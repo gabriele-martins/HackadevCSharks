@@ -10,4 +10,3 @@
 - Mateus Fujita Silveira
 - Raylson Moreira
 - Taís Saito
-- Vinícius Perdigão
