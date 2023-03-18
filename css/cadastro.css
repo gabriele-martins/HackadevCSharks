@@ -28,16 +28,18 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 2em;
-  border: 1px solid blue;
   flex-direction: column;
 }
 
 #form {
-  width: 370px;
+  width: 35%;
+  background: #eeefee;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 #header-form  {
-  margin: 0px 0px 12px -5px; 
+  margin: 0px 0px 12px 0px; 
   display: flex;
   justify-content: space-between;
 }
@@ -59,10 +61,14 @@ main {
   justify-content: space-between;
 }
 
+#nome-sobrenome input {
+  width: 155px;
+}
+
 .input {
   border: 1px solid #787777ee;
-  margin: 0px 0px 12px -5px; 
-  border-radius: 10px;
+  margin: 0px 0px 12px 0px; 
+  border-radius: 5px;
   padding: 5px;
 }
 
@@ -72,6 +78,28 @@ main {
   outline: none;
   transform: translateY(-45%);
   margin-left: 8px;
+}
+
+#data-nascimento {
+  margin-bottom: 10px;
+}
+#select-data-nascimento {
+  display: flex;
+  justify-content: space-between; 
+}
+
+#data-nascimento>div:first-child {
+  margin: 0px 0px 5px 0px; 
+  font-size: 14px;
+}
+
+select {
+  height: 40px;
+  width: 115px;
+  border: 1px solid #787777ee;
+  margin: 0px 0px 12px 0px; 
+  padding: 5px;
+  border-radius: 5px;
 }
 
 #btn {
