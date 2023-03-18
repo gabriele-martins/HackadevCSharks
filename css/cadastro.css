@@ -18,8 +18,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffff;
-  background-color: #00efc5;
+  color: #00efc5;
 }
 
 main {
@@ -95,6 +94,5 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffff;
-  background-color: #00efc5;
+  color: #000000;
 }
