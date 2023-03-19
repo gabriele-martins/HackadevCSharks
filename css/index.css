@@ -38,7 +38,6 @@ footer {
   align-items: center;
   justify-content: center;
   color: #000000;
-
   
 }
 
@@ -55,6 +54,14 @@ nav li{
   
 }
 
+nav li :hover{
+  padding: 0.5em 0.5em;
+  background-color: #00efc5;
+  color: #fff;
+
+  border-radius: 0.5em;
+}
+
 nav li a{
   text-decoration: none;
   color: #000;
@@ -63,8 +70,6 @@ nav li a{
 #header-main{
   height: 100%;
   width: 90%;
-
-  /* background-color: blue; */
 
   display: flex;
   align-items: center;
@@ -75,8 +80,6 @@ nav li a{
 #header-icon-menu{
   height: 70%;
   width: 55%;
-
-  /* background-color: #00efc5; */
 
   display: flex;
   align-items: center;
@@ -104,10 +107,6 @@ button{
   letter-spacing: 0.01875em;
 }
 
-/* #header-buttons button{
-  height: 55%;  
-} */
-
 #header-buttons svg{
   cursor: pointer;
 }
@@ -119,22 +118,20 @@ button{
 }
 
 #button-acessar-conta{
-  color: #00efc5;
   background: #fff;
+  color: #00efc5;
   border: 0.0625em solid #00efc5;
 }
 
 #main-text{
   width: 50%;
   height: 100%;
-  /* background-color: bisque; */
+
 }
 
 #main-image{
   width: 50%;
   height: 100%;
-
-/*   background-color: aqua; */
 }
 
 h2{
