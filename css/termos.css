@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   body {
@@ -95,6 +96,7 @@
     font-size: 2em;
     background-color: #eeefee;
     border-radius: 5px;
+    height: 75vh;
   }
   
   #termos-text{
@@ -145,131 +147,36 @@
     background-color: #fff;
     overflow: auto;
     height: 75%;
-
+    border: 1px solid black;
+    text-align: justify;
+    padding: 1em;
   }
 
+#texto-termos h3{
+    text-align: center;
+}
+  
   #checkbox-termos{
     width: 100%;
     height: 10%;
+    text-align: center;
   }
 
   #botao-aceite-termos{
     width: 100%;
     height: 10%;
-    display: flex;
-    justify-content: center;
-  }
-
-  #header-form  {
-    margin: 0px 0px 12px 0px; 
-    display: flex;
-    justify-content: space-between;
-  }
-
-
-  
-  /*
-  #header-form i {
-    margin-top: 10px ;
-  }
-  
-  #header-form>div>h6 {
-    font-style: normal;
-  }
-  
-  #header-form>div>div {
-    font-size: 20px;
-  }
-  */
-  
-  #nome-sobrenome {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  #nome-sobrenome input {
-    width: 95%;
-  }
-  
-  .input {
-    border: 1px solid #787777ee;
-    margin: 0px 0px 12px 0px; 
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #ffffff;
-  }
-  
-  .input input {
-    width: 95%;
-    border: none;
-    outline: none;
-    transform: translateY(-45%);
-    margin-left: 8px;
-  }
-  
-  .select-radio-title>div:first-child {
-    margin: 0px 0px 5px 0px; 
-    font-size: 14px;
-  }
-  
-  .select-radio-flex {
-    display: flex;
-    justify-content: space-between; 
-  }
-  
-  select {
-    height: 2.5em;
-    width: 30%;
-    border: 1px solid #787777ee;
-    margin: 0px 0px 12px 0px; 
-    padding: 5px;
-    border-radius: 5px;
-  }
-  
-  .input-genero {
-    border: 1px solid red;
-    display: flex;
-    font-size: 14px;
-    justify-content: space-between;
-    height: 2.5em;
-    width: 30%;
-    background-color: #ffffff;
-    border: 1px solid #787777ee;
-    border-radius: 5px;
-    margin-bottom: 12px;
-  }
-  
-  .input-genero label {
-    width: 45%;
-    font-size: 17px;
     text-align: center;
-    line-height: 2.6vw; 
-    flex:1;
   }
   
-  .input-genero input {
-    margin-right: 12px;
-  }
-  
-  span {
-    display: inline-block;
-  }
-  
-  #btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-  
-  #btn button {
+  #botao-aceite-termos button {
     background: #00efc5;
     width: 70%;
     height: 50px;
     border-radius: 10px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: bold;
     cursor: pointer;
+    color: #ffffff;
   }
   
   footer {
