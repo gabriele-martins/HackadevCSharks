@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
   }
+
   body {
     height: 100vh;
     width: 100%;
@@ -11,7 +12,6 @@
     align-items: center;
   }
 
-  
   header {
     flex: 1.5;
     width: 100%;
@@ -131,28 +131,33 @@
   #container-termos {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: space-between;
     width: 37%;
     background: #eeefee;
     padding: 15px;
     border-radius: 5px;
-    height: 30%;
+    height: 90%;
+    font-size: 0.7em;
   }
   
   #texto-termos{
     width: 100%;
     background-color: #fff;
+    overflow: auto;
+    height: 75%;
+
   }
 
   #checkbox-termos{
     width: 100%;
-    background-color: red;
+    height: 10%;
   }
 
   #botao-aceite-termos{
     width: 100%;
-    background-color: blue;
+    height: 10%;
+    display: flex;
+    justify-content: center;
   }
 
   #header-form  {
