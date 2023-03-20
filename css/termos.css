@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
   }
-  
-  #background {
-    height: 100%;
+  body {
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
+
   
   header {
     flex: 1.5;
@@ -97,7 +97,7 @@
     border-radius: 5px;
   }
   
-  #cadastro-text{
+  #termos-text{
     width: 45%;
     height: 60%;
     display: flex;
@@ -131,8 +131,8 @@
   #container-termos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
     width: 37%;
     background: #eeefee;
     padding: 15px;
