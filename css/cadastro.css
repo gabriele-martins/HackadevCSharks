@@ -29,10 +29,11 @@ main {
   justify-content: center;
   font-size: 2em;
   flex-direction: column;
+  border: 1px solid red;
 }
 
 #form {
-  width: 35%;
+  width: 37%;
   background: #eeefee;
   padding: 15px;
   border-radius: 5px;
@@ -62,7 +63,7 @@ main {
 }
 
 #nome-sobrenome input {
-  width: 155px;
+  width: 95%;
 }
 
 .input {
@@ -80,32 +81,59 @@ main {
   margin-left: 8px;
 }
 
-#data-nascimento {
-  margin-bottom: 10px;
-}
-#select-data-nascimento {
-  display: flex;
-  justify-content: space-between; 
-}
-
-#data-nascimento>div:first-child {
+.select-radio-title>div:first-child {
   margin: 0px 0px 5px 0px; 
   font-size: 14px;
 }
 
+.select-radio-flex {
+  display: flex;
+  justify-content: space-between; 
+}
+
 select {
-  height: 40px;
-  width: 115px;
+  height: 2.5em;
+  width: 30%;
   border: 1px solid #787777ee;
   margin: 0px 0px 12px 0px; 
   padding: 5px;
   border-radius: 5px;
 }
 
+.input-genero {
+  border: 1px solid red;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  height: 2.5em;
+  width: 30%;
+  background-color: #ffffff;
+  border: 1px solid #787777ee;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.input-genero label {
+  width: 45%;
+  font-size: 17px;
+  text-align: center;
+  line-height: 2.6vw; 
+  flex:1;
+}
+
+.input-genero input {
+  margin-right: 12px;
+}
+
+span {
+  display: inline-block;
+}
+
 #btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
 #btn button {
