@@ -4,8 +4,8 @@
 }
 
 #background {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -19,6 +19,71 @@ header {
   align-items: center;
   justify-content: center;
   color: #00efc5;
+  margin-bottom: 30px;
+}
+
+nav{
+  overflow: hidden;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+nav li{
+  float: left;
+  font-size: 1em;
+  padding: 0.875em 1em;
+  list-style: none;
+  
+}
+
+nav li :hover{
+  padding: 0.5em 0.5em;
+  background-color: #00efc5;
+  color: #fff;
+  border-radius: 0.5em;
+}
+
+nav li a{
+  text-decoration: none;
+  color: #000;
+}
+
+#header-main{
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header-icon-menu{
+  height: 70%;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+#header-buttons{
+  height: 70%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+header button{
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.5em;
+  padding: 0.875em 1em;
+  font-family: inherit;
+  font-size: 0.875em;  
+  letter-spacing: 0.01875em;
+  border: medium none;
+  background: #00efc5;
+  color: #fff;
 }
 
 main {
@@ -26,10 +91,41 @@ main {
   width: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: 2em;
+  background-color: #eeefee;
+  border-radius: 5px;
+}
+
+#cadastro-text{
+  width: 45%;
+  height: 60%;
+  display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  justify-content: center; 
+}
+
+#text-logo{
+  color:#00efc5;
+  /* margin-bottom: 0%; */
+}
+
+#sub-text{
+  margin-bottom: 5%;
+  font-size: 1.5em;
+  font-family: Graphik-Medium, "Graphik-Regular", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: -0.02em;
+}
+
+#text-description{
+  margin-bottom: 5%;
+  font-size: 0.7em;
+  font-family: Graphik-Medium, "Graphik-Regular", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: -0.02em;
 }
 
 #form {
@@ -37,6 +133,7 @@ main {
   background: #eeefee;
   padding: 15px;
   border-radius: 5px;
+  height: 30%;
 }
 
 #header-form  {
@@ -45,6 +142,7 @@ main {
   justify-content: space-between;
 }
 
+/*
 #header-form i {
   margin-top: 10px ;
 }
@@ -56,6 +154,7 @@ main {
 #header-form>div>div {
   font-size: 20px;
 }
+*/
 
 #nome-sobrenome {
   display: flex;
@@ -71,6 +170,7 @@ main {
   margin: 0px 0px 12px 0px; 
   border-radius: 5px;
   padding: 5px;
+  background-color: #ffffff;
 }
 
 .input input {
@@ -137,11 +237,13 @@ span {
 }
 
 #btn button {
-  background: green;
+  background: #00efc5;
   width: 70%;
   height: 50px;
   border-radius: 10px;
   font-size: 0.6em;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 footer {
