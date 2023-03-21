@@ -5,13 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../css/cadastro.css" />
+        <script src="../script/cadastro.js"></script>
         <script
             src="https://kit.fontawesome.com/e302105e7d.js"
             crossorigin="anonymous"
         ></script>
         <title>Cadastro</title>
     </head>
-    <body>
+    <body onload="mascaras()">
         <div id="background">
             <header>
                 <div id="header-main">
@@ -113,6 +114,7 @@
                                     name="cpf"
                                     id="cpf"
                                     placeholder="CPF"
+                                    maxlength="14"
                                 />
                             </div>
 
@@ -131,6 +133,7 @@
                                     name="celular"
                                     id="celular"
                                     placeholder="Celular"
+                                    maxlength="15"
                                 />
                             </div>
 
@@ -361,9 +364,11 @@
                             />
                             <span style="font-size: 14px">
                                 Para se cadastrar, você precisa concordar com
-                                nossos Termos e Política de privacidade. Você
-                                poderá receber notificações por SMS e cancelar
-                                isso quando quiser.
+                                nossos
+                                <a href="./termos.html"
+                                    >Termos e Política de privacidade</a
+                                >. Você poderá receber notificações por SMS e
+                                cancelar isso quando quiser.
                             </span>
                         </div>
                         <div id="btn">
@@ -378,17 +383,3 @@
         </div>
     </body>
 </html>
-
-<script>
-    function toogleButton() {
-        const checkBox = document.querySelector("#checkbox-form");
-
-        if (checkBox.checked) {
-            document.querySelector("#login").disabled = false;
-            return;
-        } else {
-            document.querySelector("#login").disabled = true;
-            return;
-        }
-    }
-</script>
