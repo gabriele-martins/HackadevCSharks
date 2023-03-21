@@ -355,8 +355,9 @@
                             <input
                                 type="checkbox"
                                 name=""
-                                id=""
+                                id="checkbox-form"
                                 style="margin: -33px 5px 0px 0px"
+                                onchange="toogleButton()"
                             />
                             <span style="font-size: 14px">
                                 Para se cadastrar, você precisa concordar com
@@ -366,7 +367,9 @@
                             </span>
                         </div>
                         <div id="btn">
-                            <button type="submit">Cadastre-se</button>
+                            <button type="submit" id="login" disabled>
+                                Cadastre-se
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -375,3 +378,17 @@
         </div>
     </body>
 </html>
+
+<script>
+    function toogleButton() {
+        const checkBox = document.querySelector("#checkbox-form");
+
+        if (checkBox.checked) {
+            document.querySelector("#login").disabled = false;
+            return;
+        } else {
+            document.querySelector("#login").disabled = true;
+            return;
+        }
+    }
+</script>
