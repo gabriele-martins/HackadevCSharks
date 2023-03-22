@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 #background {
@@ -14,21 +15,22 @@
 }
 
 header {
-  flex: 0.8;
-  width: 100%;
+  flex: 1;
+  width: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #00efc5;
+  justify-content: space-between;
+  
 }
 
 main {
   flex: 4;
+  
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 footer {
@@ -38,12 +40,12 @@ footer {
   align-items: center;
   justify-content: center;
   color: #000000;
-  
+  /* background-color: antiquewhite; */
 }
 
 nav{
   overflow: hidden;
-  font-family: Arial,Helvetica,sans-serif;
+  
 }
 
 nav li{
@@ -51,7 +53,6 @@ nav li{
   font-size: 1em;
   padding: 0.875em 1em;
   list-style: none;
-  
 }
 
 nav li :hover{
@@ -69,31 +70,29 @@ nav li a{
 
 #header-main{
   height: 100%;
-  width: 90%;
+  width: 100%;
 
   display: flex;
   align-items: center;
-  justify-content: center;
-
+  justify-content: space-between;
 }
 
-#header-icon-menu{
+#header-menu{
   height: 70%;
   width: 55%;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 #header-buttons{
   height: 70%;
-  width: 30%;
+  width: 25%;
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   
 }
 
@@ -102,43 +101,37 @@ button{
   cursor: pointer;
   border-radius: 0.5em;
   padding: 0.875em 1em;
-  font-family: inherit;
-  font-size: 0.875em;  
-  letter-spacing: 0.01875em;
+  
+
+  color: #00efc5;
+  background-color: #fff;
+  border: 0.0625em solid #00efc5;
 }
 
-#header-buttons svg{
-  cursor: pointer;
-}
 
-#button-abrir-conta{
+#button-abrir-conta:hover, #button-acessar-conta:hover, #criar-conta-botao:hover{
   border: medium none;
   background: #00efc5;
   color: #fff;
 }
 
-#button-acessar-conta{
-  background: #fff;
-  color: #00efc5;
-  border: 0.0625em solid #00efc5;
-}
-
 #main-text{
   width: 50%;
-  height: 100%;
+  height: 85%;
 
 }
 
 #main-image{
   width: 50%;
-  height: 100%;
+  height: 90%;
 }
 
 h2{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
   font-size: 3em;
   height: 15%;
   margin-bottom: 10%;
+
 }
 
 #sub-text{
@@ -175,11 +168,7 @@ h2{
 }
 
 #criar-conta-botao{
-
   margin-top: 2em;
-  border: medium none;
-  background: #00efc5;
-  color: #fff;
   width: 12em;
   height: 3em;
 }
