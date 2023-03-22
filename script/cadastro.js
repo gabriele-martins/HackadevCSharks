@@ -1,6 +1,12 @@
-//const submitButton = document.querySelector("#btn");
-//const nomeInput = document.querySelector("#nome");
-//const sobrenomeInput = document.querySelector("#sobrenome");
+const form = document.querySelector("#form");
+let campos = document.querySelectorAll(".required");
+let divs = document.querySelectorAll(".div-required");
+const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+
+const submitButton = document.querySelector("#login");
+const nomeInput = document.querySelector("#nome");
+const sobrenomeInput = document.querySelector("#sobrenome");
+const errorMessage = document.querySelector(".msg");
 //const cpfInput = document.querySelector("#cpf");
 //const emailInput = document.querySelector("#email");
 //const celularInput = document.querySelector("#celular");

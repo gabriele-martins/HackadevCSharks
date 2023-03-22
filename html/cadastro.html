@@ -63,6 +63,7 @@
                                     name="nome"
                                     id="nome"
                                     placeholder="Nome"
+                                    class="required"
                                 />
                             </div>
                             <div class="input">
@@ -71,10 +72,13 @@
                                     name="sobrenome"
                                     id="sobrenome"
                                     placeholder="Sobrenome"
+                                    class="required"
                                 />
                             </div>
+                            <!-- 
+                            <div class="div-required">Nome e sobrenome precisam ter mais de 3 caracteres.</div>
+                            -->
                         </div>
-
                         <div id="outros-dados">
                             <div class="input">
                                 <input
@@ -83,18 +87,24 @@
                                     id="cpf"
                                     placeholder="CPF"
                                     maxlength="14"
+                                    class="required"
                                 />
                             </div>
-
+                            <!--
+                            <div class="div-required">CPF inválido.</div>
+                            -->
                             <div class="input">
                                 <input
-                                    type="text"
+                                    type="email"
                                     name="email"
                                     id="email"
                                     placeholder="E-mail"
+                                    class="required"
                                 />
                             </div>
-
+                            <!--
+                            <div class="div-required">E-mail inválido.</div>
+                            -->
                             <div class="input">
                                 <input
                                     type="text"
@@ -102,18 +112,25 @@
                                     id="celular"
                                     placeholder="Celular"
                                     maxlength="15"
+                                    class="required"
                                 />
                             </div>
-
+                            <!--
+                            <div class="div-required">Celular inválido.</div>
+                            -->
                             <div class="input">
                                 <input
                                     type="password"
                                     name="senha"
                                     id="senha"
                                     placeholder="Nova senha"
+                                    class="required"
                                 />
                             </div>
                         </div>
+                        <!--
+                        <div class="div-required">Sua senha precisa ter no mínimo 8 caracteres.</div>
+                        -->
                         <div class="select-radio-title">
                             <div>Data de nascimento</div>
                             <div class="select-radio-flex">
@@ -308,7 +325,7 @@
                                     <input
                                         type="radio"
                                         name="genero"
-                                        id="fem"
+                                        id="masc"
                                     />
                                 </div>
                                 <div class="input-genero">
@@ -316,7 +333,7 @@
                                     <input
                                         type="radio"
                                         name="genero"
-                                        id="fem"
+                                        id="outros"
                                     />
                                 </div>
                             </div>

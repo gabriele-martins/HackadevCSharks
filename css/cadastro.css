@@ -106,6 +106,7 @@ main {
 #nome-sobrenome {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #nome-sobrenome input {
