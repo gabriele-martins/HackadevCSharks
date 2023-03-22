@@ -39,15 +39,3 @@ function mascaraCelular() {
         celularInput.value = celular;
     });
 }
-
-function toogleButton() {
-    const checkBox = document.querySelector("#checkbox-form");
-
-    if (checkBox.checked) {
-        document.querySelector("#login").disabled = false;
-        return;
-    } else {
-        document.querySelector("#login").disabled = true;
-        return;
-    }
-}

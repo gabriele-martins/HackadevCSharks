@@ -1,10 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 #background {
-  height: 100%;
+  height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,58 +20,14 @@ header {
   align-items: center;
   justify-content: center;
   color: #00efc5;
-  margin-bottom: 30px;
-}
-
-nav{
-  overflow: hidden;
-  font-family: Arial,Helvetica,sans-serif;
-}
-
-nav li{
-  float: left;
-  font-size: 1em;
-  padding: 0.875em 1em;
-  list-style: none;
-  
-}
-
-nav li :hover{
-  padding: 0.5em 0.5em;
-  background-color: #00efc5;
-  color: #fff;
-  border-radius: 0.5em;
-}
-
-nav li a{
-  text-decoration: none;
-  color: #000;
 }
 
 #header-main{
   height: 100%;
-  width: 90%;
+  width: 75%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-#header-icon-menu{
-  height: 70%;
-  width: 55%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-}
-
-#header-buttons{
-  height: 70%;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  
+  justify-content: space-between;
 }
 
 header button{
@@ -82,8 +39,14 @@ header button{
   font-size: 0.875em;  
   letter-spacing: 0.01875em;
   border: medium none;
+  background: #fff;
+  color: #00efc5;
+  border: 1px solid #00efc5;
+}
+
+header button:hover {
   background: #00efc5;
-  color: #fff;
+  color: #fff;  
 }
 
 main {
@@ -113,7 +76,6 @@ main {
 #sub-text{
   margin-bottom: 5%;
   font-size: 1.5em;
-  font-family: Graphik-Medium, "Graphik-Regular", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.32;
   letter-spacing: -0.02em;
@@ -122,7 +84,6 @@ main {
 #text-description{
   margin-bottom: 5%;
   font-size: 0.7em;
-  font-family: Graphik-Medium, "Graphik-Regular", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.32;
   letter-spacing: -0.02em;
@@ -130,10 +91,10 @@ main {
 
 #form {
   width: 37%;
+  height: 80%;
   background: #eeefee;
   padding: 15px;
   border-radius: 5px;
-  height: 30%;
 }
 
 #header-form  {
@@ -141,20 +102,6 @@ main {
   display: flex;
   justify-content: space-between;
 }
-
-/*
-#header-form i {
-  margin-top: 10px ;
-}
-
-#header-form>div>h6 {
-  font-style: normal;
-}
-
-#header-form>div>div {
-  font-size: 20px;
-}
-*/
 
 #nome-sobrenome {
   display: flex;
@@ -167,17 +114,17 @@ main {
 
 .input {
   border: 1px solid #787777ee;
-  margin: 0px 0px 12px 0px; 
+  margin-bottom: 12px; 
   border-radius: 5px;
-  padding: 5px;
   background-color: #ffffff;
+  height: 1em;
 }
 
 .input input {
   width: 95%;
   border: none;
   outline: none;
-  transform: translateY(-45%);
+  transform: translateY(-70%);
   margin-left: 8px;
 }
 
@@ -192,32 +139,30 @@ main {
 }
 
 select {
-  height: 2.5em;
+  height: 2em;
   width: 30%;
   border: 1px solid #787777ee;
-  margin: 0px 0px 12px 0px; 
-  padding: 5px;
+  margin-bottom:15px; 
   border-radius: 5px;
 }
 
 .input-genero {
-  border: 1px solid red;
   display: flex;
   font-size: 14px;
   justify-content: space-between;
-  height: 2.5em;
+  height: 2em;
   width: 30%;
   background-color: #ffffff;
   border: 1px solid #787777ee;
   border-radius: 5px;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
 
 .input-genero label {
   width: 45%;
-  font-size: 17px;
+  font-size: 13px;
   text-align: center;
-  line-height: 2.6vw; 
+  line-height: 2.2vw; 
   flex:1;
 }
 
@@ -225,15 +170,11 @@ select {
   margin-right: 12px;
 }
 
-span {
-  display: inline-block;
-}
-
 #btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 #btn button {

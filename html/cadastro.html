@@ -6,39 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../css/cadastro.css" />
         <script src="../script/cadastro.js"></script>
-        <script
-            src="https://kit.fontawesome.com/e302105e7d.js"
-            crossorigin="anonymous"
-        ></script>
-        <title>Cadastro</title>
+        <title>Sharks - Cadastro</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        </style>
     </head>
     <body onload="mascaras()">
         <div id="background">
             <header>
                 <div id="header-main">
                     <div id="header-icon-menu">
-                        <img src="../img/logo2.png" />
-                        <nav>
-                            <ul>
-                                <li><a href="#">Sharkbank</a></li>
-                                <li><a href="#">Contas</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Sobre</a></li>
-                                <li><a href="#">Ajuda</a></li>
-                            </ul>
-                        </nav>
+                        <a href="./home">
+                            <img src="../img/logo2.png" />
+                        </a>                        
                     </div>
                     <div id="header-buttons">
                         <div>
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                data-testid="icon"
-                                color="#00efc5"
-                            >
                                 <circle
                                     cx="10"
                                     cy="10"
@@ -57,11 +40,6 @@
                                 ></path>
                             </svg>
                         </div>
-                        <a href="./cadastro.html">
-                            <button id="button-abrir-conta">
-                                Abrir sua conta
-                            </button>
-                        </a>
                         <a href="./login.html">
                             <button id="button-acessar-conta">Acessar</button>
                         </a>
@@ -70,23 +48,13 @@
             </header>
             <main>
                 <div id="cadastro-text">
-                    <h2 id="text-logo">Sharkbank</h2>
+                    <h2 id="text-logo">SharksBank</h2>
                     <h4 id="sub-text">Quero ser Shark!</h4>
                     <p id="text-description">
                         Preencha seus dados para começar a ser shark.
                     </p>
                 </div>
                 <div id="form">
-                    <!--
-                    <div id="header-form">
-                        <div>
-                            <h6>Crie sua nova conta</h6>
-                            <div>É rápido e fácil</div>
-                        </div>
-                        <i class="fa-solid fa-user-plus"></i>
-                    </div>
-                    <hr style="margin-bottom: 10px" />
-                    -->
                     <form action="">
                         <div id="nome-sobrenome">
                             <div class="input">
@@ -354,25 +322,8 @@
                             </div>
                         </div>
                         <hr />
-                        <div style="display: flex; margin-top: 12px">
-                            <input
-                                type="checkbox"
-                                name=""
-                                id="checkbox-form"
-                                style="margin: -33px 5px 0px 0px"
-                                onchange="toogleButton()"
-                            />
-                            <span style="font-size: 14px">
-                                Para se cadastrar, você precisa concordar com
-                                nossos
-                                <a href="./termos.html"
-                                    >Termos e Política de privacidade</a
-                                >. Você poderá receber notificações por SMS e
-                                cancelar isso quando quiser.
-                            </span>
-                        </div>
                         <div id="btn">
-                            <button type="submit" id="login" disabled>
+                            <button type="submit" id="login">
                                 Cadastre-se
                             </button>
                         </div>
