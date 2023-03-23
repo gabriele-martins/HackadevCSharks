@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../css/cadastro.css" />
-        <script src="../script/cadastro.js"></script>
+        <script src="../script/cadastro.js" defer></script>
         <title>Sharks - Cadastro</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -55,7 +55,8 @@
                     </p>
                 </div>
                 <div id="form">
-                    <form action="">
+                    <form action="" id="cadastro-cliente">
+                        <div class="msg"></div>
                         <div id="nome-sobrenome">
                             <div class="input">
                                 <input
@@ -64,6 +65,7 @@
                                     id="nome"
                                     placeholder="Nome"
                                     class="required"
+                                    oninput="validarNome()"
                                 />
                             </div>
                             <div class="input">
@@ -73,11 +75,11 @@
                                     id="sobrenome"
                                     placeholder="Sobrenome"
                                     class="required"
+                                    oninput="validarSobrenome()"
                                 />
-                            </div>
-                            <!-- 
-                            <div class="div-required">Nome e sobrenome precisam ter mais de 3 caracteres.</div>
-                            -->
+                            </div>                           
+                            <div class="div-required">O Nome precisa ter mais de 3 caracteres.</div>
+                            <div class="div-required">O Sobrenome precisa ter mais de 3 caracteres.</div>                                
                         </div>
                         <div id="outros-dados">
                             <div class="input">
@@ -88,11 +90,10 @@
                                     placeholder="CPF"
                                     maxlength="14"
                                     class="required"
+                                    oninput="validarCPF()"
                                 />
-                            </div>
-                            <!--
-                            <div class="div-required">CPF inválido.</div>
-                            -->
+                            </div>                          
+                            <div class="div-required">CPF inválido.</div>                           
                             <div class="input">
                                 <input
                                     type="email"
@@ -100,11 +101,10 @@
                                     id="email"
                                     placeholder="E-mail"
                                     class="required"
+                                    oninput="validarEmail()"
                                 />
-                            </div>
-                            <!--
-                            <div class="div-required">E-mail inválido.</div>
-                            -->
+                            </div>                            
+                            <div class="div-required">E-mail inválido.</div>                            
                             <div class="input">
                                 <input
                                     type="text"
@@ -113,11 +113,10 @@
                                     placeholder="Celular"
                                     maxlength="15"
                                     class="required"
+                                    oninput="validarCelular()"
                                 />
-                            </div>
-                            <!--
-                            <div class="div-required">Celular inválido.</div>
-                            -->
+                            </div>                           
+                            <div class="div-required">Celular inválido.</div>                    
                             <div class="input">
                                 <input
                                     type="password"
@@ -125,12 +124,11 @@
                                     id="senha"
                                     placeholder="Nova senha"
                                     class="required"
+                                    oninput="validarSenha()"
                                 />
                             </div>
-                        </div>
-                        <!--
-                        <div class="div-required">Sua senha precisa ter no mínimo 8 caracteres.</div>
-                        -->
+                        </div>                      
+                        <div class="div-required">Sua senha precisa ter no mínimo 8 caracteres.</div>                       
                         <div class="select-radio-title">
                             <div>Data de nascimento</div>
                             <div class="select-radio-flex">
@@ -318,6 +316,7 @@
                                         type="radio"
                                         name="genero"
                                         id="fem"
+                                        value="1"
                                     />
                                 </div>
                                 <div class="input-genero">
@@ -326,6 +325,7 @@
                                         type="radio"
                                         name="genero"
                                         id="masc"
+                                        value="2"
                                     />
                                 </div>
                                 <div class="input-genero">
@@ -334,13 +334,14 @@
                                         type="radio"
                                         name="genero"
                                         id="outros"
+                                        value="3"
                                     />
                                 </div>
                             </div>
                         </div>
                         <hr />
                         <div id="btn">
-                            <button type="submit" id="login">
+                            <button type="submit" id="cadastro">
                                 Cadastre-se
                             </button>
                         </div>
