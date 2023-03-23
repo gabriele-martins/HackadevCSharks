@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #background {
@@ -22,26 +22,25 @@ header {
   color: #00efc5;
 }
 
-#header-main{
+#header-main {
   height: 100%;
-  width: 75%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 img {
-  width: 4rem;
-  height: 4rem;
+  width: 100px;
 }
 
-header button{
+header button {
   font-weight: bold;
   cursor: pointer;
   border-radius: 0.5em;
   padding: 0.875em 1em;
   font-family: inherit;
-  font-size: 0.875em;  
+  font-size: 0.875em;
   letter-spacing: 0.01875em;
   border: medium none;
   background: #fff;
@@ -51,7 +50,7 @@ header button{
 
 header button:hover {
   background: #00efc5;
-  color: #fff;  
+  color: #fff;
 }
 
 main {
@@ -61,24 +60,23 @@ main {
   align-items: center;
   justify-content: space-around;
   font-size: 2em;
-  background-color: #eeefee;
+  background-color: #f1f2f6;
   border-radius: 5px;
 }
 
-#cadastro-text{
+#cadastro-text {
   width: 45%;
   height: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
 }
 
-#text-logo{
-  color:#00efc5;
-  /* margin-bottom: 0%; */
+#text-logo {
+  color: #00efc5;
 }
 
-#sub-text{
+#sub-text {
   margin-bottom: 5%;
   font-size: 1.5em;
   font-weight: 500;
@@ -86,7 +84,7 @@ main {
   letter-spacing: -0.02em;
 }
 
-#text-description{
+#text-description {
   margin-bottom: 5%;
   font-size: 0.7em;
   font-weight: 500;
@@ -97,13 +95,12 @@ main {
 #form {
   width: 37%;
   height: 80%;
-  background: #eeefee;
   padding: 15px;
   border-radius: 5px;
 }
 
-#header-form  {
-  margin: 0px 0px 12px 0px; 
+#header-form {
+  margin: 0px 0px 12px 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -120,7 +117,7 @@ main {
 
 .input {
   border: 1px solid #787777ee;
-  margin-bottom: 12px; 
+  margin-bottom: 12px;
   border-radius: 5px;
   background-color: #ffffff;
   height: 1em;
@@ -134,21 +131,21 @@ main {
   margin-left: 8px;
 }
 
-.select-radio-title>div:first-child {
-  margin: 0px 0px 5px 0px; 
+.select-radio-title > div:first-child {
+  margin: 0px 0px 5px 0px;
   font-size: 14px;
 }
 
 .select-radio-flex {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 select {
   height: 2em;
   width: 30%;
   border: 1px solid #787777ee;
-  margin-bottom:15px; 
+  margin-bottom: 15px;
   border-radius: 5px;
 }
 
@@ -168,8 +165,8 @@ select {
   width: 45%;
   font-size: 13px;
   text-align: center;
-  line-height: 2.2vw; 
-  flex:1;
+  line-height: 2.2vw;
+  flex: 1;
 }
 
 .input-genero input {
@@ -195,11 +192,12 @@ select {
   cursor: pointer;
 }
 
-#btn button:disabled, button:hover {
-  background-color: #eeefee;;
+#btn button:disabled,
+button:hover {
+  background-color: transparent;
   border: 1px solid #00efc5;
   color: #00efc5;
-  cursor:auto;
+  cursor: auto;
 }
 
 footer {
