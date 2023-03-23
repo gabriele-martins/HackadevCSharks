@@ -4,6 +4,10 @@
     font-family: 'Poppins', sans-serif;
   }
   
+  img{
+    width: 64px;
+  }
+
   #background {
     height: 100vh;
     width: 100vw;
