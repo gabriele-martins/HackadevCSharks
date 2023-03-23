@@ -2,11 +2,11 @@ const formulario = document.querySelector("#cadastro-cliente");
 const campos = document.querySelectorAll(".required");
 const divs_input = document.querySelectorAll(".input");
 const divs = document.querySelectorAll(".div-required");
+const submitButton = document.querySelector("#cadastro");
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const celularRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
 
 formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
     validarNome();
     validarSobrenome();
     validarCPF();
@@ -105,3 +105,28 @@ function mascaraCelular() {
         celularInput.value = celular;
     });
 }
+
+function checkInputs(inputs) {
+    var preenchido = true;
+
+    inputs.forEach(function (input) {
+        if (input.value === "") {
+            preenchido = false;
+        }
+    });
+
+    return preenchido;
+}
+
+var inputs = document.querySelectorAll("input");
+var button = document.querySelector("#cadastro");
+
+inputs.forEach((input) => {
+    input.addEventListener("keyup", () => {
+        if (checkInputs(inputs)) {
+            button.disabled = false;
+        } else {
+            button.disabled = true;
+        }
+    });
+});

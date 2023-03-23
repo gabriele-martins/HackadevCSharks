@@ -184,14 +184,22 @@ select {
 }
 
 #btn button {
-  background: #00efc5;
+  background-color: #00efc5;
+  border: 1px solid #00efc5;
+  color: #fff;
   width: 70%;
   height: 50px;
   border-radius: 10px;
   font-size: 0.6em;
   font-weight: bold;
   cursor: pointer;
-  border: none;
+}
+
+#btn button:disabled, button:hover {
+  background-color: #eeefee;;
+  border: 1px solid #00efc5;
+  color: #00efc5;
+  cursor:auto;
 }
 
 footer {
