@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+#background {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  flex: 1;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+main {
+  flex: 4;
+  
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+footer {
+  flex: 0.5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  /* background-color: antiquewhite; */
+}
+
+nav{
+  overflow: hidden;
+  
+}
+
+nav li{
+  float: left;
+  font-size: 1em;
+  padding: 0.875em 1em;
+  list-style: none;
+}
+
+nav li :hover{
+  padding: 0.5em 0.5em;
+  background-color: #00efc5;
+  color: #fff;
+
+  border-radius: 0.5em;
+}
+
+nav li a{
+  text-decoration: none;
+  color: #000;
+}
+
+#header-main{
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-menu{
+  height: 70%;
+  width: 55%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#header-buttons{
+  height: 70%;
+  width: 25%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+button{
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.5em;
+  padding: 0.875em 1em;
+  
+
+  color: #00efc5;
+  background-color: #fff;
+  border: 0.0625em solid #00efc5;
+}
+
+
+#button-abrir-conta:hover, #button-acessar-conta:hover, #criar-conta-botao:hover{
+  border: medium none;
+  background: #00efc5;
+  color: #fff;
+}
+
+#main-text{
+  width: 50%;
+  height: 85%;
+
+}
+
+#main-image{
+  width: 50%;
+  height: 90%;
+}
+
+h2{
+  
+  font-size: 3em;
+  height: 15%;
+  margin-bottom: 10%;
+
+}
+
+#sub-text{
+  color:#00efc5;
+}
+
+#items-list{
+  height: 35%;
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.item-list{
+  display: flex;
+  line-height: 1.375em;
+  align-items: center;
+  width: 24.5em;
+  height: 3.375em; 
+  /* background-color: antiquewhite; */
+}
+
+.item-list-icon{
+  margin-right: 2%;
+}
+
+.item-list-text{
+  font-size: 1.125em;
+  color: #161616;
+  font-weight: 400;
+  letter-spacing: .3px;
+  
+}
+
+#criar-conta-botao{
+  margin-top: 2em;
+  width: 12em;
+  height: 3em;
+}
