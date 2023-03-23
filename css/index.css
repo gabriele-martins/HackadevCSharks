@@ -74,6 +74,10 @@ nav li a {
   justify-content: space-between;
 }
 
+img {
+  width: 64px;
+}
+
 #header-menu {
   height: 70%;
   width: 55%;
@@ -117,6 +121,10 @@ button {
 #main-image {
   width: 50%;
   height: 90%;
+}
+
+#main-image img {
+  width: 80%;
 }
 
 h2 {
