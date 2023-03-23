@@ -16,12 +16,12 @@ body {
 
 header {
 	flex: 1.5;
-	width: 72.5%;
+	width: 75%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	color: #00efc5;
-	margin-bottom: 30px;
+	padding: 1em 0em;
 }
 
 #header-icon-menu {
@@ -32,7 +32,7 @@ header {
 }
 
 #header-icon-menu img{
-	width: 80px;
+	width: 64px;
 	
 }
 
@@ -69,7 +69,7 @@ main {
 	align-items: center;
 	justify-content: space-around;
 	font-size: 2em;
-	background-color: #eeefee;
+	background-color: #F1F2F6;
 	border-radius: 5px;
 	height: 75vh;
 }
@@ -113,11 +113,10 @@ main {
 	flex-direction: column;
 	justify-content: space-between;
 	width: 37%;
-	background: #eeefee;
 	padding: 15px;
 	border-radius: 5px;
 	height: 90%;
-	font-size: 0.7em;
+	font-size: 1rem;
 }
 
 #div-texto-termos {
@@ -139,7 +138,7 @@ main {
 	height: 10%;
 	align-items: center;
 	text-align: center;
-  	font-size: 0.8em;
+  	font-size: 0.9em;
 	display: flex;
 }
 
@@ -156,7 +155,6 @@ main {
 	padding: 0.5em;
 	height: 50px;
 	border-radius: 10px;
-	font-size: 0.8em;
 	font-weight: bold;
 	cursor: pointer;
 	color: #00efc5;
@@ -183,6 +181,8 @@ footer {
 	justify-content: center;
 	color: #000000;
 }
+
+/* CSS ESTILIZAÇÃO DO CHECKBOX */
 
 #label-checkbox-termos {
 	display: block;
@@ -211,11 +211,11 @@ footer {
 	left: 0;
 	height: 25px;
 	width: 25px;
-	border: 0.25px solid #00efc5;
+	border: 1px solid #00efc5;
   }
 
   #label-checkbox-termos input:disabled ~ #span-checkbox-termos{
-	border: 0.25px solid grey;
+	border: 1px dashed rgb(199, 199, 199);
 	cursor: not-allowed;
   }
 
