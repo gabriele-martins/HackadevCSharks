@@ -30,6 +30,11 @@ header {
   justify-content: space-between;
 }
 
+img {
+  width: 4rem;
+  height: 4rem;
+}
+
 header button{
   font-weight: bold;
   cursor: pointer;
