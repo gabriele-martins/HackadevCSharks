@@ -191,6 +191,7 @@ select {
   font-size: 0.6em;
   font-weight: bold;
   cursor: pointer;
+  border: none;
 }
 
 footer {
