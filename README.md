@@ -9,7 +9,7 @@
 - [Descrição](#Descrição)
 - [Features](#Features)
 - [Tecnologias Utilizadas](#Tecnologias-Utilizadas)
-- [Autor](#Autor)
+- [Autores](#Autores)
 
 # Descrição
 
