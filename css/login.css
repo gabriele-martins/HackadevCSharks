@@ -101,7 +101,7 @@ main {
   background-color: #fff;
   border-radius: 0.5em;
   width: 35%;
-  height: 50%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,7 +110,7 @@ main {
 
 #login-form {
   width: 95%;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,9 +137,26 @@ main {
   justify-content: center;
 }
 
+.div-form-item button {
+  height: 50px;
+  border: medium none;
+  background: #00efc5;
+  color: #fff;
+}
+
+.div-form-item button:disabled {
+  height: 50px;
+  color: #00efc5;
+  background-color: transparent;
+  border: 0.0625em solid #00efc5;
+  cursor: not-allowed;
+}
+
 .div-form-item input {
   border: 1px solid #d6d6d6;
   padding: 0.2em;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .div-form-item a {

@@ -8,7 +8,6 @@
 #background {
   height: 100vh;
   width: 100vw;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -24,27 +23,9 @@ header {
   color: #00efc5;
 }
 
-main {
-  flex: 4;
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer {
-  flex: 0.5;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000000;
-}
-
 #header-main {
   height: 100%;
   width: 90%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,8 +41,33 @@ footer {
 }
 
 img {
-  width: 64px;
+  width: 100px;
+}
+
+button {
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.5em;
+  padding: 0.875em 1em;
+  font-family: inherit;
+  font-size: 0.875em;
+  color: #00efc5;
+  background-color: #fff;
+  border: 0.0625em solid #00efc5;
+}
+
+button:hover {
+  border: medium none;
+  background: #00efc5;
+  color: #fff;
+}
+
+main {
+  flex: 4;
+  width: 80%;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #recuperacao-main-div {
@@ -69,7 +75,6 @@ img {
   height: 80%;
   background-color: #f1f2f6;
   border-radius: 0.5em;
-
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -78,10 +83,8 @@ img {
 #recuperacao-text-div {
   width: 45%;
   height: 60%;
-
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
 }
 
@@ -98,11 +101,9 @@ img {
 
 #cpf-form-div {
   background-color: #fff;
-
   border-radius: 0.5em;
   width: 35%;
   height: 50%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +113,6 @@ img {
 #cpf-form {
   width: 95%;
   height: 90%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,20 +133,17 @@ img {
 .div-form-item a {
   width: 95%;
   height: 95%;
-
   border-radius: 0.5em;
   text-decoration: none;
 }
 
 .div-form-item input {
   border: 1px solid #d6d6d6;
+  height: 50px;
 }
 
 .div-form-item button {
-  background-color: #00efc5;
-  color: #fff;
-  border: medium none;
-
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,23 +159,17 @@ img {
   padding: 1em;
 }
 
-button {
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 0.5em;
-  padding: 0.875em 1em;
-  font-family: inherit;
-  font-size: 0.875em;
-}
-
-#button-acessar-conta {
-  background: #fff;
-  color: #00efc5;
-  border: 0.0625em solid #00efc5;
-}
-
 h2 {
   font-size: 3em;
   height: 15%;
   margin-bottom: 10%;
+}
+
+footer {
+  flex: 0.5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
 }

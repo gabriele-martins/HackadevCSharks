@@ -33,7 +33,7 @@ header {
 
 #header-main img {
   flex: 1;
-  width: 64px;
+  width: 100px;
 }
 
 #header-menu {
@@ -60,7 +60,6 @@ header {
   padding: 0.5em 0.5em;
   background-color: #00efc5;
   color: #fff;
-
   border-radius: 0.5em;
 }
 
@@ -113,11 +112,11 @@ main {
   height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #main-text h2 {
-  font-size: 3em;
+  font-size: 2.5em;
   height: 15%;
   margin-bottom: 10%;
 }
@@ -168,8 +167,7 @@ main {
 }
 
 #main-image img {
-  width: 80%;
-  padding-top: 3em;
+  width: 65%;
 }
 
 footer {
