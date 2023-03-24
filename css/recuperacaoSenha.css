@@ -142,11 +142,25 @@ main {
   height: 50px;
 }
 
+.div-form-item button:disabled {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00efc5;
+  background-color: #fff;
+  border: 0.0625em solid #00efc5;
+  cursor: not-allowed;
+}
+
 .div-form-item button {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: medium none;
+  background: #00efc5;
+  color: #fff;
 }
 
 .div-form-item a {
