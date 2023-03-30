@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +66,25 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	-webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
 }
