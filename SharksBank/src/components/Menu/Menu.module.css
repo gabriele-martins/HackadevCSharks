@@ -1,0 +1,19 @@
+.menu{
+    background-color: #fff;
+    padding: 36px 24px;
+}
+
+.nav{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.nav a{
+    all: unset;
+    color: #000;
+}
