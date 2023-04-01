@@ -1,19 +1,26 @@
-.menu{
-    background-color: #fff;
-    padding: 36px 24px;
+.menu {
+  background-color: var(--branco);
+  padding: 36px 24px;
 }
 
-.nav{
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 55%;
-    margin: 0 auto;
-    cursor: pointer;
+.nav {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
-.nav a{
-    all: unset;
-    color: #000;
+.nav a {
+  all: unset;
+  color: var(--preto);
+}
+
+.nav a:hover {
+  color: var(--ciano);
 }
