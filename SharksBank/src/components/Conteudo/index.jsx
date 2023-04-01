@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 
 export function Conteudo({ titulo, subTitulo, descricao, children }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.conteudo}>
       <div className={styles.containerText}>
         <h2>{titulo}</h2>
         <span className={styles.subTitulo}>{subTitulo}</span>
