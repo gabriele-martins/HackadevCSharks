@@ -1,12 +1,12 @@
 import React from "react";
-import { Home } from "./pages/Home";
+import { Cadastro } from "./pages/Cadastro/cadastro";
 
 import "./App.css";
 
 export function App() {
-  return (
-    <div className="app">
-      <Home/>
-    </div> 
-  );
+    return (
+        <div className="app">
+            <Cadastro />
+        </div>
+    );
 }
