@@ -1,0 +1,34 @@
+:root {
+  --ciano: #00efc5;
+  --preto: #000;
+  --branco: #fff;
+  --conteudo-background: #f1f2f6; /* Background color do conteúdo */
+  --cinza-100: #e1e1e6;
+  --cinza-300: #c4c4cc;
+  --cinza-400: #8d8d99;
+  --cinza-600: #323238;
+  --cinza-700: #29292e;
+  --cinza-800: #202024;
+  --cinza-900: #121214;
+}
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
