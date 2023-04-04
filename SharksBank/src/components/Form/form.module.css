@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nomeSobrenome {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.nomeSobrenome input {
+    border: 1px solid green;
+  }
+  
+.input {
+    margin-bottom: 12px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 1.8rem;
+    border: 1px solid #787777ee;
+  }
+  
+.input input {
+    width: 95%;
+    border: none;
+    outline: none;
+    transform: translateY(6%);
+    margin-left: 8px;
+}
+  
+.selectRadioTitle > div:first-child {
+    margin: 0px 0px 5px 0px;
+    font-size: 14px;
+}
+  
+.selectRadioFlex {
+    display: flex;
+    justify-content: space-between;
+}
+  
+select {
+    height: 2em;
+    width: 30%;
+    border: 1px solid #787777ee;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+.inputGenero {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    height: 2em;
+    width: 30%;
+    background-color: #ffffff;
+    border: 1px solid #787777ee;
+    border-radius: 5px;
+    margin-bottom: 25px;
+  }
+  
+.inputGenero label {
+    width: 45%;
+    font-size: 13px;
+    text-align: center;
+    line-height: 2.2vw;
+    flex: 1;
+  }
+  
+.inputGenero input {
+    margin-right: 12px;
+  }
+  
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+.btn button {
+    background-color: #00efc5;
+    border: 1px solid #00efc5;
+    color: #fff;
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+.btn button:disabled,
+  button:hover {
+    background-color: transparent;
+    border: 1px solid #00efc5;
+    color: #00efc5;
+    cursor: auto;
+  }
+  
+.div-required {
+    margin: -11px 0px 5px 2px;
+    font-size: 0.7rem;
+    color: #ff0000;
+    display: none;
+  }
