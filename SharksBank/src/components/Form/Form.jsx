@@ -4,26 +4,16 @@ export function Form() {
     return (
         <>
             <form>
-                <div className={style.nomeSobrenome}>
-                    <div className={style.input}>
-                        <input
-                            type="text"
-                            name="nome"
-                            id="nome"
-                            placeholder="Nome"
-                            className="required"
-                        />
-                    </div>
-                    <div className={style.input}>
-                        <input
-                            type="text"
-                            name="sobrenome"
-                            id="sobrenome"
-                            placeholder="Sobrenome"
-                            className="required"
-                        />
-                    </div>
+                <div className={style.input}>
+                    <input
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        placeholder="Nome completo"
+                        className="required"
+                    />
                 </div>
+
                 <div id="outros-dados">
                     <div className={style.input}>
                         <input
@@ -276,7 +266,7 @@ export function Form() {
                 </div>
                 <hr />
                 <div className={style.btn}>
-                    <button type="submit" id="cadastro">
+                    <button type="submit" id="cadastro" disabled>
                         Cadastre-se
                     </button>
                 </div>

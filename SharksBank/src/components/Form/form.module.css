@@ -2,29 +2,21 @@
     margin: 0;
     padding: 0;
 }
-
-.nomeSobrenome {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-.nomeSobrenome input {
-    border: 1px solid green;
-  }
   
 .input {
     margin-bottom: 12px;
     border-radius: 5px;
     background-color: #ffffff;
-    height: 1.8rem;
+    height: 2.1rem;
     border: 1px solid #787777ee;
-  }
+    width: 23rem;
+}
   
 .input input {
     width: 95%;
     border: none;
     outline: none;
-    transform: translateY(6%);
+    transform: translateY(18%);
     margin-left: 8px;
 }
   
@@ -56,7 +48,7 @@ select {
     border: 1px solid #787777ee;
     border-radius: 5px;
     margin-bottom: 25px;
-  }
+}
   
 .inputGenero label {
     width: 45%;
@@ -64,11 +56,11 @@ select {
     text-align: center;
     line-height: 2.2vw;
     flex: 1;
-  }
+}
   
 .inputGenero input {
     margin-right: 12px;
-  }
+}
   
 .btn {
     display: flex;
