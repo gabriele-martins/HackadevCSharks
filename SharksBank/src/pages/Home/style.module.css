@@ -1,0 +1,77 @@
+.botoesHeader{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteudoHome{
+    width: 80%;   
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.colunaDireita{
+    width: 50%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.colunaDireitaTitulo{
+    width: 100%;
+    height: 25%; 
+}
+
+.textoAzul{
+    color: var(--ciano);
+}
+
+h1{
+  font-size: 2.5em;
+}
+
+.colunaDireitaTexto{
+    width: 100%;
+    height: 40%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.botaoTeste{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 98%;
+    height: 20%;
+}
+
+
+.colunaEsquerda{
+    width: 50%;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linhaBeneficios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.linhaBeneficios p{
+    width: 90%;
+}

@@ -1,3 +1,6 @@
+import React from "react";
+import { Home } from "./pages/Home";
+
 import "./App.css";
 import { Termos } from "./pages/Termos/index";
 
