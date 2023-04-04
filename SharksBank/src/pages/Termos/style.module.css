@@ -29,6 +29,14 @@
 	display: flex;
 }
 
+.conteudoBotoes {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
 /* CSS ESTILIZAÇÃO DO CHECKBOX */
 #label-checkbox-termos {
 	display: block;

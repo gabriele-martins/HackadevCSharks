@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Conteudo } from '../../components/Conteudo';
 
 import styles from './style.module.css';
+import { Botao } from '../../components/Botao';
 
 export function Termos() {
+	const [termosLido, setTermosLido] = useState(false);
+	const [termoAceito, setTermoAceito] = useState(false);
+
+	function handleScroll(evento) {
+		let alturaTotalCaixaTexto = evento.target.scrollHeight;
+		let posicaoAtual = evento.target.scrollTop;
+		let compensacao = evento.target.offsetHeight;
+
+		if (posicaoAtual > alturaTotalCaixaTexto - compensacao) {
+			setTermosLido(true);
+		}
+	}
+
+	function handleClickCheckboxAceitarTermos() {
+		setTermoAceito(!termoAceito);
+	}
+
 	return (
 		<main>
 			<Conteudo
@@ -14,7 +32,10 @@ export function Termos() {
 				}
 			>
 				<div id={styles['container-termos']}>
-					<div id={styles['div-texto-termos']}>
+					<div
+						id={styles['div-texto-termos']}
+						onScroll={handleScroll}
+					>
 						<h3>Termos de Serviço Sharks Bank</h3>
 						<br />
 						<p>
@@ -217,12 +238,16 @@ export function Termos() {
 							<input
 								type="checkbox"
 								id={styles['checkbox-termos']}
-								disabled
+								disabled={!termosLido}
+								onClick={handleClickCheckboxAceitarTermos}
 							/>
 							<span id={styles['span-checkbox-termos']}></span>
 						</label>
 					</div>
-					<button>teste</button>
+					<div className={styles.conteudoBotoes}>
+						<Botao nome={'Cancelar'} desabilitado={false} />
+						<Botao nome={'Aceito'} desabilitado={!termoAceito} />
+					</div>
 				</div>
 			</Conteudo>
 		</main>
