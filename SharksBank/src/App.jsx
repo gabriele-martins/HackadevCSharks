@@ -2,11 +2,12 @@ import React from "react";
 import { Home } from "./pages/Home";
 
 import "./App.css";
+import { Termos } from "./pages/Termos/index";
 
 export function App() {
-  return (
-    <div className="app">
-      <Home/>
-    </div> 
-  );
+  return <div className="App">
+
+    <Termos/>
+
+  </div>;
 }
