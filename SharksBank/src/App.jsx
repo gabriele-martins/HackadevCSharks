@@ -1,13 +1,14 @@
-import React from "react";
-import { Home } from "./pages/Home";
+import React from 'react';
+import { Home } from './pages/Home';
 
-import "./App.css";
-import { Termos } from "./pages/Termos/index";
+import './App.css';
+import { Termos } from './pages/Termos';
+import Transferencia from './pages/Transferencia';
 
 export function App() {
-  return <div className="App">
-
-    <Termos/>
-
-  </div>;
+	return (
+		<div className="App">
+			<Transferencia></Transferencia>
+		</div>
+	);
 }
