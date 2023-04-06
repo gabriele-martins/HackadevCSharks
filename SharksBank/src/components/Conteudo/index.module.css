@@ -19,10 +19,11 @@
   font-size: 2em;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  gap: 1rem;
 }
 
 .subTitulo {
-  margin-bottom: 5%;
   font-size: 1.5em;
   font-weight: 500;
   line-height: 1.32;
