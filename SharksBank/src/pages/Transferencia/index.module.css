@@ -7,20 +7,19 @@
 	padding: 2rem;
 	gap: 1rem;
 }
-.formularioTransferencia input {
-	margin: 0;
+
+.formularioTransferencia textarea {
+	resize: none;
 	width: 100%;
 	padding: 0.25rem;
+	
 }
 
-.formularioTransferencia span {
+.transferenciaContaDiv {
 	display: flex;
-	font-size: 0.75rem;
-	color: red;
-	margin: 0;
-	align-self: flex-start;
+	gap: 1rem;
 }
 
-#trasferencia-valor-input::before {
-	content: "R$ ";
+.inputAgencia {
+	width: 60%;
 }
