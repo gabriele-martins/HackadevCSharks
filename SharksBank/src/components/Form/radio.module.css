@@ -3,7 +3,7 @@
     font-size: 14px;
     justify-content: space-between;
     height: 2em;
-    width: 30%;
+    width: 33%;
     background-color: #ffffff;
     border: 1px solid #787777ee;
     border-radius: 5px;
@@ -15,7 +15,6 @@
     font-size: 13px;
     text-align: center;
     line-height: 2.2vw;
-    flex: 1;
 }
   
 .inputGenero input {

@@ -1,41 +1,69 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import style from "./form.module.css";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
 import Radio from "./Radio";
+
 export function Form() {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+
+    const registrarUsuario = (data) => {
+        console.log(data);
+    };
+
     return (
         <>
-            <form>
+            <form onSubmit={handleSubmit(registrarUsuario)}>
                 <Input
                     type={"text"}
-                    name={"nome"}
+                    name={"Nome"}
                     placeholder={"Nome completo"}
+                    register={register}
+                    errors={errors}
                 />
                 <div id="outros-dados">
                     <Input
                         type={"email"}
-                        name={"email"}
+                        name={"E-mail"}
                         placeholder={"E-mail"}
+                        register={register}
+                        errors={errors}
                     />
-
                     <Input
                         type={"text"}
-                        name={"celular"}
+                        name={"Celular"}
                         placeholder={"Celular"}
+                        register={register}
+                        errors={errors}
                     />
-                    <Input type={"text"} name={"cpf"} placeholder={"CPF"} />
+                    <Input
+                        type={"text"}
+                        name={"CPF"}
+                        placeholder={"CPF"}
+                        register={register}
+                        errors={errors}
+                    />
                     <Input
                         type={"password"}
-                        name={"senha"}
+                        name={"Senha"}
                         placeholder={"Nova senha"}
+                        register={register}
+                        errors={errors}
                     />
                 </div>
                 <div className={style.selectRadioTitle}>
                     <div>Data de nascimento</div>
                     <div className={style.selectRadioFlex}>
-                        <select name="diaNascimento" id="dia">
-                            <option value="1">1</option>
+                        <select
+                            name="diaNascimento"
+                            id="dia"
+                            {...register("diaNascimento")}
+                        >
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -67,7 +95,11 @@ export function Form() {
                             <option value="30">30</option>
                             <option value="31">31</option>
                         </select>
-                        <select name="mesNascimento" id="mes">
+                        <select
+                            name="mesNascimento"
+                            id="mes"
+                            {...register("mesNascimento")}
+                        >
                             <option value="1">Janeiro</option>
                             <option value="2">Fevereiro</option>
                             <option value="3">Março</option>
@@ -81,7 +113,11 @@ export function Form() {
                             <option value="11">Novembro</option>
                             <option value="12">Dezembro</option>
                         </select>
-                        <select name="anoNascimento" id="ano">
+                        <select
+                            name="anoNascimento"
+                            id="ano"
+                            {...register("anoNascimento")}
+                        >
                             <option value="2023">2023</option>
                             <option value="2022">2022</option>
                             <option value="2021">2021</option>
@@ -219,9 +255,9 @@ export function Form() {
                 </div>
                 <hr />
                 <SubmitButton
-                    type={"submit"}
-                    id={"cadastro"}
+                    type={"Submit"}
                     text={"Cadastre-se"}
+                    id={"cadastro"}
                 />
             </form>
         </>
