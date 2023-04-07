@@ -15,8 +15,8 @@ export function Conteudo({
 				<h2>{titulo}</h2>
 				<span className={styles.subTitulo}>{subTitulo}</span>
 				<p>{descricao}</p>
+        		<p>{descricaoContinuacao}</p>
 				{conteudoPainelEsquerdo}
-        <p>{descricaoContinuacao}</p>
 			</div>
 			<div className={styles.containerConteudoExterno}>{children}</div>
 		</div>
