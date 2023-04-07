@@ -13,11 +13,15 @@ export function CampoInput({
 	tamanhoMax,
 	tamanhoMin,
 	desabilitar,
+	tipo,
+	placeholder
 }) {
 	return (
 		<div className={styles.containerInput}>
 			<label htmlFor={idNome}>{labelNome}</label>
 			<input
+				type={tipo}
+				placeholder={placeholder}
 				name={nome}
 				disabled={desabilitar}
 				maxLength={tamanhoMax}

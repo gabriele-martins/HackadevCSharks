@@ -7,7 +7,7 @@ export function Conteudo({
 	subTitulo,
 	descricao,
 	conteudoPainelEsquerdo,
-	children,
+	children, descricaoContinuacao,
 }) {
 	return (
 		<div className={styles.conteudo}>
@@ -15,6 +15,7 @@ export function Conteudo({
 				<h2>{titulo}</h2>
 				<span className={styles.subTitulo}>{subTitulo}</span>
 				<p>{descricao}</p>
+        		<p>{descricaoContinuacao}</p>
 				{conteudoPainelEsquerdo}
 			</div>
 			<div className={styles.containerConteudoExterno}>{children}</div>
