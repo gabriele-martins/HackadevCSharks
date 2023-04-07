@@ -1,58 +1,35 @@
 import React from "react";
 import style from "./form.module.css";
+import Input from "./Input";
+import SubmitButton from "./SubmitButton";
+import Radio from "./Radio";
 export function Form() {
     return (
         <>
             <form>
-                <div className={style.input}>
-                    <input
-                        type="text"
-                        name="nome"
-                        id="nome"
-                        placeholder="Nome completo"
-                        className="required"
-                    />
-                </div>
-
+                <Input
+                    type={"text"}
+                    name={"nome"}
+                    placeholder={"Nome completo"}
+                />
                 <div id="outros-dados">
-                    <div className={style.input}>
-                        <input
-                            type="text"
-                            name="cpf"
-                            id="cpf"
-                            placeholder="CPF"
-                            maxlength="14"
-                            className="required"
-                        />
-                    </div>
-                    <div className={style.input}>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="E-mail"
-                            className="required"
-                        />
-                    </div>
-                    <div className={style.input}>
-                        <input
-                            type="text"
-                            name="celular"
-                            id="celular"
-                            placeholder="Celular"
-                            maxlength="15"
-                            className="required"
-                        />
-                    </div>
-                    <div className={style.input}>
-                        <input
-                            type="password"
-                            name="senha"
-                            id="senha"
-                            placeholder="Nova senha"
-                            className="required"
-                        />
-                    </div>
+                    <Input
+                        type={"email"}
+                        name={"email"}
+                        placeholder={"E-mail"}
+                    />
+
+                    <Input
+                        type={"text"}
+                        name={"celular"}
+                        placeholder={"Celular"}
+                    />
+                    <Input type={"text"} name={"cpf"} placeholder={"CPF"} />
+                    <Input
+                        type={"password"}
+                        name={"senha"}
+                        placeholder={"Nova senha"}
+                    />
                 </div>
                 <div className={style.selectRadioTitle}>
                     <div>Data de nascimento</div>
@@ -235,41 +212,17 @@ export function Form() {
                 <div className={style.selectRadioTitle}>
                     <div>Gênero</div>
                     <div className={style.selectRadioFlex}>
-                        <div className={style.inputGenero}>
-                            <label for="">Feminino</label>
-                            <input
-                                type="radio"
-                                name="genero"
-                                id="fem"
-                                value="1"
-                            />
-                        </div>
-                        <div className={style.inputGenero}>
-                            <label for="">Masculino</label>
-                            <input
-                                type="radio"
-                                name="genero"
-                                id="masc"
-                                value="2"
-                            />
-                        </div>
-                        <div className={style.inputGenero}>
-                            <label for="">Outros</label>
-                            <input
-                                type="radio"
-                                name="genero"
-                                id="outros"
-                                value="3"
-                            />
-                        </div>
+                        <Radio id={"fem"} value={"1"} text={"Feminino"} />
+                        <Radio id={"masc"} value={"2"} text={"Masculino"} />
+                        <Radio id={"outros"} value={"3"} text={"Outros"} />
                     </div>
                 </div>
                 <hr />
-                <div className={style.btn}>
-                    <button type="submit" id="cadastro" disabled>
-                        Cadastre-se
-                    </button>
-                </div>
+                <SubmitButton
+                    type={"submit"}
+                    id={"cadastro"}
+                    text={"Cadastre-se"}
+                />
             </form>
         </>
     );

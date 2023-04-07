@@ -3,3 +3,9 @@
     padding: 0; 
 }
 
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid red;
+}

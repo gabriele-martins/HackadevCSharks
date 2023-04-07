@@ -1,0 +1,16 @@
+.input {
+    margin-bottom: 12px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 2.1rem;
+    border: 1px solid #787777ee;
+    width: 23rem;
+}
+  
+.input input {
+    width: 95%;
+    border: none;
+    outline: none;
+    transform: translateY(18%);
+    margin-left: 8px;
+}
