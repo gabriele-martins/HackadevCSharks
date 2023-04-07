@@ -1,0 +1,13 @@
+.containerInput input {
+	margin: 0;
+	width: 100%;
+	padding: 0.25rem;
+}
+
+.containerInput span {
+	display: flex;
+	font-size: 0.75rem;
+	color: red;
+	margin: 0;
+	align-self: flex-start;
+}
