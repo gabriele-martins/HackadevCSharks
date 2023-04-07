@@ -1,0 +1,25 @@
+.formularioTransferencia {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	background-color: white;
+	padding: 2rem;
+	gap: 1rem;
+}
+
+.formularioTransferencia textarea {
+	resize: none;
+	width: 100%;
+	padding: 0.25rem;
+	
+}
+
+.transferenciaContaDiv {
+	display: flex;
+	gap: 1rem;
+}
+
+.inputAgencia {
+	width: 60%;
+}
