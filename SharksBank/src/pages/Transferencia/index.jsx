@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form';
-
 import { Conteudo } from '../../components/Conteudo';
 import { CampoInput } from '../../components/Inputs';
 import { Botao } from '../../components/Botao';
+import { Mascara } from '../../util/tipoMascara';
 
 import styles from './index.module.css';
 
@@ -18,8 +18,19 @@ export function Transferencia() {
 
 	return (
 		<Conteudo
+			esconderTextosPainelEsquerdo={true}
 			conteudoPainelEsquerdo={
-				<div className={styles.infoConta}>Suave</div>
+				<div className={styles.infoConta}>
+					<span className={styles.infoContaTitle}>Olá, Tubarão</span>
+					<p className={styles.infoContaLabel}>Agência</p>
+					<p className={styles.infoContaValue}>3002</p>
+					<p className={styles.infoContaLabel}>Conta</p>
+					<p className={styles.infoContaValue}>01493238-7</p>
+					<p className={styles.infoContaLabel}>Saldo Disponível</p>
+					<p className={styles.infoContaValue}>R$ 2.000,00</p>
+					<p className={styles.infoContaLabel}>Saldo</p>
+					<p className={styles.infoContaValue}>R$ 1.000,00</p>
+				</div>
 			}
 		>
 			<form
@@ -27,7 +38,7 @@ export function Transferencia() {
 				onSubmit={handleSubmit(onSubmit)}
 			>
 				<div className={styles.transferenciaContaDiv}>
-					<div className={styles.inputAgencia}>
+					<div id={styles['input-agencia']}>
 						<CampoInput
 							nome={'agencia'}
 							placeholder={'Agencia'}
@@ -41,6 +52,7 @@ export function Transferencia() {
 							obrigatorio={!watch('cpf')}
 						/>
 					</div>
+
 					<CampoInput
 						nome={'conta'}
 						placeholder={'Conta'}
@@ -57,12 +69,13 @@ export function Transferencia() {
 				<CampoInput
 					nome={'cpf'}
 					placeholder={'CPF'}
+					mascara={Mascara.CPF}
 					campoReferencia={'cpf'}
-					padrao={/^[0-9]*$/}
+					padrao={/^[0-9]|-|.*$/}
 					register={register}
 					errors={errors}
-					tamanhoMax={11}
-					tamanhoMin={11}
+					tamanhoMax={14}
+					tamanhoMin={14}
 					desabilitar={watch('conta') || watch('agencia')}
 					obrigatorio={!(watch('conta') || watch('agencia'))}
 				/>
@@ -70,8 +83,10 @@ export function Transferencia() {
 				<CampoInput
 					placeholder={'Valor'}
 					campoReferencia={'valor'}
+					mascara={Mascara.ValorMonetario}
 					obrigatorio={true}
-					padrao={/^[0-9]*$/}
+					tamanhoMax={14}
+					padrao={/^[0-9]|,|.*$/}
 					register={register}
 					errors={errors}
 				/>
@@ -85,6 +100,7 @@ export function Transferencia() {
 				/>
 
 				<CampoInput
+					tipo={'password'}
 					placeholder={'Senha'}
 					campoReferencia={'senha'}
 					tamanhoMax={4}
