@@ -6,9 +6,10 @@ import { Header } from '../../components/Header';
 import { Menu } from '../../components/Menu';
 import { Botao } from '../../components/Botao';
 
-import { Footer } from '../../components/Footer';
+
 
 import styles from './style.module.css';
+import { Footer } from '../../components/Footer';
 
 export function Home(){
 
