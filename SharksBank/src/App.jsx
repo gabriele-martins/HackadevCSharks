@@ -1,14 +1,12 @@
 import React from "react";
 
-
 import "./App.css";
-import Senha from "./pages/Senha";
-import { Home } from "./pages/Home";
+import { Senha } from "./pages/Senha";
 
 export function App() {
   return (
     <div className="app">
-      <Senha/>
-    </div> 
+      <Senha />
+    </div>
   );
 }
