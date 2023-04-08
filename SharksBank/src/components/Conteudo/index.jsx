@@ -7,15 +7,15 @@ export function Conteudo({
 	subTitulo,
 	descricao,
 	conteudoPainelEsquerdo,
-	children, descricaoContinuacao,
+	children, descricaoContinuacao, esconderTextosPainelEsquerdo
 }) {
 	return (
 		<div className={styles.conteudo}>
 			<div className={styles.containerText}>
-				<h2>{titulo}</h2>
-				<span className={styles.subTitulo}>{subTitulo}</span>
-				<p>{descricao}</p>
-        		<p>{descricaoContinuacao}</p>
+				<h2 hidden = {esconderTextosPainelEsquerdo}>{titulo}</h2>
+				<span hidden = {esconderTextosPainelEsquerdo} className={styles.subTitulo}>{subTitulo}</span>
+				<p hidden = {esconderTextosPainelEsquerdo}>{descricao}</p>
+        		<p hidden = {esconderTextosPainelEsquerdo}>{descricaoContinuacao}</p>
 				{conteudoPainelEsquerdo}
 			</div>
 			<div className={styles.containerConteudoExterno}>{children}</div>
