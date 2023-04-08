@@ -39,20 +39,28 @@ export default function Extrato() {
                             <p>01493238-7</p>
                         </div>
                         <div className={styles.subtitulos}>
-                            <p>Última Transação</p>
+                            <p>Seu saldo é: </p>
                         </div>
                         <div className={styles.conteudoSubtitulos}>
-                            <p>04/04 13:00 R$ 50,00</p>
+                            <p>R$ 1.000,00</p>
                         </div>
                     </div>
                 </div>
                 <div className={styles.colunaEsquerda}>
-                    <div className={styles.mes}>Abril</div>
-                    <Transacao />
-                    <Transacao />
-                    <div className={styles.mes}>Março</div>
-                    <Transacao />
-                    <Transacao />
+                    <div className={styles.controlScroll}>
+                        <div className={styles.mes}>Abril</div>
+                        <Transacao />
+                        <Transacao />
+                        <div className={styles.mes}>Março</div>
+                        <Transacao />
+                        <Transacao />
+                        <div className={styles.mes}>Fevereiro</div>
+                        <Transacao />
+                        <Transacao />
+                    </div>
+                    <div className={styles.btn}>
+                        <Botao desabilitado={false} nome={"Exportar"} />
+                    </div>
                 </div>
             </div>
             <Footer />
