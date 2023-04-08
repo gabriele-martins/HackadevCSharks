@@ -6,7 +6,7 @@ import { Botao } from '../../components/Botao';
 
 import styles from './index.module.css';
 
-export default function Transferencia() {
+export function Transferencia() {
 	const {
 		register,
 		handleSubmit,
@@ -30,8 +30,7 @@ export default function Transferencia() {
 					<div className={styles.inputAgencia}>
 						<CampoInput
 							nome={'agencia'}
-							labelNome={'Agencia'}
-							idNome={'agencia-id'}
+							placeholder={'Agencia'}
 							campoReferencia={'agencia'}
 							padrao={/^[0-9]*$/}
 							register={register}
@@ -44,8 +43,7 @@ export default function Transferencia() {
 					</div>
 					<CampoInput
 						nome={'conta'}
-						labelNome={'Conta'}
-						idNome={'conta-id'}
+						placeholder={'Conta'}
 						campoReferencia={'conta'}
 						padrao={/^[0-9]*$/}
 						register={register}
@@ -58,8 +56,7 @@ export default function Transferencia() {
 				</div>
 				<CampoInput
 					nome={'cpf'}
-					labelNome={'CPF'}
-					idNome={'cpf-id'}
+					placeholder={'CPF'}
 					campoReferencia={'cpf'}
 					padrao={/^[0-9]*$/}
 					register={register}
@@ -71,8 +68,7 @@ export default function Transferencia() {
 				/>
 
 				<CampoInput
-					labelNome={'Valor'}
-					idNome={'valor-id'}
+					placeholder={'Valor'}
 					campoReferencia={'valor'}
 					obrigatorio={true}
 					padrao={/^[0-9]*$/}
@@ -80,16 +76,24 @@ export default function Transferencia() {
 					errors={errors}
 				/>
 
-				<div>
-					<label htmlFor="transferencia-mensagem">Mensagem</label>
+				<textarea
+					placeholder={'Mensagem (opcional)'}
+					rows={4}
+					maxLength={100}
+					id="transferencia-mensagem"
+					{...register('mensagem')}
+				/>
 
-					<textarea
-						rows={4}
-						maxLength={100}
-						id="transferencia-mensagem"
-						{...register('mensagem')}
-					/>
-				</div>
+				<CampoInput
+					placeholder={'Senha'}
+					campoReferencia={'senha'}
+					tamanhoMax={4}
+					tamanhoMin={4}
+					padrao={/^[0-9]*$/}
+					obrigatorio={true}
+					register={register}
+					errors={errors}
+				/>
 
 				<Botao type="submit" nome={'Enviar'} />
 			</form>
