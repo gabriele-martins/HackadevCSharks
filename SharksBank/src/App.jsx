@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Home } from "./pages/Home";
-import { Termos } from "./pages/Termos/index";
-import { Login } from "./pages/Login";
+import Extrato from "./pages/Extrato";
 
 export function App() {
     return (
         <div className="App">
-            <Login />
+            <Extrato />
         </div>
     );
 }

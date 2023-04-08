@@ -23,3 +23,7 @@
 .inputAgencia {
 	width: 60%;
 }
+
+.mes {
+	border: 1px solid red;
+}

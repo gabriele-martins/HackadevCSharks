@@ -1,0 +1,27 @@
+.transacaoContainer {
+    width: 100%;
+    margin: 5px 0px 8px 0px;
+}
+
+.controlDados  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.controlDados div {
+    font-size: 0.86rem;
+    border: 1px solid red;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+  }
+  
+td {
+    text-align: left;
+}
+
+  .direita {
+    text-align: right;
+  }
