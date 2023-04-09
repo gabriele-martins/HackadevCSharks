@@ -5,7 +5,7 @@
     min-height: 70vh;
     display: flex;
     flex-wrap: wrap;
-    align-items: row;
+    align-items: center;
     justify-content: space-between;
     background-color: var(--conteudo-background);
     border-radius: 10px;
@@ -31,27 +31,54 @@
     justify-content: center;
 }
 
-.colunaDireitaTitulo{
-    color: #000;
+.colunaEsquerdaTitulo{
+    color: var(--preto);
     font-size: 24px;
+    width: 100%;
+}
+
+.colunaEsquerdaTexto{
+    width: 100%;
 }
 
 .subtitulos{
-    color: #00efc5;
+    color: var(--ciano);
     font-size:24px;
 }
 
 .conteudoSubtitulos{
-    color: #000;
+    color: var(--preto);
     font-size:24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.colunaEsquerdaTitulos{
-    color: #00efc5;
+.colunaDireitaTitulos{
+    color: var(--ciano);
     font-size:24px;
+    width: 100%;
+    text-align: right;
 }
 
-.colunaEsquerdaValores{
-    color: #000;
+.colunaDireitaValores{
+    color: var(--preto);
     font-size:24px;
+    width: 100%;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+.colunaDireitaValores h2{
+    color: var(--preto);
+    width: 100%;
+    text-align: right;
+}
+
+.botoesHeader{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  

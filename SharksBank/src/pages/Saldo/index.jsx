@@ -23,11 +23,11 @@ export function Saldo () {
         />
         
         <div className={styles.conteudoSaldo}>
-                <div className={styles.colunaDireita}>
-                   <div className={styles.colunaDireitaTitulo}>  
+                <div className={styles.colunaEsquerda}>
+                   <div className={styles.colunaEsquerdaTitulo}>  
                         <h1>Olá, Tubarão</h1>  
                     </div>
-                    <div className={styles.colunaDireitaTexto}>
+                    <div className={styles.colunaEsquerdaTexto}>
                         <div className={styles.subtitulos}>
                             <p>Agência</p>
                         </div>
@@ -48,23 +48,23 @@ export function Saldo () {
                         </div>
                     </div>
                 </div>
-                <div className={styles.colunaEsquerda}>                  
-                    <div className={styles.colunaEsquerdaTitulos}>  
+                <div className={styles.colunaDireita}>                  
+                    <div className={styles.colunaDireitaTitulos}>  
                         <h1>Seu saldo é</h1>
                     </div>
-                    <div className={styles.colunaEsquerdaValores}>  
-                        <h1>R$ 1.000,00</h1>
+                    <div className={styles.colunaDireitaValores}>  
+                        <h2>R$ 1.000,00</h2>
                     </div>
-                    <div className={styles.colunaEsquerdaTitulos}>
+                    <div className={styles.colunaDireitaTitulos}>
                         <p>Saldo Disponível</p>
                     </div>
-                    <div className={styles.colunaEsquerdaValores}>
+                    <div className={styles.colunaDireitaValores}>
                         <p>R$ 2.000,00</p>
                     </div> 
-                    <div className={styles.colunaEsquerdaTitulos}>
+                    <div className={styles.colunaDireitaTitulos}>
                         <p>Juros Aplicados</p>
                     </div>
-                    <div className={styles.colunaEsquerdaValores}>
+                    <div className={styles.colunaDireitaValores}>
                         <p>8% a.m.</p>
                     </div>                    
                 </div>                      
