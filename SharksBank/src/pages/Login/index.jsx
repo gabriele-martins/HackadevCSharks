@@ -1,32 +1,12 @@
-import { useForm } from "react-hook-form";
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Conteudo } from "../../components/Conteudo";
 import { CampoInput } from "../../components/Inputs";
 import { Botao } from "../../components/Botao";
+
 import styles from "./style.module.css";
+
 export function Login() {
-  // const [cpfValido, setCpfValido] = useState(false);
-  // const [senhaValida, setSenhaValida] = useState(false);
-  // const [cpfDados, setCpfDados] = useState("");
-  // const [senhaDados, setSenhaDados] = useState("");
-
-  // function handleCpfDados(evento) {
-  //   setCpfDados(evento.target.value);
-  //   if (cpfDados.trim() !== "") setCpfValido(true);
-  //   else setCpfValido(false);
-  //   console.log("cpf: " + cpfValido);
-  // }
-
-  // function handleSenhaDados(evento) {
-  //   setSenhaDados(evento.target.value);
-  //   if (senhaDados.trim() !== "") setSenhaValida(true);
-  //   else setSenhaValida(false);
-  //   console.log("senha: " + senhaValida);
-  // }
-
-  // function handleHabilitaBotao() {
-  //   return senhaValida && cpfValido;
-  // }
   const {
     register,
     handleSubmit,
@@ -49,28 +29,6 @@ export function Login() {
       >
         <div id={styles["login-form-div"]}>
           <form onSubmit={handleSubmit(onSubmit)} id={styles["login-form"]}>
-            {/* <div className={styles.divFormItem}>
-              <input
-                type="text"
-                name="cpf"
-                id="cpf"
-                value={cpfDados}
-                onInput={handleCpfDados}
-                onBlur={handleCpfDados}
-                placeholder="Digite seu CPF"
-              />
-            </div>
-            <div className={styles.divFormItem}>
-              <input
-                type="password"
-                name="senha"
-                id="senha"
-                value={senhaDados}
-                onInput={handleSenhaDados}
-                onBlur={handleSenhaDados}
-                placeholder="Digite sua senha"
-              />
-            </div> */}
             <div className={styles.divFormItem}>
               <CampoInput
                 campoReferencia={"cpf"}
@@ -97,9 +55,9 @@ export function Login() {
             </div>
             <div className={styles.divFormItem}>
               <Botao
+                funcaoDoBotao={"/saldo"}
                 nome={"Entrar"}
                 type="submit"
-                //desabilitado={!(cpfValido && senhaValida)}
               ></Botao>
             </div>
             <div className={styles.divFormItem}>
