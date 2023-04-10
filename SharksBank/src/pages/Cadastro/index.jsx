@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderCadastro } from "../../components/HeaderCadastro/HeaderCadastro";
+import { Header } from "../../components/Header";
 import { Menu } from "../../components/Menu";
 import { Botao } from "../../components/Botao";
 import { Footer } from "../../components/Footer";
@@ -12,16 +12,10 @@ export function Cadastro() {
   return (
     <>
       <div className={styles.body}>
-        <HeaderCadastro
+        <Header
           menu={<Menu></Menu>}
           botoes={
-            <div className={styles.botoesHeader}>
-              <Botao
-                funcaoDoBotao={"/login"}
-                desabilitado={false}
-                nome={"Acessar"}
-              />
-            </div>
+            <Botao pagina={"/login"} desabilitado={false} nome={"Acessar"} />
           }
         />
         <Conteudo

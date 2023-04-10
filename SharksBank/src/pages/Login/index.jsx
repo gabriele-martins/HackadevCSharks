@@ -1,22 +1,41 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { Header } from "../../components/Header";
+import { Menu } from "../../components/Menu";
 import { Conteudo } from "../../components/Conteudo";
 import { CampoInput } from "../../components/Inputs";
 import { Botao } from "../../components/Botao";
+import { Footer } from "../../components/Footer";
 
 import styles from "./style.module.css";
 
 export function Login() {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    navigate("/saldo");
+  };
 
   return (
     <>
+      <Header
+        menu={<Menu></Menu>}
+        botoes={
+          <Botao
+            pagina={"/termos"}
+            desabilitado={false}
+            nome={"Abrir sua conta"}
+          />
+        }
+      />
       <Conteudo
         titulo={"Sharks Bank"}
         subTitulo={"O banco digital que nada com você!"}
@@ -54,11 +73,7 @@ export function Login() {
               />
             </div>
             <div className={styles.divFormItem}>
-              <Botao
-                funcaoDoBotao={"/saldo"}
-                nome={"Entrar"}
-                type="submit"
-              ></Botao>
+              <Botao nome={"Entrar"} type="submit"></Botao>
             </div>
             <div className={styles.divFormItem}>
               <a href="">Esqueceu a senha?</a>
@@ -66,6 +81,7 @@ export function Login() {
           </form>
         </div>
       </Conteudo>
+      <Footer></Footer>
     </>
   );
 }

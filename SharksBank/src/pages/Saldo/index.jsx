@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Conteudo } from "../../components/Conteudo";
+import React from "react";
 import { Header } from "../../components/Header";
 import { MenuTransacoes } from "../../components/MenuTransacoes";
 import { Botao } from "../../components/Botao";
@@ -14,7 +13,7 @@ export function Saldo() {
         menu={<MenuTransacoes></MenuTransacoes>}
         botoes={
           <div className={styles.botoesHeader}>
-            <Botao desabilitado={false} nome={"Sair"} />
+            <Botao pagina={"/"} desabilitado={false} nome={"Sair"} />
           </div>
         }
       />

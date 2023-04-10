@@ -7,7 +7,9 @@ export function Header({ menu, botoes }) {
   return (
     <div className={styles.header}>
       <div className={styles.headerImg}>
-        <img src={logo} alt="" />
+        <a href="/">
+          <img src={logo} alt="" />
+        </a>
       </div>
       <div className={styles.headerMenu}>{menu}</div>
       <div className={styles.headerBotoes}>{botoes}</div>

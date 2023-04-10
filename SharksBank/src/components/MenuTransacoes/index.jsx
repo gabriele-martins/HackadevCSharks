@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./index.module.css";
 
@@ -8,9 +8,9 @@ export function MenuTransacoes() {
       <nav className={styles.nav}>
         <a href="#">Sobre</a>
         <a href="#">Ajuda</a>
-        <a href="#">Saldo</a>
-        <a href="#">Histórico</a>
-        <a href="#">Transferir</a>
+        <a href="/saldo">Saldo</a>
+        <a href="/extrato">Histórico</a>
+        <a href="/transferir">Transferir</a>
       </nav>
     </section>
   );

@@ -20,15 +20,11 @@ export function Home() {
         botoes={
           <div className={styles.botoesHeader}>
             <Botao
-              funcaoDoBotao={"/termos"}
+              pagina={"/termos"}
               desabilitado={false}
               nome={"Abrir sua conta"}
             />
-            <Botao
-              funcaoDoBotao={"/login"}
-              desabilitado={false}
-              nome={"Acessar"}
-            />
+            <Botao pagina={"/login"} desabilitado={false} nome={"Acessar"} />
           </div>
         }
       />
@@ -58,7 +54,7 @@ export function Home() {
           </div>
           <div className={styles.botaoTeste}>
             <Botao
-              funcaoDoBotao={"/termos"}
+              pagina={"/termos"}
               desabilitado={false}
               nome={"Abra sua conta"}
             />
