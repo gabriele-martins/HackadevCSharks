@@ -21,7 +21,7 @@ export function Saldo() {
       <div className={styles.conteudoSaldo}>
         <div className={styles.colunaEsquerda}>
           <div className={styles.colunaEsquerdaTitulo}>
-            <h1>Olá, Tubarão</h1>
+            <h2>Olá, Tubarão</h2>
           </div>
           <div className={styles.colunaEsquerdaTexto}>
             <div className={styles.subtitulos}>
@@ -46,7 +46,7 @@ export function Saldo() {
         </div>
         <div className={styles.colunaDireita}>
           <div className={styles.colunaDireitaTitulos}>
-            <h1>Seu saldo é</h1>
+            <h2>Seu saldo é</h2>
           </div>
           <div className={styles.colunaDireitaValores}>
             <h2>R$ 1.000,00</h2>

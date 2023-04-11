@@ -1,50 +1,55 @@
+.transferenciaRealizada {
+  overflow: auto;
+  max-height: 300px;
+}
+
 .transferenciaInfo {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin: 0.5rem 0;
-	row-gap: 0.5rem;
-	width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0.5rem 0;
+  row-gap: 0.5rem;
+  width: 100%;
 }
 
 textarea {
-	resize: none;
-	width: 100%;
-	padding: 0.25rem;
-	border: 1px solid #d6d6d6;
-	border-radius: 0.5em;
-	margin: 0;
+  resize: none;
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 0.5em;
+  margin: 0;
 }
 
 .transferenciaMensagem {
-	width: 100%;
+  width: 100%;
 }
 
 h1 {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 h3,
 h2 {
-	color: var(--ciano);
+  color: var(--ciano);
 }
 
 .transferenciaInfo h2 {
-	margin: 0;
-	color: black;
+  margin: 0;
+  color: black;
 }
 
 .transferenciaInfoValue {
-	margin: 0;
-	margin-left: auto;
-	font-size: x-large;
-	font-weight: bold;
+  margin: 0;
+  margin-left: auto;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 .transferenciaInfo h4 {
-	margin: 0;
+  margin: 0;
 }
 
 .transferenciaInfo p {
-	margin: 0;
-	margin-left: auto;
+  margin: 0;
+  margin-left: auto;
 }

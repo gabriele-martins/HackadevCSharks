@@ -28,6 +28,7 @@ export function Transferencia() {
   });
 
   const {
+    reset,
     register,
     handleSubmit,
     watch,
@@ -49,6 +50,7 @@ export function Transferencia() {
     });
 
     setFormTransfererencia(true);
+    reset();
   };
 
   return (

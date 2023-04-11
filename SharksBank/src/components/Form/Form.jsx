@@ -4,8 +4,10 @@ import style from "./form.module.css";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
 import Radio from "./Radio";
+import { useNavigate } from "react-router-dom";
 
 export function Form() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -14,6 +16,7 @@ export function Form() {
 
   const registrarUsuario = (data) => {
     console.log(data);
+    navigate("/saldo");
   };
 
   return (
