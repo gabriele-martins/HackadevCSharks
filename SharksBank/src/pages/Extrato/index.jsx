@@ -13,17 +13,13 @@ export function Extrato() {
     <>
       <Header
         menu={<MenuTransacoes></MenuTransacoes>}
-        botoes={
-          <div className={styles.botoesHeader}>
-            <Botao desabilitado={false} nome={"Sair"} />
-          </div>
-        }
+        botoes={<Botao pagina={"/"} desabilitado={false} nome={"Sair"} />}
       />
 
       <div className={styles.conteudoSaldo}>
         <div className={styles.colunaDireita}>
           <div className={styles.colunaDireitaTitulo}>
-            <h1>Olá, Tubarão</h1>
+            <h2>Olá, Tubarão</h2>
           </div>
           <div className={styles.colunaDireitaTexto}>
             <div className={styles.subtitulos}>

@@ -64,14 +64,14 @@ export function Transferencia() {
         conteudoPainelEsquerdo={
           <div className={styles.infoConta}>
             <span className={styles.infoContaTitle}>Olá, Tubarão</span>
-            <p className={styles.infoContaLabel}>Agência</p>
-            <p className={styles.infoContaValue}>3002</p>
-            <p className={styles.infoContaLabel}>Conta</p>
-            <p className={styles.infoContaValue}>01493238-7</p>
-            <p className={styles.infoContaLabel}>Saldo Disponível</p>
-            <p className={styles.infoContaValue}>R$ 2.000,00</p>
-            <p className={styles.infoContaLabel}>Saldo</p>
-            <p className={styles.infoContaValue}>R$ 1.000,00</p>
+            <p id={styles["infoContaLabel"]}>Agência</p>
+            <p id={styles["infoContaValue"]}>3002</p>
+            <p id={styles["infoContaLabel"]}>Conta</p>
+            <p id={styles["infoContaValue"]}>01493238-7</p>
+            <p id={styles["infoContaLabel"]}>Saldo Disponível</p>
+            <p id={styles["infoContaValue"]}>R$ 2.000,00</p>
+            <p id={styles["infoContaLabel"]}>Saldo</p>
+            <p id={styles["infoContaValue"]}>R$ 1.000,00</p>
           </div>
         }
       >
