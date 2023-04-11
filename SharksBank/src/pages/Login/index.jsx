@@ -42,9 +42,6 @@ export function Login() {
         descricao={
           "Com o Sharks Bank você nunca está sozinho em suas transações bancárias e investimentos, pois o banco nada junto com você em direção ao sucesso financeiro."
         }
-        descricaoContinuacao={
-          "Conheça o Sharks Bank hoje e mergulhe no futuro das finanças digitais."
-        }
       >
         <div id={styles["login-form-div"]}>
           <form onSubmit={handleSubmit(onSubmit)} id={styles["login-form"]}>
@@ -76,7 +73,7 @@ export function Login() {
               <Botao nome={"Entrar"} type="submit"></Botao>
             </div>
             <div className={styles.divFormItem}>
-              <a href="">Esqueceu a senha?</a>
+              <Link to="">Esqueceu a senha?</Link>
             </div>
           </form>
         </div>
