@@ -1,15 +1,15 @@
-import React from 'react';
-import './App.css';
-import { Home } from './pages/Home';
-import {Saldo} from './pages/Saldo'
-import { Termos } from './pages/Termos/index';
-import { Login } from './pages/Login';
-import { Transferencia } from './pages/Transferencia';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./Router";
+
+import "./App.css";
 
 export function App() {
-	return (
-		<div className="App">
-			<Saldo/>
-		</div>
-	);
+  return (
+    <div className="app">
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </div>
+  );
 }

@@ -8,13 +8,12 @@
   border-radius: 0.5em;
   padding: 0.875em 1em;
   color: var(--ciano);
-  background-color: var(--branco);
+  background-color: transparent;
   border: 0.0625em solid var(--ciano);
   white-space: nowrap;
 }
 
 .botao button:hover {
-  border: medium none;
   background-color: var(--ciano);
   color: var(--branco);
 }
