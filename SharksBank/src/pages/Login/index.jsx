@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Header } from "../../components/Header";
 import { Menu } from "../../components/Menu";
@@ -73,7 +73,7 @@ export function Login() {
               <Botao nome={"Entrar"} type="submit"></Botao>
             </div>
             <div className={styles.divFormItem}>
-              <Link to="">Esqueceu a senha?</Link>
+              <Link to="/senha">Esqueceu a senha?</Link>
             </div>
           </form>
         </div>

@@ -1,19 +1,35 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 import { Botao } from "../../components/Botao";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
+import { Menu } from "../../components/Menu";
 import { Conteudo } from "../../components/Conteudo";
+import { CampoInput } from "../../components/Inputs";
+import { Mascara } from "../../util/tipoMascara";
 
-import styles from "./style.module.css";
+import styles from "./index.module.css";
 
 export function Senha() {
+  const {
+    reset,
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({ mode: "onChange" });
+
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
+
   return (
     <>
       <Header
+        menu={<Menu></Menu>}
         botoes={
-          <div>
-            <Botao desabilitado={false} nome={"Acessar"} />
-          </div>
+          <Botao pagina={"/login"} desabilitado={false} nome={"Acessar"} />
         }
       />
       <Conteudo
@@ -23,40 +39,24 @@ export function Senha() {
         }
       >
         <div className={styles.colunaEsquerda}>
-          <div>
-            <input type="cpf" name="cpf" placeholder="Insira seu CPF" />
-            <div className={styles.botaoDeEnviar}>
-              <Botao desabilitado={false} nome={"Enviar"} />
-            </div>
-          </div>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <CampoInput
+              nome={"cpf"}
+              placeholder={"CPF"}
+              mascara={Mascara.CPF}
+              campoReferencia={"cpf"}
+              padrao={/^[0-9]|-|.*$/}
+              register={register}
+              errors={errors}
+              tamanhoMax={14}
+              tamanhoMin={14}
+              obrigatorio={true}
+            />
+            <Botao type="submit" desabilitado={false} nome={"Enviar"} />
+          </form>
         </div>
       </Conteudo>
       <Footer />
     </>
   );
-}
-
-{
-  /* <div className={styles.conteudoSenha}>
-<div className={styles.colunaDireita}>
-<div className={styles.colunaDireitaTitulo}>
-    <h1 className={styles.textoAzul}>Recupere sua senha</h1>
-</div>
-<div className={styles.colunaDireitaTexto}>
-    <div>
-    <p>
-        Digite seu CPF para receber um e-mail de recuperação de senha.
-    </p>
-    </div>
-</div>
-</div>
-<div className={styles.colunaEsquerda}>
-<div>
-    <input type="cpf" name="cpf" placeholder="Insira seu CPF" />
-    <div className={styles.botaoDeEnviar}>
-    <Botao desabilitado={false} nome={"Enviar"} />
-    </div>
-</div>
-</div>
-</div>  */
 }

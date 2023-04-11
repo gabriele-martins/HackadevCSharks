@@ -6,7 +6,7 @@ import { Saldo } from "./pages/Saldo";
 import { Termos } from "./pages/Termos";
 import { Transferencia } from "./pages/Transferencia";
 import { Extrato } from "./pages/Extrato";
-// import { Senha } from "./pages/Senha";
+import { Senha } from "./pages/Senha";
 
 export function Router() {
   return (
@@ -18,7 +18,7 @@ export function Router() {
       <Route path="/termos" element={<Termos />} />
       <Route path="/transferir" element={<Transferencia />} />
       <Route path="/extrato" element={<Extrato />} />
-      {/* <Route path="/senha" element={<Senha />} /> */}
+      <Route path="/senha" element={<Senha />} />
     </Routes>
   );
 }
