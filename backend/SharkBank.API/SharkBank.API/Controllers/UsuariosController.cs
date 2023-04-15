@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SharkBank.API.Data.Context;
 using SharkBank.API.Domain.DTO;
+using SharkBank.API.Domain.Interfaces.Services;
 using SharkBank.API.Domain.Models;
 
 namespace SharkBank.API.Controllers
@@ -13,18 +14,32 @@ namespace SharkBank.API.Controllers
     {
         private readonly DataContext _context;
         private readonly IMapper _mapper;
+        private readonly IUsuarioService _usuarioService;
 
-
-        public UsuariosController(DataContext context, IMapper mapper)
+        public UsuariosController(DataContext context, IMapper mapper, IUsuarioService usuarioService)
         {
             _context = context;
             _mapper = mapper;
+            _usuarioService = usuarioService;
         }
 
         [HttpGet]
-        public IEnumerable<Usuario> Get()
+        public async Task<IActionResult> Get()
         {
-            return _context.Usuarios.Include(campo => campo.Conta).ToList();
+            try
+            {
+                var usuarios = await _usuarioService.PegarUsuariosAsync(); 
+                if (usuarios == null)
+                {
+                    return NoContent();
+                }
+                return Ok(usuarios);
+            }
+            catch (Exception e)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                                       $"Erro ao tentar recuperar usuários. Erro: {e.Message}");
+            }
         }
 
         [HttpGet]
@@ -46,7 +61,7 @@ namespace SharkBank.API.Controllers
         [HttpPost]
         public IActionResult RegisterUser(
         [FromBody] UsuarioDTO usuarioRequisicao
-    )
+        )
         {
             var usuario = _mapper.Map<Usuario>(usuarioRequisicao);
             Random rnd = new Random ();
@@ -67,6 +82,62 @@ namespace SharkBank.API.Controllers
             var usuarioDTO = _mapper.Map<UsuarioDTO>(usuario);
 
             return CreatedAtAction(nameof(GetById), new { Id = usuario.Id }, usuarioDTO);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, Usuario model)
+        {
+            try
+            {
+                
+                if (model.Id != id)
+                {
+                    this.StatusCode(StatusCodes.Status409Conflict,
+                                    $"Você está tentando atualizar o usuário errado.");
+                }
+                var usuario = await _usuarioService.AtualizarUsuario(model);
+
+                if (usuario == null)
+                {
+                    return NoContent();
+                }
+                return Ok(usuario);
+            }
+            catch (Exception e)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                                       $"Erro ao tentar recuperar usuário com o ID {id}. Erro: {e.Message}");
+            }
+
+        }
+
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                var usuario = await _usuarioService.PegarUsuarioIdAsync(id); 
+
+                if (usuario == null)
+                {
+                    this.StatusCode(StatusCodes.Status409Conflict,
+                                  $"Você está deletar o usuário errado ou ele não existe.");
+                }
+                if (await _usuarioService.DeletarUsuario(id))
+                {
+                    return Ok(new {message = "Deletado"}); 
+                }
+                else
+                {
+                    return BadRequest("Ocorreu um problema ao tentar deletar o usuário.");
+                }
+            }
+            catch (Exception e)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                                       $"Erro ao tentar deletar o usuário com o ID {id}. Erro: {e.Message}");
+            }
         }
 
     }
