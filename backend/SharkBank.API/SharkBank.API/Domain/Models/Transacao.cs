@@ -1,9 +1,12 @@
 ﻿using SharkBank.API.Domain.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace SharkBank.API.Domain.Models
 {
     public class Transacao
     {
+        [Key]
+        [Required]
         public int Id { get; set; }
         public string Nome { get; set; }
         public DateTime Data { get; set; }

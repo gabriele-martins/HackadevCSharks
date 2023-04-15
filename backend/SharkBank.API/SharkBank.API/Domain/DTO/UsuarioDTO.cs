@@ -9,6 +9,6 @@ namespace SharkBank.API.Domain.DTO
         public string? Celular { get; set; }
         public string? Cpf { get; set; }
         public string? Senha { get; set; }
-        public ContaDTO Conta { get; set; }
+        public ContaDTO? Conta { get; set; }
     }
 }
