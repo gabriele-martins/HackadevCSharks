@@ -14,7 +14,7 @@
     border-radius: 10px;
     font-size: 1em;
     font-weight: bold;
-    cursor: pointer;
+    
   }
   
 .btn button:disabled,
@@ -23,4 +23,5 @@
     border: 1px solid #00efc5;
     color: #00efc5;
     cursor: auto;
+    cursor: pointer;
   }

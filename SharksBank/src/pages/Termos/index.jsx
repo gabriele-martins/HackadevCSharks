@@ -12,11 +12,14 @@ export function Termos() {
   const [termoAceito, setTermoAceito] = useState(false);
 
   function handleScroll(evento) {
-    let alturaTotalCaixaTexto = evento.target.scrollHeight;
-    let posicaoAtual = evento.target.scrollTop;
-    let compensacao = evento.target.offsetHeight;
-
-    if (posicaoAtual > alturaTotalCaixaTexto - compensacao) {
+    let alturaTotalCaixaTexto = evento.target.scrollHeight; //Altura total do scroll da caixa de texto
+    let posicaoAtual = evento.target.scrollTop; // Posição atual do scroll
+    let compensacao = evento.target.offsetHeight + 100; //
+  /*   console.log("Altura Caixa: " + alturaTotalCaixaTexto);
+    console.log("Posição Atual: " + posicaoAtual);
+    console.log("Conpensação: " + compensacao); */
+    
+    if (posicaoAtual >= alturaTotalCaixaTexto - compensacao) {
       setTermosLido(true);
     }
   }

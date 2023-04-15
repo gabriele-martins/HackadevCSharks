@@ -14,6 +14,7 @@ function Input({ type, name, placeholder, register, errors }) {
                 <div className={styles.errorMessage}>
                     O campo {name} está invalido.
                 </div>
+                
             )}
         </div>
     );
