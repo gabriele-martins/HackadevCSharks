@@ -19,51 +19,44 @@ export function Saldo() {
       />
 
       <div className={styles.conteudoSaldo}>
-        <div className={styles.colunaEsquerda}>
-          <div className={styles.colunaEsquerdaTitulo}>
-            <h2>Olá, Tubarão</h2>
+          <div className={styles.painelNomes}>
+            <h1>Olá, Tubarão</h1> <div>Ultimo Acesso: 15/04/2023</div>
           </div>
-          <div className={styles.colunaEsquerdaTexto}>
-            <div className={styles.subtitulos}>
-              <p>Agência</p>
-            </div>
-            <div className={styles.conteudoSubtitulos}>
-              <p>3002</p>
-            </div>
-            <div className={styles.subtitulos}>
-              <p>Conta</p>
-            </div>
-            <div className={styles.conteudoSubtitulos}>
-              <p>01493238-7</p>
-            </div>
-            <div className={styles.subtitulos}>
-              <p>Última Transação</p>
-            </div>
-            <div className={styles.conteudoSubtitulos}>
-              <p>04/04 13:00 R$ 50,00</p>
-            </div>
+          <div className={styles.painelSuperior}>
+              <div className={styles.dadosConta}>
+                <div className={styles.painelSuperiorlinha}>
+                  <div className={styles.coluna}>Agencia: </div>
+                  <div className={styles.coluna}>0001</div>
+                </div>
+                <div className={styles.painelSuperiorlinha}>
+                  <div className={styles.coluna}>Conta: </div>
+                  <div className={styles.coluna}>000001-1</div>
+                </div>
+              </div>
+              <div className={styles.dadosConta}>
+                <div className={styles.painelSuperiorlinha}>
+                  <div className={styles.coluna}>Saldo: </div>
+                  <div className={styles.coluna}>R$ 100</div>
+                </div>
+                <div className={styles.painelSuperiorlinha}>
+                  <div className={styles.coluna}>Juros: </div>
+                  <div className={styles.coluna}>2% a.m</div>
+                </div>
+              </div>
+              <div className={styles.dadosConta}>
+                <div className={styles.painelSuperiorlinha}>
+                  <div className={styles.coluna}>Crédito:</div>
+                  <div className={styles.coluna}>R$ 10</div>
+                </div>
+                <div className={styles.painelSuperiorlinha}>
+                  <div className={styles.coluna}>Fatura:</div>
+                  <div className={styles.coluna}>R$ 2</div>
+                </div>
+              </div>
+
+
           </div>
-        </div>
-        <div className={styles.colunaDireita}>
-          <div className={styles.colunaDireitaTitulos}>
-            <h2>Seu saldo é</h2>
-          </div>
-          <div className={styles.colunaDireitaValores}>
-            <h2>R$ 1.000,00</h2>
-          </div>
-          <div className={styles.colunaDireitaTitulos}>
-            <p>Saldo Disponível</p>
-          </div>
-          <div className={styles.colunaDireitaValores}>
-            <p>R$ 2.000,00</p>
-          </div>
-          <div className={styles.colunaDireitaTitulos}>
-            <p>Juros Aplicados</p>
-          </div>
-          <div className={styles.colunaDireitaValores}>
-            <p>8% a.m.</p>
-          </div>
-        </div>
+          <div className={styles.painelInferior}>GRAFICO DE VALORES TOTAIS DE GASTOS MENSAIS</div>
       </div>
 
       <Footer />
