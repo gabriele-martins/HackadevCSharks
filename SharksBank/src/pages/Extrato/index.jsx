@@ -21,7 +21,7 @@ export function Extrato() {
       <div className={styles.painelSuperior}>
         <div className={styles.painelSuperiorColuna}>
           <div className={styles.painelSuperiorTexto}>Titular: Tubarão</div>
-          
+          <button className={styles.botaoExportar}>Exportar Extrato</button>
         </div>
         <div className={styles.painelSuperiorColuna}>
           <div className={styles.painelSuperiorColunaTeste}>
@@ -30,8 +30,8 @@ export function Extrato() {
           </div>
         </div>
       </div>
-      <div >
-
+      <div className={styles.painelInferior}>
+              <TabelaTransacoes/>
       </div>
       </div>
       <Footer />

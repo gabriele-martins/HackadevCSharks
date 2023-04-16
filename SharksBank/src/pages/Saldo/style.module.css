@@ -25,18 +25,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 5px;
+
 }
 
 .painelNomes h1{
-  justify-self: flex-start;
   
   margin-left: 0px;
   margin-right: 0px;
 }
 
 .painelNomes div{
-  justify-self: flex-start;
-  
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -45,16 +44,17 @@
   width: 100%;
   height: 30%;
   
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.dadosConta{
+.blocoConteudo{
   width: 30%;
-  height: 100%;
-  background-color: var(--ciano);
+  height: 80%;
+  /* background-color: var(--ciano); */
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-300);
   border-radius: 10px;
 
   margin-left: 0px;
@@ -63,26 +63,40 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.painelSuperiorlinha{
-  width: 70%;
+.blocoConteudoLinha{
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  
  
 }
 
-.coluna{
-  font-size: 2rem;
+.blocoConteudoLinhaItem{
+  flex: 4;
+  height: 100%;
+  font-size: 1rem;
   
+}
+
+.blocoConteudoLinhaValue{
+  flex: 2;
+  height: 100%;
+  font-size: 1rem;  
+}
+
+
+.blocoConteudoLinhaIcone{
+  flex: 1;
+  height: 100%;
 }
 
 .painelInferior{
   width: 100%;
   height: 50%;
-  background-color: aqua;
 
 }
 

@@ -172,13 +172,23 @@ export function Transferencia() {
               mensagem={comprovanteProps.mensagem}
               erro={comprovanteProps.erro}
             />
+            <div className={styles.botoesComprovante}>
             <Botao
               funcaoDoBotao={() => {
                 setFormTransfererencia(false);
               }}
               pagina={"/transferir"}
-              nome={"Realizar Outra Transferência"}
+              nome={"Nova Transferência"}
             ></Botao>
+
+            <Botao
+              funcaoDoBotao={() => {
+                setFormTransfererencia(false);
+              }}
+              pagina={"/transferir"}
+              nome={"Compartilhar"}
+            ></Botao>
+            </div>
           </div>
         </div>
       </Conteudo>

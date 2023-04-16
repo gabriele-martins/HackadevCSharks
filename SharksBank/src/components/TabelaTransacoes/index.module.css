@@ -1,0 +1,35 @@
+.tabela{
+    
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    border-collapse: separate;
+    border-spacing: 0 10px;   
+}
+
+tbody tr{
+    width: 90%;
+    text-align: center;
+    height: 70px;
+    
+    background-color: var(--branco);
+    background-color: aliceblue;
+    
+}
+
+td{
+    width: 25%;
+    text-align: center; 
+ }
+
+.transacaoPositiva{
+    color: blue;
+}
+
+.transacaoNegativa{
+    color: red;    
+}
+
+
+
+
