@@ -38,7 +38,8 @@ namespace SharkBank.API.Data.Repositories
             IQueryable<Usuario> query = _context.Usuarios;
             query = query.AsNoTracking()
                          .OrderBy(usuario => usuario.Id)
-                         .Include(u => u.Conta);
+                         .Include(u => u.Conta)
+                         .Include(u => u.Conta.Transacoes);
 
             return await query.ToListAsync(); 
         }

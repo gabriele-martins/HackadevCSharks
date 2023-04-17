@@ -19,6 +19,21 @@ namespace SharkBank.API.Domain.Services
             _usuarioRepo = usuarioRepo;
             _geralRepo = geralRepo;
         }
+
+        //public async Task<Usuario> AdicionarUsuario(Usuario usuario)
+        //{
+        //    if (await _usuarioRepo.GetUsuarioByIdAsync(usuario.Id) == null)
+        //    {
+        //        _usuarioRepo.Adicionar(usuario);
+
+        //        if (await _usuarioRepo.SalvarMudancasAsync())
+        //        {
+        //            return usuario;
+        //        }
+
+        //    }
+        //        return null;
+        //}
         public async Task<Usuario> AtualizarUsuario(Usuario usuario)
         {
            if (await _usuarioRepo.GetUsuarioByIdAsync(usuario.Id) != null)

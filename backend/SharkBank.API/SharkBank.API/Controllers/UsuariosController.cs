@@ -29,11 +29,22 @@ namespace SharkBank.API.Controllers
             try
             {
                 var usuarios = await _usuarioService.PegarUsuariosAsync(); 
+                List<UsuarioReduzidoDTO> usuariosRetorno = new List<UsuarioReduzidoDTO>();
+
+                foreach (var usuario in usuarios)
+                {
+                    usuariosRetorno.Add(new UsuarioReduzidoDTO
+                    {
+                        Id = usuario.Id,
+                        Nome = usuario.Nome,
+                        Conta = usuario.Conta,
+                    });
+                }; 
                 if (usuarios == null)
                 {
                     return NoContent();
                 }
-                return Ok(usuarios);
+                return Ok(usuariosRetorno);
             }
             catch (Exception e)
             {
@@ -46,7 +57,10 @@ namespace SharkBank.API.Controllers
         [Route("{id}")]
         public IActionResult GetById(int id)
         {
-            var usuarioBancoDeDados = _context.Usuarios.FirstOrDefault(u => u.Id == id);
+            var usuarioBancoDeDados = _context.Usuarios.Include(u => u.Conta)
+                                                       .ThenInclude(c => c.Transacoes)
+                                                       .Where(u => u.Id == id)
+                                                       .FirstOrDefault();
 
             if (usuarioBancoDeDados == null) return NotFound(new
             {
