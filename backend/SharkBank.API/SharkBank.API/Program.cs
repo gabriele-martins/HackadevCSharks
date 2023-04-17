@@ -4,6 +4,7 @@ using SharkBank.API.Data.Repositories;
 using SharkBank.API.Domain.Interfaces.Repositories;
 using SharkBank.API.Domain.Interfaces.Services;
 using SharkBank.API.Domain.Services;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,11 @@ builder.Services.AddScoped<IGeralRepo, GeralRepo>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(opt =>
+    {
+        opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
