@@ -26,7 +26,7 @@ namespace SharkBank.API.Data.Repositories
             _context.Remove(entity);
         }
 
-        public async Task<bool> SalvarMudançasAsync()
+        public async Task<bool> SalvarMudancasAsync()
         {
             return (await _context.SaveChangesAsync() > 0);
         }

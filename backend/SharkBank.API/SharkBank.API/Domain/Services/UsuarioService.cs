@@ -25,7 +25,7 @@ namespace SharkBank.API.Domain.Services
             {
                 _usuarioRepo.Atualizar(usuario);
 
-                if (await _usuarioRepo.SalvarMudançasAsync())
+                if (await _usuarioRepo.SalvarMudancasAsync())
                 {
                     return usuario;
                 }             
@@ -43,7 +43,7 @@ namespace SharkBank.API.Domain.Services
             }
 
             _usuarioRepo.Deletar(usuario);
-            return await _usuarioRepo.SalvarMudançasAsync(); 
+            return await _usuarioRepo.SalvarMudancasAsync(); 
           
         }
 
