@@ -10,7 +10,7 @@ export function Menu() {
     
        <section className={styles.menu}>
        <nav className={styles.nav}>
-         <a href="#">Sharks Bank</a>
+         <a href="/sharksbank">Sharks Bank</a>
          <a href="#">Contas</a>
          <a href="#">Blog</a>
          <a href="/sobre">Sobre</a>
