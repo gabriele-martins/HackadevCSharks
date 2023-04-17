@@ -103,11 +103,13 @@ namespace SharkBank.API.Migrations
 
             modelBuilder.Entity("SharkBank.API.Domain.Models.Transacao", b =>
                 {
-                    b.HasOne("SharkBank.API.Domain.Models.Conta", null)
+                    b.HasOne("SharkBank.API.Domain.Models.Conta", "Conta")
                         .WithMany("Transacoes")
                         .HasForeignKey("ContaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Conta");
                 });
 
             modelBuilder.Entity("SharkBank.API.Domain.Models.Usuario", b =>

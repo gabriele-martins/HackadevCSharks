@@ -11,8 +11,8 @@ using SharkBank.API.Data.Context;
 namespace SharkBank.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230413191636_InitialRelacionamentos")]
-    partial class InitialRelacionamentos
+    [Migration("20230417191012_FixRelacionamentos")]
+    partial class FixRelacionamentos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -99,26 +99,27 @@ namespace SharkBank.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ContaId")
-                        .IsUnique();
+                    b.HasIndex("ContaId");
 
                     b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("SharkBank.API.Domain.Models.Transacao", b =>
                 {
-                    b.HasOne("SharkBank.API.Domain.Models.Conta", null)
+                    b.HasOne("SharkBank.API.Domain.Models.Conta", "Conta")
                         .WithMany("Transacoes")
                         .HasForeignKey("ContaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Conta");
                 });
 
             modelBuilder.Entity("SharkBank.API.Domain.Models.Usuario", b =>
                 {
                     b.HasOne("SharkBank.API.Domain.Models.Conta", "Conta")
-                        .WithOne("Usuario")
-                        .HasForeignKey("SharkBank.API.Domain.Models.Usuario", "ContaId")
+                        .WithMany()
+                        .HasForeignKey("ContaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -128,9 +129,6 @@ namespace SharkBank.API.Migrations
             modelBuilder.Entity("SharkBank.API.Domain.Models.Conta", b =>
                 {
                     b.Navigation("Transacoes");
-
-                    b.Navigation("Usuario")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

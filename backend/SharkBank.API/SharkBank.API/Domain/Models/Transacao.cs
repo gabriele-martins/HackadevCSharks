@@ -1,5 +1,6 @@
 ﻿using SharkBank.API.Domain.Models.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace SharkBank.API.Domain.Models
 {
@@ -13,17 +14,8 @@ namespace SharkBank.API.Domain.Models
         public double Valor { get; set; }
         public TipoTransacao Tipo { get; set; }
         public bool IsEnviada { get; set; }
+        [JsonIgnore]
+        public Conta Conta { get; set; }
         public int ContaId { get; set; }
-
-        public Transacao(int id, string nome, DateTime data, double valor, TipoTransacao tipo, bool isEnviada, int contaId)
-        {
-            Id = id;
-            Nome = nome;
-            Data = data;
-            Valor = valor;
-            Tipo = tipo;
-            IsEnviada = isEnviada;
-            ContaId = contaId;  
-        }
     }
 }

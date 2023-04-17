@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SharkBank.API.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialRelacionamentos : Migration
+    public partial class FixRelacionamentos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -96,8 +96,7 @@ namespace SharkBank.API.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Usuarios_ContaId",
                 table: "Usuarios",
-                column: "ContaId",
-                unique: true);
+                column: "ContaId");
         }
 
         /// <inheritdoc />
