@@ -26,13 +26,16 @@ export function Ajuda() {
                     </div>
                 }
             />
+             
             <div className={styles.tituloAjuda}>
                 <h1> Dúvidas frequentes</h1>
             </div>
             <div className={styles.conteudoAjuda}>
                 <ListaAjuda />
             </div>
+    
             <Footer />
+            
         </>
     );
 }
