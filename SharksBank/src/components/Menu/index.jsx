@@ -12,7 +12,7 @@ export function Menu() {
        <nav className={styles.nav}>
          <a href="/sharksbank">Sharks Bank</a>
          <a href="#">Contas</a>
-         <a href="#">Blog</a>
+         <a href="https://blog.imatech.io/" target="_blank">Blog</a>
          <a href="/sobre">Sobre</a>
          <a href="/ajuda">Ajuda</a>
        </nav>
