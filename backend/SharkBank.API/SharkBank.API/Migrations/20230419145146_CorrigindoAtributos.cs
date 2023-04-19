@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SharkBank.API.Migrations
 {
     /// <inheritdoc />
-    public partial class FixRelacionamentos : Migration
+    public partial class CorrigindoAtributos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,7 +24,8 @@ namespace SharkBank.API.Migrations
                     Numero = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Agencia = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Saldo = table.Column<double>(type: "double", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,8 +39,6 @@ namespace SharkBank.API.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Data = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Valor = table.Column<double>(type: "double", nullable: false),
                     Tipo = table.Column<int>(type: "int", nullable: false),
@@ -74,6 +73,8 @@ namespace SharkBank.API.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Senha = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    DataNascimento = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    Genero = table.Column<int>(type: "int", nullable: false),
                     ContaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

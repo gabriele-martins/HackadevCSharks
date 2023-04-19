@@ -11,6 +11,7 @@ namespace SharkBank.API.Domain.Models
         public int Id { get; set; }
         public string Numero { get; set; }
         public string Agencia { get; set; }
+        public double Saldo { get; set; }
         public List<Transacao>? Transacoes { get; set; }
 
     }

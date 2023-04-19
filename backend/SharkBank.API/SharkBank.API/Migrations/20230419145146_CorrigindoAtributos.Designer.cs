@@ -11,8 +11,8 @@ using SharkBank.API.Data.Context;
 namespace SharkBank.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230417191012_FixRelacionamentos")]
-    partial class FixRelacionamentos
+    [Migration("20230419145146_CorrigindoAtributos")]
+    partial class CorrigindoAtributos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,9 @@ namespace SharkBank.API.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<double>("Saldo")
+                        .HasColumnType("double");
+
                     b.HasKey("Id");
 
                     b.ToTable("Contas");
@@ -55,10 +58,6 @@ namespace SharkBank.API.Migrations
 
                     b.Property<bool>("IsEnviada")
                         .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<int>("Tipo")
                         .HasColumnType("int");
@@ -88,8 +87,14 @@ namespace SharkBank.API.Migrations
                     b.Property<string>("Cpf")
                         .HasColumnType("longtext");
 
+                    b.Property<DateTime>("DataNascimento")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("Email")
                         .HasColumnType("longtext");
+
+                    b.Property<int>("Genero")
+                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
                         .HasColumnType("longtext");

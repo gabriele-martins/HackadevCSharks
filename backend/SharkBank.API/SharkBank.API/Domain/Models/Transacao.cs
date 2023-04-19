@@ -9,8 +9,10 @@ namespace SharkBank.API.Domain.Models
         [Key]
         [Required]
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public DateTime Data { get; set; }
+        
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy HH:mm}")]
+        public DateTime Data { get; set; } = DateTime.Now;
         public double Valor { get; set; }
         public TipoTransacao Tipo { get; set; }
         public bool IsEnviada { get; set; }

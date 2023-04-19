@@ -90,6 +90,7 @@ namespace SharkBank.API.Controllers
             var contaSalva = _context.Contas.FirstOrDefault(conta => conta.Numero == novaConta.Numero);
             usuario.Conta = contaSalva;
             usuario.ContaId = contaSalva.Id;
+            usuario.Conta.Saldo = 1000.00; 
             _context.Usuarios.Add(usuario);
             _context.SaveChanges();
             

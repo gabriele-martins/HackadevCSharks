@@ -4,7 +4,6 @@ namespace SharkBank.API.Domain.DTO
 {
     public class TransacaoDTO
     {
-        public string Nome { get; set; }
         public DateTime Data { get; set; }
         public double Valor { get; set; }
         public TipoTransacao Tipo { get; set; }

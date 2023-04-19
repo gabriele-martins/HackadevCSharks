@@ -44,11 +44,10 @@ namespace SharkBank.API.Controllers
 
             var novaTransacao = new Transacao
             {
-                Nome = requisicao.Nome,
-                Data = requisicao.Data,
+                Data = DateTime.Now,
                 Valor = requisicao.Valor,
                 Tipo = requisicao.Tipo,
-                IsEnviada = requisicao.isEnviada,
+                IsEnviada = true,
                 Conta = conta
             }; 
             _context.Transacoes.Add(novaTransacao);
