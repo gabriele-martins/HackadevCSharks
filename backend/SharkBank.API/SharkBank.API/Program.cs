@@ -18,6 +18,8 @@ builder.Services.AddDbContext<DataContext>
 builder.Services.AddScoped<IUsuarioRepo, UsuarioRepo>();
 builder.Services.AddScoped<IGeralRepo, GeralRepo>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IContaRepo, ContaRepo>();
+builder.Services.AddScoped<IContaService, ContaService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers()

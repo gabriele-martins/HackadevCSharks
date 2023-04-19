@@ -13,7 +13,7 @@ namespace SharkBank.API.Domain.Profiles
             CreateMap<UsuarioDTO, Usuario>();
             CreateMap<Transacao, TransacaoDTO>();
             CreateMap<Conta, ContaDTO>()
-                .ForMember(dest => dest.Transacoes, opt => opt.MapFrom(src => src.Transacoes));
+                .ForMember(dest => dest.Transacoes, opt => opt.MapFrom(src => src.Transacoes));               
         }
     }
 }

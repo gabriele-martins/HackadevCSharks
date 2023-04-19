@@ -33,26 +33,47 @@ namespace SharkBank.API.Controllers
         }
 
         [HttpPost]
-
-        public async Task<ActionResult<List<Transacao>>> Post(CriarTransferenciaDTO requisicao)
+        public async Task<ActionResult<List<Transacao>>> Post(CriarTransferenciaDTO requisicaoOrigem)
         {
-            var conta = await _context.Contas.FindAsync(requisicao.ContaId);
-            if (conta == null)
+            var contaOrigem = await _context.Contas.FindAsync(requisicaoOrigem.ContaId);
+            var contaDestino = await _context.Contas.FindAsync(requisicaoOrigem.ContaIdDestino); 
+            if (contaOrigem == null)
             {
-                return NotFound("Usuário não encontrado"); 
+                return NotFound("Conta de origem não encontrada"); 
+            }
+            if (contaDestino == null)
+            {
+                return NotFound("Conta de destino não encontrada"); 
             }
 
-            var novaTransacao = new Transacao
+            var novaTransacaoOrigem = new Transacao
             {
                 Data = DateTime.Now,
-                Valor = requisicao.Valor,
-                Tipo = requisicao.Tipo,
+                Valor = requisicaoOrigem.Valor,
+                Tipo = requisicaoOrigem.Tipo,
                 IsEnviada = true,
-                Conta = conta
-            }; 
-            _context.Transacoes.Add(novaTransacao);
+                Conta = contaOrigem
+            };
+
+            var novaTransacaoDestino = new Transacao
+            {
+                Data = DateTime.Now,
+                Valor = requisicaoOrigem.Valor,
+                Tipo = Domain.Models.Enums.TipoTransacao.DEPOSITO,
+                IsEnviada = true,
+                Conta = contaDestino
+            };
+
+            contaOrigem.Saldo -= requisicaoOrigem.Valor;
+            contaDestino.Saldo += requisicaoOrigem.Valor; 
+            _context.Transacoes.Add(novaTransacaoOrigem);
+            _context.Transacoes.Add(novaTransacaoDestino);
             await _context.SaveChangesAsync();
-            return await Get(novaTransacao.ContaId);
+            return Ok(new
+            {
+                Message = $"Transferência realizada da conta {contaOrigem.Numero} para {contaDestino.Numero}",
+                Moment = DateTime.UtcNow
+            });
         }
     }
 }

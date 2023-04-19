@@ -35,9 +35,13 @@ namespace SharkBank.API.Controllers
                 {
                     usuariosRetorno.Add(new UsuarioReduzidoDTO
                     {
-                        Id = usuario.Id,
+                        Cpf = usuario.Cpf,
                         Nome = usuario.Nome,
-                        Conta = usuario.Conta,
+                        Conta = new ContaReduzidaDTO
+                        {
+                            Agencia = usuario.Conta.Agencia,
+                            Numero = usuario.Conta.Numero
+                        }
                     });
                 }; 
                 if (usuarios == null)
