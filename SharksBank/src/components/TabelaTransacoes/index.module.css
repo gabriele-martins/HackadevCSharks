@@ -5,6 +5,7 @@
     height: 90%;
     border-collapse: separate;
     border-spacing: 0 10px;   
+    
 }
 
 tbody tr{
@@ -20,7 +21,16 @@ tbody tr{
 td{
     width: 25%;
     text-align: center; 
+    
  }
+.data{
+    
+    border-radius: 10px 0 0 10px;
+}
+.valor{
+    
+    border-radius: 0 10px 10px 0;
+}
 
 .transacaoPositiva{
     color: blue;

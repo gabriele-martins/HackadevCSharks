@@ -81,10 +81,10 @@ export function TabelaTransacoes(){
                     {transacoes.map((transacao, index) => (
                         <tr key={index} className={transacao.valor < 0 ? 
                                           styles.transacaoNegativa : styles.transacaoPositiva}>
-                            <td>{transacao.data.toLocaleDateString()}</td>
+                            <td className={styles.data}>{transacao.data.toLocaleDateString()}</td>
                             <td>{transacao.tipo}</td>
                             <td>{transacao.detalhes}</td>
-                            <td>R$: {parseFloat(transacao.valor).toFixed(2)}</td>
+                            <td className={styles.valor}>R$: {parseFloat(transacao.valor).toFixed(2)}</td>
                         </tr>
                     ))}
                 </tbody>

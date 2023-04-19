@@ -50,7 +50,7 @@
 }
 
 .blocoConteudo{
-  width: 30%;
+  width: 32%;
   height: 80%;
   /* background-color: var(--ciano); */
   background-color: var(--branco);
@@ -76,14 +76,14 @@
 }
 
 .blocoConteudoLinhaItem{
-  flex: 4;
+  flex: 5.5;
   height: 100%;
   font-size: 1rem;
   
 }
 
 .blocoConteudoLinhaValue{
-  flex: 2;
+  flex: 2.5;
   height: 100%;
   font-size: 1rem;  
 }
