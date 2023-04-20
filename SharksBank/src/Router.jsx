@@ -7,6 +7,9 @@ import { Termos } from "./pages/Termos";
 import { Transferencia } from "./pages/Transferencia";
 import { Extrato } from "./pages/Extrato";
 import { Senha } from "./pages/Senha";
+import { Sobre } from "./pages/Sobre";
+import { Ajuda } from "./pages/Ajuda";
+import { SharksBank } from "./pages/SharksBank";
 
 export function Router() {
   return (
@@ -19,6 +22,9 @@ export function Router() {
       <Route path="/transferir" element={<Transferencia />} />
       <Route path="/extrato" element={<Extrato />} />
       <Route path="/senha" element={<Senha />} />
+      <Route path="/sobre" element={<Sobre />} />
+      <Route path="/ajuda" element={<Ajuda />} />
+      <Route path="/sharksbank" element={<SharksBank />} />
     </Routes>
   );
 }

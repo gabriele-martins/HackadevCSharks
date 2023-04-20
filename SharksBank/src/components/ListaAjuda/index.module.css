@@ -1,0 +1,28 @@
+.conteiner{
+    padding: 1.5em;
+    
+}
+
+.pergunta {
+font-size: 1.5em;
+cursor: pointer;
+
+font-weight: 500;
+margin-top: 1rem;
+
+}
+
+.pergunta:hover{
+background-color: rgb(138, 236, 203);
+opacity: 0.9
+}
+
+
+.resposta{
+font-size: 0.7em;
+padding: 0.2em 1.5em;
+background-color: white;
+font-weight: 400;
+
+}
+

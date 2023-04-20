@@ -68,10 +68,11 @@ export function Transferencia() {
             <p id={styles["infoContaValue"]}>3002</p>
             <p id={styles["infoContaLabel"]}>Conta</p>
             <p id={styles["infoContaValue"]}>01493238-7</p>
-            <p id={styles["infoContaLabel"]}>Saldo Disponível</p>
-            <p id={styles["infoContaValue"]}>R$ 2.000,00</p>
             <p id={styles["infoContaLabel"]}>Saldo</p>
             <p id={styles["infoContaValue"]}>R$ 1.000,00</p>
+            <p id={styles["infoContaLabel"]}>Crédito aprovado</p>
+            <p id={styles["infoContaValue"]}>R$ 900,00</p>
+            
           </div>
         }
       >
@@ -105,8 +106,8 @@ export function Transferencia() {
                 errors={errors}
                 tamanhoMax={9}
                 tamanhoMin={9}
-                desabilitar={watch("cpf")}
-                obrigatorio={!watch("cpf")}
+                // desabilitar={watch("cpf")}
+                // obrigatorio={!watch("cpf")}
               />
             </div>
             <CampoInput
@@ -119,8 +120,8 @@ export function Transferencia() {
               errors={errors}
               tamanhoMax={14}
               tamanhoMin={14}
-              desabilitar={watch("conta") || watch("agencia")}
-              obrigatorio={!(watch("conta") || watch("agencia"))}
+              // desabilitar={watch("conta") || watch("agencia")}
+              // obrigatorio={!(watch("conta") || watch("agencia"))}
             />
 
             <CampoInput
@@ -172,13 +173,23 @@ export function Transferencia() {
               mensagem={comprovanteProps.mensagem}
               erro={comprovanteProps.erro}
             />
-            <Botao
-              funcaoDoBotao={() => {
-                setFormTransfererencia(false);
-              }}
-              pagina={"/transferir"}
-              nome={"Realizar Outra Transferência"}
-            ></Botao>
+            <div className={styles.botoesComprovante}>
+              <Botao
+                funcaoDoBotao={() => {
+                  setFormTransfererencia(false);
+                }}
+                pagina={"/transferir"}
+                nome={"Nova Transferência"}
+              ></Botao>
+
+              <Botao
+                funcaoDoBotao={() => {
+                  setFormTransfererencia(false);
+                }}
+                pagina={"/transferir"}
+                nome={"Compartilhar"}
+              ></Botao>
+            </div>
           </div>
         </div>
       </Conteudo>

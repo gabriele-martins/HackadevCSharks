@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+
+}
+
+.botoesHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.conteudo h1 {
+    text-align: left;
+
+    margin: 10px 120px 10px;
+    font-weight: 300;
+}
+
+.conteudo h3 {
+    text-align: left;
+    margin-left: 120px;
+    
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+}
+
+.container .colunaEsquerda {
+
+    width: 60%;
+    height: 80%;
+    margin: 0;
+
+
+
+
+
+}
+
+.colunaEsquerda .imagem {
+    width: 300px;
+    height: 415px;
+    display: flex;
+    margin: 0.5em 7.5em;
+
+    
+
+
+}
+
+
+.colunaDireita {
+    width: 40%;
+    height: 96%;
+    font-size: 1em;
+    line-height: 2em;
+    padding-top: 0.5em;
+    margin: 0.5em 1em;
+    text-indent: 2em;
+    text-align: justify;
+
+   
+}
+
+/* .metadeInferior{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.5em 0em;
+    font-weight: 300;
+} */

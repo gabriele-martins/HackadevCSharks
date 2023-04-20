@@ -4,6 +4,9 @@ import { MenuTransacoes } from "../../components/MenuTransacoes";
 import { Botao } from "../../components/Botao";
 import { Footer } from "../../components/Footer";
 
+import { Bank, AddressBook, CurrencyDollar, Coins, CreditCard, Receipt } from "phosphor-react";
+import { Grafico } from "../../components/Grafico";
+
 import styles from "./style.module.css";
 
 export function Saldo() {
@@ -19,51 +22,51 @@ export function Saldo() {
       />
 
       <div className={styles.conteudoSaldo}>
-        <div className={styles.colunaEsquerda}>
-          <div className={styles.colunaEsquerdaTitulo}>
-            <h2>Olá, Tubarão</h2>
-          </div>
-          <div className={styles.colunaEsquerdaTexto}>
-            <div className={styles.subtitulos}>
-              <p>Agência</p>
-            </div>
-            <div className={styles.conteudoSubtitulos}>
-              <p>3002</p>
-            </div>
-            <div className={styles.subtitulos}>
-              <p>Conta</p>
-            </div>
-            <div className={styles.conteudoSubtitulos}>
-              <p>01493238-7</p>
-            </div>
-            <div className={styles.subtitulos}>
-              <p>Última Transação</p>
-            </div>
-            <div className={styles.conteudoSubtitulos}>
-              <p>04/04 13:00 R$ 50,00</p>
-            </div>
-          </div>
+        <div className={styles.painelNomes}>
+          <h1>Olá, Tubarão</h1> 
         </div>
-        <div className={styles.colunaDireita}>
-          <div className={styles.colunaDireitaTitulos}>
-            <h2>Seu saldo é</h2>
+        <div className={styles.painelSuperior}>
+          <div className={styles.blocoConteudo}>
+            <div className={styles.blocoConteudoLinha}>
+              <div className={styles.blocoConteudoLinhaIcone}><Bank size={32} color="#00efc5" /></div>
+              <div className={styles.blocoConteudoLinhaItem}>Agencia:&nbsp;</div>
+              <div className={styles.blocoConteudoLinhaValue}>0001</div>
+            </div>
+            <div className={styles.blocoConteudoLinha}>
+              <div className={styles.blocoConteudoLinhaIcone}><AddressBook size={32} color="#00efc5" /></div>
+              <div className={styles.blocoConteudoLinhaItem}>Conta:&nbsp;</div>
+              <div className={styles.blocoConteudoLinhaValue}>000001-1</div>
+            </div>
           </div>
-          <div className={styles.colunaDireitaValores}>
-            <h2>R$ 1.000,00</h2>
+
+          <div className={styles.blocoConteudo}>
+            <div className={styles.blocoConteudoLinha}>
+              <div className={styles.blocoConteudoLinhaIcone}><CurrencyDollar size={32} color="#00efc5" /></div>
+              <div className={styles.blocoConteudoLinhaItem}>Saldo:&nbsp;</div>
+              <div className={styles.blocoConteudoLinhaValue}>R$ 100,00</div>
+            </div>
+            <div className={styles.blocoConteudoLinha}>
+              <div className={styles.blocoConteudoLinhaIcone}><Receipt size={32} color="#00efc5" /></div>
+              <div className={styles.blocoConteudoLinhaItem}>Última transação:&nbsp;</div>
+              <div className={styles.blocoConteudoLinhaValue}>R$ 20,00</div>
+            </div>
           </div>
-          <div className={styles.colunaDireitaTitulos}>
-            <p>Saldo Disponível</p>
+          <div className={styles.blocoConteudo}>
+            <div className={styles.blocoConteudoLinha}>
+              <div className={styles.blocoConteudoLinhaIcone}><CreditCard size={32} color="#00efc5" /></div>
+              <div className={styles.blocoConteudoLinhaItem}>Crédito aprovado:&nbsp;</div>
+              <div className={styles.blocoConteudoLinhaValue}>R$ 900,00</div>
+            </div>
+            <div className={styles.blocoConteudoLinha}>
+              <div className={styles.blocoConteudoLinhaIcone}><Coins size={32} color="#00efc5" /></div>
+              <div className={styles.blocoConteudoLinhaItem}>Juros:&nbsp;</div>
+              <div className={styles.blocoConteudoLinhaValue}>2% a.m.</div>
+            </div>
           </div>
-          <div className={styles.colunaDireitaValores}>
-            <p>R$ 2.000,00</p>
-          </div>
-          <div className={styles.colunaDireitaTitulos}>
-            <p>Juros Aplicados</p>
-          </div>
-          <div className={styles.colunaDireitaValores}>
-            <p>8% a.m.</p>
-          </div>
+
+
         </div>
+        <div className={styles.painelInferior}><Grafico /></div>
       </div>
 
       <Footer />

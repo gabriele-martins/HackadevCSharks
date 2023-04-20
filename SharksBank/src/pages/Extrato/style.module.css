@@ -1,81 +1,62 @@
+*{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 .conteudoSaldo {
   flex: 4;
   width: 95%;
   max-width: 1000px;
   min-height: 70vh;
   display: flex;
-  flex-wrap: wrap;
-  align-items: row;
-  justify-content: space-between;
+  flex-direction: column;
   background-color: var(--conteudo-background);
+  
   border-radius: 10px;
-  padding: 4rem 1rem;
-  gap: 1rem;
+  padding: 1rem;
+  
 }
 
-.colunaDireita {
-  min-width: 266px;
-  width: 45%;
-  height: 100%;
+.painelSuperior{
+  width: 100%;
+  height: 25%;
+  background-color: var(--ciano);
+  border-radius: 10px;
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: space-around;
 }
 
-.colunaEsquerda {
-  min-width: 266px;
+.painelSuperiorColuna{
   width: 45%;
-  height: 25rem;
-  display: flex;
-  flex-direction: column;
+  margin-top: 20px;
 }
 
-.controlScroll {
-  overflow-y: scroll;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 30px;
+.painelSuperiorColunaTeste{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.colunaDireitaTitulo {
-  width: 100%;
-}
-
-.colunaDireitaTitulo h2 {
+.botaoExportar, .botaoExportar:hover{ 
+  cursor: pointer;
+  border-radius: 0.5em;
+  padding: 0.2em 1em;
   color: var(--preto);
-  font-size: 48px;
-  font-weight: 500;
+  background-color: var(--conteudo-background);
+  border: 0.0625em solid var(--conteudo-background);
+  white-space: nowrap;
+  margin-top: 10px;
 }
 
-.colunaDireitaTexto {
-  width: 100%;
-}
+.painelInferior{
+  width: 95%;
+  height: 90%;
+  margin-top: -5%;
 
-.subtitulos {
-  color: var(--ciano);
-  font-size: 24px;
-  text-align: left;
-}
-
-.conteudoSubtitulos {
-  color: var(--preto);
-  font-size: 24px;
-  text-align: left;
-  padding: 10px 0;
-}
-
-.colunaEsquerdaTitulos {
-  color: var(--ciano);
-  font-size: 24px;
-}
-
-.colunaEsquerdaValores {
-  color: var(--preto);
-  font-size: 24px;
-}
-
-.mes {
-  color: var(--ciano);
-  width: 71%;
+  background-color: var(--cinza-100);
+  border-radius: 10px;
+  overflow: auto;
 }
