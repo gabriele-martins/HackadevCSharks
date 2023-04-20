@@ -17,32 +17,49 @@ export function Comprovante({
 		<>
 			<div className={styles.transferenciaRealizada} hidden={erro}>
 				<div className={styles.transferenciaRealizadaTitulo}>
-					<h1>Transferência Realizada</h1>
-					<p>{dataHora}</p>
+					<p className={styles.tituloComprovante}>Comprovante de Transferência</p>
 				</div>
 				<div className={styles.transferenciaInfo}>
-					<h2>Valor</h2>
-					<p className={styles.transferenciaInfoValue}>
+					<div className={styles.transferenciaInfoInterno}>
+						<p className={styles.tituloComprovante}>Valor:</p>
+						<p className={styles.transferenciaInfoValue}>
 						R$ {valorEnviado}
 					</p>
+					</div>
+					<div className={styles.transferenciaInfoInterno}>
+						<p>Data da operação:</p>
+						<p>{dataHora}</p>
+					</div>
 				</div>
-				<h3>Origem</h3>
+				<h4>Origem</h4>
 				<div className={styles.transferenciaInfo}>
-					<h4>CPF</h4>
-					<p>{cpfOrigem}</p>
-					<h4>Agência</h4>
-					<p>{agenciaOrigem}</p>
-					<h4>Conta</h4>
-					<p>{contaOrigem}</p>
+					<div className={styles.transferenciaInfoInterno}>
+						<h4>CPF:</h4>
+						<p>{cpfOrigem}</p>
+						<h4>Nome: </h4>
+						<p>{cpfOrigem}</p>
+					</div>
+					<div className={styles.transferenciaInfoInterno}>
+						<h4>Agência:</h4>
+						<p>{agenciaOrigem}</p>
+						<h4>Conta:</h4>
+						<p>{contaOrigem}</p>
+					</div>
 				</div>
-				<h3>Destino</h3>
+				<h4>Destino</h4>
 				<div className={styles.transferenciaInfo}>
-					<h4>CPF</h4>
-					<p>{cpfDestino || '000.000.000-00'}</p>
-					<h4>Agência </h4>
-					<p>{agenciaDestino || '0000'}</p>
-					<h4>Conta</h4>
-					<p>{contaDestino || '000000000-0'}</p>
+					<div className={styles.transferenciaInfoInterno}>
+						<h4>CPF:</h4>
+						<p>{cpfDestino || '000.000.000-00'}</p>
+						<h4>Nome: </h4>
+						<p>{cpfOrigem}</p>
+					</div>
+					<div className={styles.transferenciaInfoInterno}>
+						<h4>Agência: </h4>
+						<p>{agenciaDestino || '0000'}</p>
+						<h4>Conta:</h4>
+						<p>{contaDestino || '000000000-0'}</p>
+					</div>
 				</div>
 				<div className={styles.transferenciaMensagem}>
 					<h4>Mensagem</h4>

@@ -16,6 +16,7 @@
 .botao button:hover {
   background-color: var(--ciano);
   color: var(--branco);
+  cursor: pointer;
 }
 
 .botao button:disabled {

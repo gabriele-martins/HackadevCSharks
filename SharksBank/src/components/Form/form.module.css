@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
 }
-  
+
+.outrosDados {
+  margin-bottom: 20px;
+}
+
 .selectRadioTitle > div:first-child {
     font-size: 14px;
 }
@@ -18,13 +22,20 @@ select {
     border: 1px solid #787777ee;
     margin-bottom: 15px;
     border-radius: 5px;
+    
+    font-size: 14px;
+    text-align: center;
+    text-align-last: center;
+    
+
   }
   
-.btn {
+/* .btn {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
+
   }
   
 .btn button {
@@ -45,6 +56,7 @@ select {
     border: 1px solid #00efc5;
     color: #00efc5;
     cursor: auto;
+    cursor: pointer;
   }
-
+ */
 
