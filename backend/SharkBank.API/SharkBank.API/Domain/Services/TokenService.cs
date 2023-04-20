@@ -11,12 +11,14 @@ namespace SharkBank.API.Domain.Services
         public string GerarToken(Usuario usuario)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(Setings.Secret);
+            var key = Encoding.ASCII.GetBytes(Settings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim(type: ClaimTypes.Name, value: usuario.Nome),
+                    new Claim(type: ClaimTypes.DateOfBirth, value: usuario.DataNascimento.ToString()),
+                    new Claim(type: ClaimTypes.Email, value: usuario.Email),
                 }),
                 Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey (key), algorithm:SecurityAlgorithms.HmacSha256Signature),

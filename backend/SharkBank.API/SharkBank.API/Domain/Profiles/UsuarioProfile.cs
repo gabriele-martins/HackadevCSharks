@@ -11,6 +11,7 @@ namespace SharkBank.API.Domain.Profiles
             CreateMap<Usuario, UsuarioDTO>().
                 ForMember(usuarioDTO => usuarioDTO.Conta, opt => opt.MapFrom(usuario => usuario.Conta));
             CreateMap<Usuario, UsuarioReduzidoDTO>();
+            CreateMap<LoginDTO, Usuario>();
             CreateMap<UsuarioDTO, Usuario>();
             CreateMap<Transacao, TransacaoDTO>();
             CreateMap<Conta, ContaDTO>()

@@ -58,9 +58,19 @@ namespace SharkBank.API.Domain.Services
             }
 
             _usuarioRepo.Deletar(usuario);
-            _usuarioRepo.Deletar(usuario.Conta);
             return await _usuarioRepo.SalvarMudancasAsync(); 
           
+        }
+
+        public async Task<Usuario> LoginUsuarioAsync(string name, string senha)
+        {
+            var usuario = await _usuarioRepo.GetUsuarioByNameSenhaAsync(name, senha);
+            if (usuario == null)
+            {
+                throw new Exception("Usuário não existe");
+            }
+
+            return usuario;
         }
 
         public async Task<Usuario> PegarUsuarioIdAsync(int usuarioId)
