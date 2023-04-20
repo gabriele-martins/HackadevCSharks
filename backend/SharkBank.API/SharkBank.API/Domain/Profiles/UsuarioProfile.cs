@@ -10,10 +10,12 @@ namespace SharkBank.API.Domain.Profiles
         {
             CreateMap<Usuario, UsuarioDTO>().
                 ForMember(usuarioDTO => usuarioDTO.Conta, opt => opt.MapFrom(usuario => usuario.Conta));
+            CreateMap<Usuario, UsuarioReduzidoDTO>();
             CreateMap<UsuarioDTO, Usuario>();
             CreateMap<Transacao, TransacaoDTO>();
             CreateMap<Conta, ContaDTO>()
-                .ForMember(dest => dest.Transacoes, opt => opt.MapFrom(src => src.Transacoes));               
+                .ForMember(dest => dest.Transacoes, opt => opt.MapFrom(src => src.Transacoes));
+            CreateMap<Conta, ContaReduzidaDTO>(); 
         }
     }
 }

@@ -58,6 +58,7 @@ namespace SharkBank.API.Domain.Services
             }
 
             _usuarioRepo.Deletar(usuario);
+            _usuarioRepo.Deletar(usuario.Conta);
             return await _usuarioRepo.SalvarMudancasAsync(); 
           
         }

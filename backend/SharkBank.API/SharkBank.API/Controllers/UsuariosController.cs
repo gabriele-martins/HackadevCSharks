@@ -72,8 +72,7 @@ namespace SharkBank.API.Controllers
                 Message = $"Usuário não encontrado = {id}."
             });
 
-            var usuarioDTO = _mapper.Map<UsuarioDTO>(usuarioBancoDeDados);
-            return Ok(usuarioDTO);
+            return Ok(usuarioBancoDeDados);
         }
 
         [HttpPost]

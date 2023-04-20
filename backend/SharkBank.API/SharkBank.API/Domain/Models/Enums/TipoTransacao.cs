@@ -6,6 +6,7 @@
         TED, 
         DOC,
         SAQUE,
-        DEPOSITO
+        DEPOSITO,
+        TRANSFERENCIARECEBIDA
     }
 }

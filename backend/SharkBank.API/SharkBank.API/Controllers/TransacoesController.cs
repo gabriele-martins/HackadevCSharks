@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using SharkBank.API.Data.Context;
@@ -12,10 +13,12 @@ namespace SharkBank.API.Controllers
     public class TransacoesController : ControllerBase
     {
         private readonly DataContext _context;
+        private readonly IMapper _mapper;
 
-        public TransacoesController(DataContext context)
+        public TransacoesController(DataContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -36,7 +39,9 @@ namespace SharkBank.API.Controllers
         public async Task<ActionResult<List<Transacao>>> Post(CriarTransferenciaDTO requisicaoOrigem)
         {
             var contaOrigem = await _context.Contas.FindAsync(requisicaoOrigem.ContaId);
-            var contaDestino = await _context.Contas.FindAsync(requisicaoOrigem.ContaIdDestino); 
+            var contaDestino = await _context.Contas.FindAsync(requisicaoOrigem.ContaIdDestino);
+            var usuarioOrigem =  await _context.Usuarios.Where(c => c.ContaId == requisicaoOrigem.ContaId).FirstOrDefaultAsync();
+            var usuarioDestino = await _context.Usuarios.Where(c => c.ContaId == contaDestino.Id).FirstOrDefaultAsync();
             if (contaOrigem == null)
             {
                 return NotFound("Conta de origem não encontrada"); 
@@ -59,21 +64,25 @@ namespace SharkBank.API.Controllers
             {
                 Data = DateTime.Now,
                 Valor = requisicaoOrigem.Valor,
-                Tipo = Domain.Models.Enums.TipoTransacao.DEPOSITO,
+                Tipo = Domain.Models.Enums.TipoTransacao.TRANSFERENCIARECEBIDA,
                 IsEnviada = true,
                 Conta = contaDestino
             };
 
             contaOrigem.Saldo -= requisicaoOrigem.Valor;
-            contaDestino.Saldo += requisicaoOrigem.Valor; 
+            contaDestino.Saldo += requisicaoOrigem.Valor;
             _context.Transacoes.Add(novaTransacaoOrigem);
             _context.Transacoes.Add(novaTransacaoDestino);
-            await _context.SaveChangesAsync();
-            return Ok(new
+
+            var comprovante = new ComprovanteDTO
             {
-                Message = $"Transferência realizada da conta {contaOrigem.Numero} para {contaDestino.Numero}",
-                Moment = DateTime.UtcNow
-            });
+                Data = DateTime.Now.Date,
+                Valor = requisicaoOrigem.Valor,
+                UsuarioDestino = _mapper.Map<UsuarioReduzidoDTO>(usuarioDestino),
+                UsuarioOrigem = _mapper.Map<UsuarioReduzidoDTO>(usuarioOrigem)
+            }; 
+            await _context.SaveChangesAsync();
+            return Ok(comprovante);
         }
     }
 }
