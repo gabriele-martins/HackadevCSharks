@@ -50,9 +50,9 @@ Esse projeto foi entregue no programa Sharp Coders da Ímã Tech, como um desafi
 - C#
 - SQLite
 
-# Autores (CSharks)
+# Autores
 
-:blue_heart: Melhor grupo do programa de formação Sharp Coders :blue_heart:
+:blue_heart: CSharks: Melhor grupo do programa de formação Sharp Coders :blue_heart:
 
 Feito com carinho e dedicação pelas pessoas incríveis abaixo:
 
