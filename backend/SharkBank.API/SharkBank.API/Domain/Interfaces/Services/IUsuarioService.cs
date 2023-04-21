@@ -9,7 +9,7 @@ namespace SharkBank.API.Domain.Interfaces.Services
         Task<Usuario> AtualizarUsuario(Usuario usuario);
         Task<IEnumerable<Usuario>> PegarUsuariosAsync();
         Task<Usuario> PegarUsuarioIdAsync(int usuarioId);
-        Task<Usuario> LoginUsuarioAsync(string name, string senha);
+        Usuario LoginUsuario(string name, string senha);
         Task<bool> DeletarUsuario(int usuarioId);
         //Task<Usuario> AdicionarUsuario(AdicionarUsuarioDTO usuario);
     }

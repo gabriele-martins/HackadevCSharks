@@ -27,7 +27,7 @@ namespace SharkBank.API.Controllers
         public async Task<ActionResult<dynamic>> AuthenticateAsync([FromBody] LoginDTO model)
         {
 
-            var usuario = _mapper.Map<Usuario>(model);
+            var usuario = _usuarioRepo.GetUsuarioByNameSenha(model.Nome, model.Senha); 
 
             if (usuario == null)
             {

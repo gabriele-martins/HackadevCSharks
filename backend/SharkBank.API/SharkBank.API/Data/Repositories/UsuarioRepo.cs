@@ -24,14 +24,12 @@ namespace SharkBank.API.Data.Repositories
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<Usuario> GetUsuarioByNameSenhaAsync(string nome, string senha)
+        public Usuario GetUsuarioByNameSenha(string nome, string senha)
         {
-            IQueryable<Usuario> query = _context.Usuarios;
-            query = query.AsNoTracking()
-                         .Where(u => u.Nome == nome && u.Senha == senha);
-                        
-
-            return await query.FirstOrDefaultAsync();
+            return _context.Usuarios
+                           .Include(c => c.Conta)
+                           .ThenInclude(c => c.Transacoes)
+                           .FirstOrDefault(u => u.Nome == nome && u.Senha == senha);
         }
 
         public async Task<IEnumerable<Usuario>> GetUsuariosAsync()
