@@ -62,9 +62,9 @@ namespace SharkBank.API.Domain.Services
           
         }
 
-        public async Task<Usuario> LoginUsuarioAsync(string name, string senha)
+        public Usuario LoginUsuario(string cpf, string senha)
         {
-            var usuario = await _usuarioRepo.GetUsuarioByNameSenhaAsync(name, senha);
+            var usuario =  _usuarioRepo.GetUsuarioByCpfSenha(cpf, senha);
             if (usuario == null)
             {
                 throw new Exception("Usuário não existe");
