@@ -58,63 +58,56 @@ Feito com carinho e dedicação pelas pessoas incríveis abaixo:
 
 
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/48768035?v=4" width="100px;" alt=""/>
+<div align="center"><img src="https://avatars.githubusercontent.com/u/48768035?v=4" width="100px;" alt=""/></div>
 
-<div align="center"><a href="https://github.com/brunosas88">Bruno Soares de Araújo</a>
-</div>
+<div align="center"><a href="https://github.com/brunosas88">Bruno Soares de Araújo</a></div>
 
-![Linkedin Badge](https://img.shields.io/badge/-Bruno-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/brunosas/)
+<div align="center"><a href="https://www.linkedin.com/in/brunosas/"><img src="https://img.shields.io/badge/-Bruno-blue?style=flat-square&logo=Linkedin&logoColor=white"/></a></div>
 
+</br></br>
 
+<div align="center"><img src="https://avatars.githubusercontent.com/u/116194748?s=400&u=cba011cc512094051366a94ef260ded447b35ccf&v=4" width="100px;" alt=""/></div>
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/116194748?s=400&u=cba011cc512094051366a94ef260ded447b35ccf&v=4" width="100px;" alt=""/>
+<div align="center"><a href="https://github.com/gabriele-martins">Gabriele Martins Pereira</a></div>
 
-<div align="center"><a href="https://github.com/gabriele-martins">Gabriele Martins Pereira</a>
-</div>
+<div align="center"><a href="https://www.linkedin.com/in/gabriele-martins-pereira/"><img src="https://img.shields.io/badge/-Gabriele-blue?style=flat-square&logo=Linkedin&logoColor=white"/></a></div>
 
-![Linkedin Badge](https://img.shields.io/badge/-Gabriele-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gabriele-martins-pereira/)
+</br></br>
 
+<div align="center"><img src="https://avatars.githubusercontent.com/u/114453405?v=4" width="100px;" alt=""/></div>
 
+<div align="center"><a href="https://github.com/jvbevangelista">João Victor Evangelista</a></div>
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/114453405?v=4" width="100px;" alt=""/>
+<div align="center"><a href="https://www.linkedin.com/in/jvbevangelista/"><img src="https://img.shields.io/badge/-João-blue?style=flat-square&logo=Linkedin&logoColor=white"/></a></div>
 
-<div align="center"><a href="https://github.com/jvbevangelista">João Victor Evangelista</a>
-</div>
+</br></br>
 
-![Linkedin Badge](https://img.shields.io/badge/-João-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jvbevangelista/)
+<div align="center"><img src="https://avatars.githubusercontent.com/u/31934263?v=4" width="100px;" alt=""/></div>
 
+<div align="center"><a href="https://github.com/keilertrindade">Keiler Trindade</a></div>
 
+<div align="center"><a href="https://www.linkedin.com/in/keilertrindade/"><img src="https://img.shields.io/badge/-Keiler-blue?style=flat-square&logo=Linkedin&logoColor=white"/></a></div>
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/31934263?v=4" width="100px;" alt=""/>
+</br></br>
 
-<div align="center"><a href="https://github.com/keilertrindade">Keiler Trindade</a>
-</div>
+<div align="center"><img src="https://avatars.githubusercontent.com/u/102182265?v=4" width="100px;" alt=""/></div>
 
-![Linkedin Badge](https://img.shields.io/badge/-Keiler-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/keilertrindade/)
+<div align="center"><a href="https://github.com/marccosousa">Marco Sousa</a></div>
 
+<div align="center"><a href="https://www.linkedin.com/in/marccosousa/"><img src="https://img.shields.io/badge/-Marco-blue?style=flat-square&logo=Linkedin&logoColor=white"/></a></div>
 
+</br></br>
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102182265?v=4" width="100px;" alt=""/>
+<div align="center"><img src="https://avatars.githubusercontent.com/u/105930732?v=4" width="100px;" alt=""/></div>
 
-<div align="center"><a href="https://github.com/marccosousa">Marco Sousa</a>
-</div>
+<div align="center"><a href="https://github.com/Lmraylson26">Raylson Moreira</a></div>
 
-![Linkedin Badge](https://img.shields.io/badge/-Marco-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marccosousa/)
+<div align="center"><a href="https://www.linkedin.com/in/raylson-moreira-4836b8228/"><img src="https://img.shields.io/badge/-Raylson-blue?style=flat-square&logo=Linkedin&logoColor=white"/></a></div>
 
+</br></br>
 
+<div align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/118393989?v=4" width="100px;" alt=""/></div>
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/105930732?v=4" width="100px;" alt=""/>
+<div align="center"><a href="https://github.com/TaisSaito">Taís Saito</a></div>
 
-<div align="center"><a href="https://github.com/Lmraylson26">Raylson Moreira</a>
-</div>
-
-![Linkedin Badge](https://img.shields.io/badge/-Raylson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/raylson-moreira-4836b8228/)
-
-
-
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/118393989?v=4" width="100px;" alt=""/>
-
-<div align="center"><a href="https://github.com/TaisSaito">Taís Saito</a>
-</div>
-
-![Linkedin Badge](https://img.shields.io/badge/-Taís-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ta%C3%ADs-saito-tavares-515871207/)
+<div align="center"><a href="https://www.linkedin.com/in/ta%C3%ADs-saito-tavares-515871207/"><img src="https://img.shields.io/badge/-Taís-blue?style=flat-square&logo=Linkedin&logoColor=white"/></a></div>
