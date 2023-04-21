@@ -62,9 +62,9 @@ namespace SharkBank.API.Domain.Services
           
         }
 
-        public Usuario LoginUsuario(string name, string senha)
+        public Usuario LoginUsuario(string cpf, string senha)
         {
-            var usuario =  _usuarioRepo.GetUsuarioByNameSenha(name, senha);
+            var usuario =  _usuarioRepo.GetUsuarioByCpfSenha(cpf, senha);
             if (usuario == null)
             {
                 throw new Exception("Usuário não existe");
