@@ -2,6 +2,7 @@
     display: flex;
     font-size: 14px;
     justify-content: space-between;
+    align-items: center;
     height: 2em;
     width: 33%;
     background-color: #ffffff;
@@ -14,6 +15,7 @@
     width: 45%;
     font-size: 13px;
     text-align: center;
+   
     line-height: 2.2vw;
 }
   

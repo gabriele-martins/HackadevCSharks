@@ -70,7 +70,7 @@ export function Form() {
   let selectDias = getValuesSelect(1, 31);
 
   return (
-    <>
+    <div className={style.cadastroFormDiv }>
       <form onSubmit={handleSubmit(registrarUsuario)}>
         <Input
           type={"text"}
@@ -158,9 +158,9 @@ export function Form() {
             <Radio id={"outros"} value={"3"} text={"Outros"} />
           </div>
         </div>
-        <hr />
+        {/* <hr /> */}
         <SubmitButton type={"Submit"} text={"Cadastre-se"} id={"cadastro"} />
       </form>
-    </>
+    </div>
   );
 }

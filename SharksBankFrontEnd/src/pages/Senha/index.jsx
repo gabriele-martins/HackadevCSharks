@@ -38,7 +38,7 @@ export function Senha() {
           "Digite seu CPF para receber um e-mail de recuperação de senha."
         }
       >
-        <div className={styles.colunaEsquerda}>
+        <div className={styles.colunaDireita}>
           <form onSubmit={handleSubmit(onSubmit)}>
             <CampoInput
               nome={"cpf"}

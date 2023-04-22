@@ -25,7 +25,7 @@ export function Sobre() {
                 }
             />
             <div className={styles.titulo}>
-                <h1 className={styles.tituloPreto}>Conheça os <span className={styles.tituloazul}>Sharks</span></h1>
+                <h1 className={styles.tituloPreto}>Conheça os <span className={styles.tituloazul}>#CSharks</span></h1>
             </div>
 
             <div className={styles.conteudoConteiner}>
