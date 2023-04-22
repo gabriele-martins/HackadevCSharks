@@ -6,7 +6,7 @@ namespace SharkBank.API.Domain.Interfaces.Repositories
     public interface IUsuarioRepo : IGeralRepo
     {
         Task<IEnumerable<Usuario>> GetUsuariosAsync();
-        Usuario GetUsuarioByNameSenha(string name, string senha);
+        Usuario GetUsuarioByCpfSenha(string cpf, string senha);
         Task<Usuario> GetUsuarioByIdAsync(int usuarioId);
     }
 }

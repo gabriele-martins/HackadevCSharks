@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using SharkBank.API;
+using SharkBank.API.Controllers;
 using SharkBank.API.Data.Context;
 using SharkBank.API.Data.Repositories;
 using SharkBank.API.Domain.Interfaces.Repositories;

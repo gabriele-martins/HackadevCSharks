@@ -1,3 +1,4 @@
+##################################### Backend .NET #################################################
 # Created by https://www.toptal.com/developers/gitignore/api/csharp,dotnetcore
 # Edit at https://www.toptal.com/developers/gitignore?templates=csharp,dotnetcore
 
@@ -409,3 +410,29 @@ obj/
 /wwwroot/node_modules
 
 # End of https://www.toptal.com/developers/gitignore/api/csharp,dotnetcore
+
+##################################### Frontend React ##############################################
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

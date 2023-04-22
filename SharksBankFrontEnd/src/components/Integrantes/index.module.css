@@ -1,0 +1,44 @@
+.conteiner {
+
+    margin: 0em;
+    margin-bottom: 3em;
+   
+   
+}
+
+.imagemConteiner {
+
+    margin: 1em;
+    padding: 0.5em;
+    border: 1px solid var(--ciano);
+    
+}
+
+.imagem {
+    width: 10em;
+    border-radius: 50%;
+    display: flex;
+
+
+}
+
+
+
+
+.nome {
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+.botoesConteiner {
+    display: flex;
+    gap: 10px;
+    height: 10px;
+    
+}
+
+.botao{
+height: 10px;
+border: 1px solid red;
+}

@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { Menu } from "../../components/Menu";
 import { Botao } from "../../components/Botao";
 import { Footer } from "../../components/Footer";
+import { Integrante } from "../../components/Integrantes";
 
 
 export function Sobre() {
@@ -23,25 +24,67 @@ export function Sobre() {
                     </div>
                 }
             />
-            <div className={styles.tituloSobre}>
-                <h1> Sobre nós</h1>
+            <div className={styles.titulo}>
+                <h1 className={styles.tituloPreto}> Nossa</h1>
+                <h1 className={styles.tituloazul}>Equipe</h1>
             </div>
-            <div className = {styles.conteudoSobre}>
-                <p>
-                    Bem-vindo(a) ao nosso banco digital! Nós somos uma instituição financeira que tem como objetivo democratizar o acesso aos serviços bancários para todos os brasileiros, independentemente de sua renda ou localização geográfica.
-                </p>
-                <p>
-                    Acreditamos que todos merecem ter acesso a serviços financeiros confiáveis e acessíveis, e é por isso que desenvolvemos uma plataforma digital intuitiva e fácil de usar, que permite que você faça transações bancárias com facilidade, segurança e rapidez, tudo a partir do conforto da sua casa ou escritório.
-                </p>
-                <p>
-                    Nós valorizamos a transparência e a honestidade em tudo o que fazemos. Nós nos esforçamos para fornecer informações claras e precisas sobre nossos serviços, taxas e encargos, para que você possa tomar decisões financeiras informadas.
-                </p>
-                <p>
-                    Além disso, estamos comprometidos em oferecer serviços financeiros que atendam às necessidades específicas de nossos clientes. Oferecemos uma ampla gama de produtos e serviços, desde contas correntes e cartões de crédito até empréstimos e investimentos, tudo projetado para atender às suas necessidades pessoais e financeiras.
-                </p>
-                <p>
-                    Nosso objetivo é construir um relacionamento de confiança e longo prazo com nossos clientes, e estamos sempre disponíveis para ajudá-los a alcançar seus objetivos financeiros. Se você está procurando um banco digital confiável e acessível, venha nos conhecer e faça parte da nossa comunidade de clientes satisfeitos.
-                </p>
+
+
+            <div className={styles.conteudoConteiner}>
+                <div className={styles.integranteLinha1}>
+                    
+                    <Integrante
+                    nome = "Gabriele Martins"
+                    imagem = "https://github.com/gabriele-martins.png"
+                    github={"https://github.com/gabriele-martins"}
+                    linkedin={"https://www.linkedin.com/in/gabriele-martins-pereira/"}
+                    
+                   
+                
+                    />
+                    <Integrante
+                    nome = "Marcos Sousa"
+                    imagem = "https://github.com/marccosousa.png"
+                    github={"https://github.com/marccosousa"}
+                    linkedin={"https://www.linkedin.com/in/marccosousa/"}
+                    />
+                    <Integrante
+                    nome = "Keiler Trindade"
+                    imagem = "https://github.com/keilertrindade.png"
+                    github={"https://github.com/keilertrindade"}
+                    linkedin={"https://www.linkedin.com/in/keilertrindade/"}
+                    />
+                    <Integrante
+                    nome = "João Victor Evangelista"
+                    imagem = "https://github.com/jvbevangelista.png"
+                    github={"https://github.com/jvbevangelista"}
+                    linkedin={"https://www.linkedin.com/in/jvbevangelista/"}
+                    />
+                </div>
+                <div className={styles.integranteLinha2}>
+                 
+
+                    <Integrante
+                    nome = "Raylson Moreira"
+                    imagem = "https://github.com/Lmraylson26.png"
+                    github={"https://github.com/Lmraylson26"}
+                    linkedin={"https://www.linkedin.com/in/raylson-moreira-4836b8228/"}
+                    />
+                    <Integrante
+                    nome = "Bruno Soares"
+                    imagem = "https://github.com/brunosas88.png"
+                    github={"https://github.com/brunosas88"}
+                    linkedin={"https://www.linkedin.com/in/brunosas/"}
+                    />
+                    <Integrante
+                    nome = "Taís Saito"
+                    imagem = "https://github.com/TaisSaito.png"
+                    github={"https://github.com/TaisSaito"}
+                    linkedin={"linkedin.com/in/taís-saito-tavares-515871207"}
+                    />
+                </div>
+
+
             </div>
             <Footer />
         </>
