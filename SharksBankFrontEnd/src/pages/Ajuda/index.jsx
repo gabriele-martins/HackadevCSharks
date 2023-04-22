@@ -26,12 +26,9 @@ export function Ajuda() {
                     </div>
                 }
             />
-              <div className={styles.tituloAjuda}>
-                    <h1 className={styles.tituloPreto}> Dúvidas</h1>
-                    <h1 className={styles.tituloazul}>Frequentes</h1>
-            
-               
-            </div>
+              <div className={styles.titulo}>
+              <h1 className={styles.tituloPreto}>Duvidas <span className={styles.tituloazul}>Frequentes</span></h1>
+             </div>
             <div className={styles.conteudoAjuda}>
                 <ListaAjuda />
             </div>

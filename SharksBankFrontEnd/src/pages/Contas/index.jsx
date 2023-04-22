@@ -6,8 +6,6 @@ import { Botao } from "../../components/Botao";
 import { Footer } from "../../components/Footer";
 
 
-
-
 export function Contas() {
 
 
@@ -28,8 +26,7 @@ export function Contas() {
             />
             <div className={styles.conteiner}>
                 <div className={styles.titulo}>
-                    <h1 className={styles.tituloPreto}> Tipos de</h1>
-                    <h1 className={styles.tituloazul}>Contas</h1>
+                    <h1 className={styles.tituloPreto}>Conheça os tipos de <span className={styles.tituloazul}>contas</span></h1>
                 </div>
                 <div className={styles.conteudo}>
                     <div className={styles.contaConteiner}>
@@ -52,16 +49,6 @@ export function Contas() {
                         </div>
                     </div>
                 </div>
-
-                {/* <div className={styles.contaConteiner}>
-                    <div className={styles.conta}>
-                        <p className={styles.vantagens}>
-                            Ter uma conta no Sharks Bank é a escolha ideal para quem busca praticidade, segurança e rentabilidade na gestão de suas finanças. 
-                            
-                            
-                    </div>
-                </div> */}
-
             </div>
 
             <Footer />

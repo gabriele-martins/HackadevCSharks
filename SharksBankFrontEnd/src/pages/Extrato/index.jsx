@@ -26,7 +26,7 @@ export function Extrato() {
             <div className={styles.painelSuperiorTexto}>
               Titular: {definePrimeiroEUltimoNome(usuario.nome)}
             </div>
-            <button className={styles.botaoExportar}>Exportar Extrato</button>
+            {/* <button className={styles.botaoExportar}>Exportar Extrato</button> */}
           </div>
           <div className={styles.painelSuperiorColuna}>
             <div className={styles.painelSuperiorColunaTeste}>
