@@ -8,5 +8,6 @@ namespace SharkBank.API.Domain.DTO
         public double Valor { get; set; }
         public TipoTransacao Tipo { get; set; }
         public bool IsEnviada { get; set; }
+        public string Mensagem { get; set; }
     }
 }

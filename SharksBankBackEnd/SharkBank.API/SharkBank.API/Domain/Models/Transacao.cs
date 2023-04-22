@@ -14,6 +14,7 @@ namespace SharkBank.API.Domain.Models
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy HH:mm}")]
         public DateTime Data { get; set; } = DateTime.Now;
         public double Valor { get; set; }
+        public string Mensagem { get; set; }
         public TipoTransacao Tipo { get; set; }
         public bool IsEnviada { get; set; }
         [JsonIgnore]

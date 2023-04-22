@@ -38,10 +38,12 @@ namespace SharkBank.API.Controllers
         [HttpPost]
         public async Task<ActionResult<List<Transacao>>> Post(CriarTransferenciaDTO requisicaoOrigem)
         {
-            var contaOrigem = await _context.Contas.FindAsync(requisicaoOrigem.ContaId);
-            var contaDestino = await _context.Contas.FindAsync(requisicaoOrigem.ContaIdDestino);
-            var usuarioOrigem =  await _context.Usuarios.Where(c => c.ContaId == requisicaoOrigem.ContaId).FirstOrDefaultAsync();
-            var usuarioDestino = await _context.Usuarios.Where(c => c.ContaId == contaDestino.Id).FirstOrDefaultAsync();
+            var contaOrigem = await _context.Contas.Where(c => c.Numero == requisicaoOrigem.NumeroContaOrigem)
+                                                   .FirstOrDefaultAsync();
+            var contaDestino = await _context.Contas.Where(c => c.Numero == requisicaoOrigem.NumeroContaDestino)
+                                                   .FirstOrDefaultAsync();
+            var usuarioOrigem =  await _context.Usuarios.Where(c => c.Conta.Numero == requisicaoOrigem.NumeroContaOrigem).FirstOrDefaultAsync();
+            var usuarioDestino = await _context.Usuarios.Where(c => c.Conta.Numero == contaDestino.Numero).FirstOrDefaultAsync();
             if (contaOrigem == null)
             {
                 return NotFound("Conta de origem não encontrada"); 
@@ -57,7 +59,8 @@ namespace SharkBank.API.Controllers
                 Valor = requisicaoOrigem.Valor,
                 Tipo = requisicaoOrigem.Tipo,
                 IsEnviada = true,
-                Conta = contaOrigem
+                Conta = contaOrigem,
+                Mensagem = requisicaoOrigem.Mensagem
             };
 
             var novaTransacaoDestino = new Transacao
@@ -66,7 +69,8 @@ namespace SharkBank.API.Controllers
                 Valor = requisicaoOrigem.Valor,
                 Tipo = Domain.Models.Enums.TipoTransacao.TRANSFERENCIARECEBIDA,
                 IsEnviada = true,
-                Conta = contaDestino
+                Conta = contaDestino,
+                Mensagem = requisicaoOrigem.Mensagem
             };
 
             contaOrigem.Saldo -= requisicaoOrigem.Valor;
@@ -79,7 +83,8 @@ namespace SharkBank.API.Controllers
                 Data = DateTime.Now.Date,
                 Valor = requisicaoOrigem.Valor,
                 UsuarioDestino = _mapper.Map<UsuarioReduzidoDTO>(usuarioDestino),
-                UsuarioOrigem = _mapper.Map<UsuarioReduzidoDTO>(usuarioOrigem)
+                UsuarioOrigem = _mapper.Map<UsuarioReduzidoDTO>(usuarioOrigem),
+                Mensagem = requisicaoOrigem.Mensagem,
             }; 
             await _context.SaveChangesAsync();
             return Ok(comprovante);
