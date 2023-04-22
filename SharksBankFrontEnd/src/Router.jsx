@@ -10,6 +10,7 @@ import { Senha } from "./pages/Senha";
 import { Sobre } from "./pages/Sobre";
 import { Ajuda } from "./pages/Ajuda";
 import { SharksBank } from "./pages/SharksBank";
+import { Contas } from "./pages/Contas";
 
 export function Router() {
   return (
@@ -25,6 +26,7 @@ export function Router() {
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/ajuda" element={<Ajuda />} />
       <Route path="/sharksbank" element={<SharksBank />} />
+      <Route path="/contas" element={<Contas />} />
     </Routes>
   );
 }

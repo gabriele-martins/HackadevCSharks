@@ -14,12 +14,15 @@
   width: 100%;
   margin: 0 auto;
   cursor: pointer;
+  gap: 10px;
 }
+
 
 .nav a {
   all: unset;
   color: var(--preto);
 }
+
 
 .nav a:hover {
   color: var(--ciano);
