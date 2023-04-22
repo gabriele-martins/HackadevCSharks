@@ -29,22 +29,26 @@ export function SharksBank() {
             />
 
             <div className={styles.conteudo}>
-                <h1> Nossa equipe</h1>
-                <h3>Para nós do Sharks Bank, o trabalho em equipe é a chave para o sucesso!</h3>
+            <div className={styles.titulo}>
+                    <h1 className={styles.tituloPreto}> Nossa</h1>
+                    <h1 className={styles.tituloazul}>História</h1>
+                </div>
+                 {/* <h3>Para nós do Sharks Bank, o trabalho em equipe é a chave para o sucesso!</h3> */}
                 <div className={styles.container}>
                     <div className={styles.colunaEsquerda}>
-                        <div className={styles.imagem}>
-                            <img src={group} alt="Imagem Equipe SharksBank" />
+                        <div >
+                            <img className={styles.imagem} src={group} alt="Imagem Equipe SharksBank" />
                         </div>
                     </div>
-                    <div className={styles.colunaDireita}>
+                    <div className={styles.colunaDireitaConteiner}>
+                        <div className={styles.colunaDireita}>
 
                         <p>
-                            O sucesso de qualquer empresa depende em grande parte da qualidade de sua equipe de funcionários. Isso é particularmente verdadeiro no setor bancário, onde a competição é feroz e os clientes exigem um alto nível de serviço e segurança financeira. O Sharks Bank é um excelente exemplo de uma instituição financeira que valoriza seus funcionários e reconhece a importância de investir em seu desenvolvimento.
+                        O Shark Bank é um banco digital criado por um grupo de alunos da escola Imã Learning Place. A ideia surgiu durante uma aula de empreendedorismo, quando os estudantes foram desafiados a criar um negócio inovador que pudesse solucionar problemas do cotidiano. Com a crescente demanda por serviços bancários online e a dificuldade de acesso a esses serviços por parte de muitas pessoas, a equipe decidiu criar um banco digital que oferecesse praticidade e inclusão financeira.
 
                         </p>
                         <p>
-                            A equipe de funcionários do Sharks Bank é formada por indivíduos altamente capacitados e experientes, que são dedicados a oferecer o melhor serviço possível aos seus clientes. Desde o atendimento ao cliente até a gestão de contas e operações bancárias, cada membro da equipe é treinado para atender aos altos padrões de qualidade do Sharks Bank.
+                        Após meses de estudos, pesquisas e desenvolvimento, o Shark Bank foi lançado com sucesso. Com uma interface simples e intuitiva, o banco oferece serviços como abertura de conta, transferências, pagamento de contas e investimentos. Além disso, o Shark Bank busca promover a inclusão financeira, oferecendo serviços personalizados e acessíveis a todas as classes sociais. O sucesso do Shark Bank inspirou outros estudantes a empreender e acreditarem em suas ideias, mostrando que é possível transformar sonhos em realidade com muita dedicação e esforço.
                         </p>
                         {/* <p>
                         O Sharks Bank valoriza seus funcionários de várias maneiras. Primeiro, a instituição oferece programas de treinamento e desenvolvimento para garantir que seus funcionários tenham as habilidades necessárias para atender às necessidades em constante mudança de seus clientes. Além disso, o banco oferece salários e benefícios competitivos para atrair e reter os melhores talentos do setor.
@@ -58,6 +62,7 @@ export function SharksBank() {
                     <p>
                         Em resumo, a equipe de funcionários do Sharks Bank é fundamental para o sucesso da instituição. O banco valoriza seus funcionários e investe em seu desenvolvimento para garantir que eles possam oferecer o melhor serviço possível aos seus clientes. Além disso, o Sharks Bank está comprometido com a inovação e com a oferta de serviços financeiros de alta qualidade para ajudar seus clientes a gerenciar suas finanças de forma eficaz e segura.
                     </p> */}
+                    </div>
                     </div>
 
                 </div>
