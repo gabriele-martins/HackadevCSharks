@@ -14,12 +14,34 @@ export function Form() {
     formState: { errors },
   } = useForm();
 
-  const registrarUsuario = (data) => {
+  const registrarUsuario = async (data) => {
     console.log(data);
-    navigate("/saldo");
+    let nome = data.Nome;
+    let email = data.Email;
+    let celular = data.Celular;
+    let senha = data.Senha;
+    let dataNascimento = `${data.anoNascimento}-${data.mesNascimento}-${data.diaNascimento}`;
+    let cpf = data.CPF;
+    let genero = "OUTROS";
+    await fetch("https://localhost:7130/api/Usuarios", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nome,
+        email,
+        celular,
+        cpf,
+        senha,
+        dataNascimento,
+        genero,
+      }),
+    });
+     navigate("/login");
   };
 
-/* 
+  /* 
   const genero = [
     {label: "Masculino", value="Masculino"},
     {label: "Feminino", value:"Feminino"},
@@ -30,17 +52,23 @@ export function Form() {
   
   */
 
-  function getValuesSelect(inicial, final){
-   let anos = [];
-   for (let i = inicial; i <= final; i++) {
-     anos.push(i);
-   }
-   return anos;
-}
+  function getValuesSelect(inicial, final) {
+    let anos = [];
+    let resultado = "";
+    for (let i = inicial; i <= final; i++) {
+      if (i < 10) {
+        resultado = "0" + i;
+      } else {
+        resultado = i + "";
+      }
+      anos.push(resultado);
+    }
+    return anos;
+  }
 
-let selectAnos = getValuesSelect(1900, 2023);
-let selectDias = getValuesSelect(1, 31);
- 
+  let selectAnos = getValuesSelect(1900, 2023);
+  let selectDias = getValuesSelect(1, 31);
+
   return (
     <>
       <form onSubmit={handleSubmit(registrarUsuario)}>
@@ -54,8 +82,8 @@ let selectDias = getValuesSelect(1, 31);
         <div className={style.outrosDados}>
           <Input
             type={"email"}
-            name={"E-mail"}
-            placeholder={"E-mail"}
+            name={"Email"}
+            placeholder={"Email"}
             register={register}
             errors={errors}
           />
@@ -87,24 +115,26 @@ let selectDias = getValuesSelect(1, 31);
             <select
               name="diaNascimento"
               id="dia"
-              {...register("diaNascimento")} 
+              {...register("diaNascimento")}
             >
-            {selectDias.map((dia) => <option value={dia}>{dia}</option>)}
+              {selectDias.map((dia) => (
+                <option value={dia}>{dia}</option>
+              ))}
             </select>
             <select
               name="mesNascimento"
               id="mes"
               {...register("mesNascimento")}
             >
-              <option value="1">Janeiro</option>
-              <option value="2">Fevereiro</option>
-              <option value="3">Março</option>
-              <option value="4">Abril</option>
-              <option value="5">Maio</option>
-              <option value="6">Junho</option>
-              <option value="7">Julho</option>
-              <option value="8">Agosto</option>
-              <option value="9">Setembro</option>
+              <option value="01">Janeiro</option>
+              <option value="02">Fevereiro</option>
+              <option value="03">Março</option>
+              <option value="04">Abril</option>
+              <option value="05">Maio</option>
+              <option value="06">Junho</option>
+              <option value="07">Julho</option>
+              <option value="08">Agosto</option>
+              <option value="09">Setembro</option>
               <option value="10">Outubro</option>
               <option value="11">Novembro</option>
               <option value="12">Dezembro</option>
@@ -114,7 +144,9 @@ let selectDias = getValuesSelect(1, 31);
               id="ano"
               {...register("anoNascimento")}
             >
-            {selectAnos.map((ano) => <option value={ano}>{ano}</option>)}
+              {selectAnos.map((ano) => (
+                <option value={ano}>{ano}</option>
+              ))}
             </select>
           </div>
         </div>

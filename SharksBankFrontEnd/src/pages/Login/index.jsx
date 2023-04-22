@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useNavigation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Header } from "../../components/Header";
 import { Menu } from "../../components/Menu";
@@ -7,6 +7,7 @@ import { Conteudo } from "../../components/Conteudo";
 import { CampoInput } from "../../components/Inputs";
 import { Botao } from "../../components/Botao";
 import { Footer } from "../../components/Footer";
+import { Navigate } from "react-router-dom";
 
 import styles from "./style.module.css";
 
@@ -19,9 +20,32 @@ export function Login() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
-    navigate("/saldo");
+    let nome = data.cpf;
+    let senha = data.senha;
+    //let cpf = data.CPF;
+    const resposta = await fetch("https://localhost:7130/api/Login/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      //credentials: 'include',
+      body: JSON.stringify({
+        nome,
+        //cpf,
+        senha,
+      }),
+    });
+    const conteudo = await resposta.json();
+
+    if (conteudo.message) alert(conteudo.message);
+    else
+      navigate("/saldo", {
+        state: {
+          conteudo: conteudo.usuario,
+        },
+      });
   };
 
   return (

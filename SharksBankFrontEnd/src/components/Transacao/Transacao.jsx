@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./transacao.module.css";
 
+
 export default function Transacao(data) {
     return (
         <div className={style.transacaoContainer}>

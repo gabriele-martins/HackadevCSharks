@@ -8,7 +8,8 @@ import { Botao } from "../../components/Botao";
 import { Mascara } from "../../util/tipoMascara";
 import { Comprovante } from "../../components/Comprovante";
 import { Footer } from "../../components/Footer";
-
+import { useLocation } from "react-router-dom";
+import { definePrimeiroEUltimoNome } from "../../util/funcoesUtilitarias";
 import moment from "moment";
 import styles from "./index.module.css";
 
@@ -52,27 +53,30 @@ export function Transferencia() {
     setFormTransfererencia(true);
     reset();
   };
+  const location = useLocation();
+  const usuario = location.state.conteudo;
 
   return (
     <>
       <Header
-        menu={<MenuTransacoes></MenuTransacoes>}
+        menu={<MenuTransacoes conteudo={usuario}></MenuTransacoes>}
         botoes={<Botao pagina={"/"} desabilitado={false} nome={"Sair"} />}
       />
       <Conteudo
         esconderTextosPainelEsquerdo={true}
         conteudoPainelEsquerdo={
           <div className={styles.infoConta}>
-            <span className={styles.infoContaTitle}>Olá, Tubarão</span>
+            <span className={styles.infoContaTitle}>
+              Olá, {definePrimeiroEUltimoNome(usuario.nome)}
+            </span>
             <p id={styles["infoContaLabel"]}>Agência</p>
-            <p id={styles["infoContaValue"]}>3002</p>
+            <p id={styles["infoContaValue"]}>{usuario.conta.agencia}</p>
             <p id={styles["infoContaLabel"]}>Conta</p>
-            <p id={styles["infoContaValue"]}>01493238-7</p>
+            <p id={styles["infoContaValue"]}>{usuario.conta.numero}</p>
             <p id={styles["infoContaLabel"]}>Saldo</p>
-            <p id={styles["infoContaValue"]}>R$ 1.000,00</p>
+            <p id={styles["infoContaValue"]}>R$ {usuario.conta.saldo}</p>
             <p id={styles["infoContaLabel"]}>Crédito aprovado</p>
             <p id={styles["infoContaValue"]}>R$ 900,00</p>
-            
           </div>
         }
       >
@@ -92,8 +96,7 @@ export function Transferencia() {
                   errors={errors}
                   tamanhoMax={4}
                   tamanhoMin={4}
-                  desabilitar={watch("cpf")}
-                  obrigatorio={!watch("cpf")}
+                  obrigatorio={true}
                 />
               </div>
 
@@ -106,8 +109,7 @@ export function Transferencia() {
                 errors={errors}
                 tamanhoMax={9}
                 tamanhoMin={9}
-                // desabilitar={watch("cpf")}
-                // obrigatorio={!watch("cpf")}
+                obrigatorio={true}
               />
             </div>
             <CampoInput
@@ -120,8 +122,7 @@ export function Transferencia() {
               errors={errors}
               tamanhoMax={14}
               tamanhoMin={14}
-              // desabilitar={watch("conta") || watch("agencia")}
-              // obrigatorio={!(watch("conta") || watch("agencia"))}
+              obrigatorio={true}
             />
 
             <CampoInput
