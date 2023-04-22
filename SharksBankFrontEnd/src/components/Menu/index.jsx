@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 import styles from "./index.module.css";
 
@@ -10,11 +11,11 @@ export function Menu() {
     
        <section className={styles.menu}>
        <nav className={styles.nav}>
-         <a href="/sharksbank">Sharks Bank</a>
-         <a href="/contas">Contas</a>
+         <Link to={"/sharksbank"}>Sharks Bank</Link>
+         <Link to={"/contas"}>Contas</Link>
          <a href="https://blog.imatech.io/" target="_blank">Blog</a>
-         <a href="/sobre">Sobre</a>
-         <a href="/ajuda">Ajuda</a>
+         <Link to={"/sobre"}>Sobre</Link>
+         <Link to={"/ajuda"}>Ajuda</Link>
        </nav>
      </section>
      
