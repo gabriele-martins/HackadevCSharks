@@ -1,0 +1,79 @@
+.formularioTransferencia {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: var(--branco);
+  padding: 2rem 3rem;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+.formularioTransferencia textarea {
+  resize: none;
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 0.5em;
+}
+
+.transferenciaContaDiv {
+  display: flex;
+  gap: 1rem;
+}
+
+#input-agencia {
+  width: 60%;
+  height: 50%;
+}
+
+.infoConta {
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.infoContaTitle {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--preto);
+  overflow-wrap: break-word;
+}
+
+#infoContaLabel {
+  margin: 0;
+  color: var(--ciano);
+  font-size: 24px;
+  font-weight: 400;
+  width: 100%;
+  text-align: left;
+}
+
+#infoContaValue {
+  color: var(--preto);
+  font-size: 24px;
+  font-weight: 400;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.transferenciaComprovante {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mes {
+  border: 1px solid red;
+}
+
+
+.botoesComprovante{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

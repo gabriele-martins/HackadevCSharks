@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+}
+
+.botoesHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .titulo{
+    width: 100%;
+    display: flex;
+    
+  }
+
+ .tituloPreto{   
+     color: var(--cinza-600);
+     font-size: 2.8rem;
+     font-weight: 500;
+ }
+ 
+   .tituloazul{
+     color: var(--ciano);
+     font-size: 2.8rem;
+     font-weight: 500;
+   }
+
+.conteudoAjuda {
+   width: 80%;
+   height: 70%;
+   overflow: auto;
+  
+}
+
+
+.footer-conteudo{
+    position: relative;
+}

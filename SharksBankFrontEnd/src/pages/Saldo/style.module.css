@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+}
+
+.conteudoSaldo {
+  flex: 4;
+  width: 95%;
+  max-width: 1000px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--conteudo-background);
+  border-radius: 10px;
+}
+
+.painelNomes{
+  width: 100%;
+  height: 15%;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+
+}
+
+.painelNomes h1{
+  
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.painelNomes div{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.painelSuperior{
+  width: 100%;
+  height: 30%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blocoConteudo{
+  width: 32%;
+  height: 80%;
+  /* background-color: var(--ciano); */
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-300);
+  border-radius: 10px;
+
+  margin-left: 0px;
+  margin-right: 0px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.blocoConteudoLinha{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+ 
+}
+
+.blocoConteudoLinhaItem{
+  flex: 5.5;
+  height: 100%;
+  font-size: 1rem;
+  
+}
+
+.blocoConteudoLinhaValue{
+  flex: 2.5;
+  height: 100%;
+  font-size: 1rem;  
+}
+
+
+.blocoConteudoLinhaIcone{
+  flex: 1;
+  height: 100%;
+}
+
+.painelInferior{
+  width: 100%;
+  height: 50%;
+
+}
+
+
+.botoesHeader {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

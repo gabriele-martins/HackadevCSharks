@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+
+}
+
+.botoesHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .titulo{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+ 
+  }
+.tituloPreto{   
+
+    color: var(--cinza-600);
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+  .tituloazul{
+    color: var(--ciano);
+    font-size: 4rem;
+    font-weight: 500;
+  }
+
+
+.conteudoConteiner{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    overflow: auto;
+    width: 80%;
+}
+
+.integranteLinha1{
+    
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    width: 85%;
+    /* gap: 3em; */
+     
+}
+
+.integranteLinha2{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+
+    /* gap: 5em; */
+ }

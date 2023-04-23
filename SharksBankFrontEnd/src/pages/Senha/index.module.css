@@ -1,0 +1,36 @@
+.colunaDireita{
+  background-color: var(--branco);
+  
+  border-radius: 0.5em;
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.colunaDireita input {
+  width: 100%;
+  /* background-color: var(--branco); */
+  border: 1px solid var(--cinza-300);
+  height: 50px;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  box-sizing: border-box;
+}
+
+.botaoDeEnviar {
+  width: 100%;
+}
+
+.colunaDireita form {
+  display: flex;
+  width: 90%;
+  height: 70%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}

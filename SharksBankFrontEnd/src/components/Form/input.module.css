@@ -1,0 +1,44 @@
+.input {
+    margin-bottom: 12px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 2.1rem;
+    border: 1px solid #787777ee;
+    width: 23rem;
+}
+  
+.input input {
+    width: 95%;
+    border: none;
+    outline: none;
+    transform: translateY(18%);
+    margin-left: 8px;
+
+}
+
+.inputError {
+    margin-bottom: 12px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 2.1rem;
+    border: 1px solid #787777ee;
+    width: 23rem;
+    border: 1px solid rgb(255, 72, 72);
+  }
+
+.inputError input {
+    width: 95%;
+    border: none;
+    outline: none;
+    transform: translateY(18%);
+    margin-left: 8px;
+}
+  
+.errorMessage {
+    color: rgb(255, 72, 72);
+    font-size:0.8rem;
+    margin-top: 10px;
+    
+}
+

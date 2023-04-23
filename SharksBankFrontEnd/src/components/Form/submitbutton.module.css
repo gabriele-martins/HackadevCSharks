@@ -1,0 +1,27 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+.btn button {
+    background-color: #00efc5;
+    border: 1px solid #00efc5;
+    color: #fff;
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    
+  }
+  
+.btn button:disabled,
+  button:hover {
+    background-color: transparent;
+    border: 1px solid #00efc5;
+    color: #00efc5;
+    cursor: auto;
+    cursor: pointer;
+  }

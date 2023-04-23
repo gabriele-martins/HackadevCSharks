@@ -1,0 +1,27 @@
+.botao {
+  margin: 0;
+}
+
+.botao button {
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.5em;
+  padding: 0.875em 1em;
+  color: var(--ciano);
+  background-color: transparent;
+  border: 0.0625em solid var(--ciano);
+  white-space: nowrap;
+}
+
+.botao button:hover {
+  background-color: var(--ciano);
+  color: var(--branco);
+  cursor: pointer;
+}
+
+.botao button:disabled {
+  cursor: not-allowed;
+  border: 0.0625em solid var(--ciano);
+  background-color: transparent;
+  color: var(--ciano);
+}

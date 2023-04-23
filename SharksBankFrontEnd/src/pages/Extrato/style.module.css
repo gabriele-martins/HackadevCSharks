@@ -1,0 +1,62 @@
+*{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.conteudoSaldo {
+  flex: 4;
+  width: 95%;
+  max-width: 1000px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--conteudo-background);
+  
+  border-radius: 10px;
+  padding: 1rem;
+  
+}
+
+.painelSuperior{
+  width: 100%;
+  height: 25%;
+  background-color: var(--ciano);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.painelSuperiorColuna{
+  width: 45%;
+  margin-top: 20px;
+}
+
+.painelSuperiorColunaTeste{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botaoExportar, .botaoExportar:hover{ 
+  cursor: pointer;
+  border-radius: 0.5em;
+  padding: 0.2em 1em;
+  color: var(--preto);
+  background-color: var(--conteudo-background);
+  border: 0.0625em solid var(--conteudo-background);
+  white-space: nowrap;
+  margin-top: 10px;
+}
+
+.painelInferior{
+  width: 95%;
+  height: 90%;
+  margin-top: -5%;
+
+  background-color: var(--cinza-100);
+  border-radius: 10px;
+  overflow: auto;
+}

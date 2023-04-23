@@ -1,0 +1,24 @@
+.inputGenero {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    width: 33%;
+    background-color: #ffffff;
+    border: 1px solid #787777ee;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+  
+.inputGenero label {
+    width: 45%;
+    font-size: 13px;
+    text-align: center;
+   
+    line-height: 2.2vw;
+}
+  
+.inputGenero input {
+    margin-right: 12px;
+}

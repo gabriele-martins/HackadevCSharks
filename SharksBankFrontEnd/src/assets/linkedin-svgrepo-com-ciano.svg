@@ -1,0 +1,14 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 192.00 192.00" xmlns="http://www.w3.org/2000/svg" fill="none" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)">
+<g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
+<rect x="0" y="0" width="192.00" height="192.00" rx="0" fill="#ffffff" strokewidth="0"/>
+</g>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier">
+<rect width="132" height="132" x="30" y="30" stroke="#00efc5" stroke-width="7.6800000000000015" rx="16"/>
+<path stroke="#00efc5" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.6800000000000015" d="M66 86v44"/>
+<circle cx="66" cy="64" r="8" fill="#00efc5"/>
+<path stroke="#00efc5" stroke-linecap="round" stroke-width="7.6800000000000015" d="M126 130v-26c0-9.941-8.059-18-18-18v0c-9.941 0-18 8.059-18 18v26"/>
+</g>
+</svg>
