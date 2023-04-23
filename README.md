@@ -31,7 +31,7 @@ Esse projeto foi entregue no programa Sharp Coders da Ímã Tech, como um desafi
 ### Backend (Endpoints da API)
 
 - [x] Cadastro de Usuário: responsável por receber os dados do usuário e inserir as informações no banco de dados.
-- [x] Login: responsável por autenticar o usuário no sistema, verificando as credenciais de login fornecidas pelo usuário. Se as informações estiverem corretas, o sistema gera um token de autenticação que será usado para autenticar o usuário em todas as outras requisições.
+- [x] Login: responsável por autenticar o usuário no sistema, verificando as credenciais de login fornecidas pelo usuário. Se as informações estiverem corretas, o sistema gera um token de autenticação.
 - [x] Dados do Usuário: retorna as informações do cliente logado, incluindo nome completo, saldo, agência e conta bancária.
 - [x] Transferência: permite que o usuário faça transferências de dinheiro de uma conta para outra.
 - [x] Histórico de Transações: retorna todas as transações realizadas pelo usuário logado, incluindo informações sobre o destinatário, o valor da transação e a data.

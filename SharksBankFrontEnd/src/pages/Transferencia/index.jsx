@@ -31,6 +31,8 @@ export function Transferencia() {
     contaDestino: "",
     mensagem: "",
     erro: true,
+    nomeOrigem: "",
+	  nomeDestino: ""
   });
 
   const {
@@ -49,7 +51,7 @@ export function Transferencia() {
     let tipo = "PIX";
     let mensagem = data.mensagem;
 
-    const resposta = await fetch("https://localhost:7130/api/Transacoes", {
+    const resposta = await fetch("https://sharksbankbackend.up.railway.app/api/Transacoes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -76,6 +78,8 @@ export function Transferencia() {
       contaDestino: conteudoTransferencia.usuarioDestino.conta.numero,
       mensagem: conteudoTransferencia.mensagem,
       erro: false,
+      nomeOrigem: conteudoTransferencia.usuarioOrigem.nome,
+	    nomeDestino: conteudoTransferencia.usuarioDestino.nome
     });
 
     setFormTransfererencia(true);
@@ -84,7 +88,7 @@ export function Transferencia() {
 
   async function atualizarUsuario() {
     const resposta = await fetch(
-      `https://localhost:7130/api/Usuarios/${usuario.id}`,
+      `https://sharksbankbackend.up.railway.app/api/Usuarios/${usuario.id}`,
       {
         method: "GET",
       }

@@ -24,7 +24,7 @@ export function Login() {
     console.log(data);
     let cpf = data.cpf;
     let senha = data.senha;
-    const resposta = await fetch("https://localhost:7130/api/Login/login", {
+    const resposta = await fetch("https://sharksbankbackend.up.railway.app/api/Login/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
