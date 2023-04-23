@@ -24,6 +24,10 @@
 }
 
 
+.ativa{
+  color: var(--ciano);
+}
+
 .nav a:hover {
   color: var(--ciano);
 }

@@ -23,7 +23,7 @@ export function Form() {
     let dataNascimento = `${data.anoNascimento}-${data.mesNascimento}-${data.diaNascimento}`;
     let cpf = data.CPF;
     let genero = "OUTROS";
-    await fetch("https://localhost:7130/api/Usuarios", {
+    await fetch("https://sharksbankbackend.up.railway.app/api/Usuarios", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

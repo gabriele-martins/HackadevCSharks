@@ -12,6 +12,8 @@ export function Comprovante({
 	contaDestino,
 	mensagem,
 	erro,
+	nomeOrigem,
+	nomeDestino
 }) {
 	return (
 		<>
@@ -36,8 +38,8 @@ export function Comprovante({
 					<div className={styles.transferenciaInfoInterno}>
 						<h4>CPF:</h4>
 						<p>{cpfOrigem}</p>
-						<h4>Nome: </h4>
-						<p>{cpfOrigem}</p>
+						{/* <h4>Nome: </h4>
+						<p>{nomeOrigem}</p> */}
 					</div>
 					<div className={styles.transferenciaInfoInterno}>
 						<h4>Agência:</h4>
@@ -51,8 +53,8 @@ export function Comprovante({
 					<div className={styles.transferenciaInfoInterno}>
 						<h4>CPF:</h4>
 						<p>{cpfDestino || '000.000.000-00'}</p>
-						<h4>Nome: </h4>
-						<p>{cpfOrigem}</p>
+						{/* <h4>Nome: </h4>
+						<p>{nomeDestino}</p> */}
 					</div>
 					<div className={styles.transferenciaInfoInterno}>
 						<h4>Agência: </h4>
