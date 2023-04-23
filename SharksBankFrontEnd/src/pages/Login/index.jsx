@@ -22,9 +22,8 @@ export function Login() {
 
   const onSubmit = async (data) => {
     console.log(data);
-    let nome = data.cpf;
+    let cpf = data.cpf;
     let senha = data.senha;
-    //let cpf = data.CPF;
     const resposta = await fetch("https://localhost:7130/api/Login/login", {
       method: "POST",
       headers: {
@@ -32,8 +31,7 @@ export function Login() {
       },
       //credentials: 'include',
       body: JSON.stringify({
-        nome,
-        //cpf,
+        cpf,
         senha,
       }),
     });

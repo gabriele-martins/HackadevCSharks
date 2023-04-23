@@ -68,7 +68,7 @@ namespace SharkBank.API.Controllers
                 Data = DateTime.Now,
                 Valor = requisicaoOrigem.Valor,
                 Tipo = Domain.Models.Enums.TipoTransacao.TRANSFERENCIARECEBIDA,
-                IsEnviada = true,
+                IsEnviada = false,
                 Conta = contaDestino,
                 Mensagem = requisicaoOrigem.Mensagem
             };

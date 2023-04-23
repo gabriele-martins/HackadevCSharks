@@ -14,6 +14,11 @@ import moment from "moment";
 import styles from "./index.module.css";
 
 export function Transferencia() {
+  const location = useLocation();
+  const usuarioTransferido = location.state?.conteudo;
+
+  const [usuario, setUsuario] = useState(usuarioTransferido);
+
   const [formTransferencia, setFormTransfererencia] = useState(false);
   const [comprovanteProps, setComprovanteProps] = useState({
     dataHora: "",
@@ -36,26 +41,58 @@ export function Transferencia() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    let valor = parseFloat(data.valor.replace(",", "."));
+    console.log(valor);
+    let numeroContaOrigem = usuario.conta.numero;
+    let numeroContaDestino = data.conta;
+    let tipo = "PIX";
+    let mensagem = data.mensagem;
+
+    const resposta = await fetch("https://localhost:7130/api/Transacoes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      //credentials: 'include',
+      body: JSON.stringify({
+        valor,
+        tipo,
+        numeroContaOrigem,
+        numeroContaDestino,
+        mensagem,
+      }),
+    });
+    const conteudoTransferencia = await resposta.json();
+    atualizarUsuario();
     setComprovanteProps({
-      dataHora: moment().format("DD/MM/YYYY HH:mm:ss"),
-      valorEnviado: data.valor,
-      cpfOrigem: "999.999.999-99",
-      agenciaOrigem: "3002",
-      contaOrigem: "01493238-7",
-      cpfDestino: data.cpf,
-      agenciaDestino: data.agencia,
-      contaDestino: data.conta,
-      mensagem: data.mensagem,
+      dataHora: conteudoTransferencia.data.split("T")[0],
+      valorEnviado: conteudoTransferencia.valor,
+      cpfOrigem: usuario.cpf,
+      agenciaOrigem: usuario.conta.agencia,
+      contaOrigem: usuario.conta.numero,
+      cpfDestino: conteudoTransferencia.usuarioDestino.cpf,
+      agenciaDestino: conteudoTransferencia.usuarioDestino.conta.agencia,
+      contaDestino: conteudoTransferencia.usuarioDestino.conta.numero,
+      mensagem: conteudoTransferencia.mensagem,
       erro: false,
     });
 
     setFormTransfererencia(true);
     reset();
   };
-  const location = useLocation();
-  const usuario = location.state.conteudo;
 
+  async function atualizarUsuario() {
+    const resposta = await fetch(
+      `https://localhost:7130/api/Usuarios/${usuario.id}`,
+      {
+        method: "GET",
+      }
+    );
+    const conteudoTransferencia = await resposta.json();
+    console.log(conteudoTransferencia);
+    setUsuario(conteudoTransferencia);
+  }
   return (
     <>
       <Header
@@ -67,14 +104,14 @@ export function Transferencia() {
         conteudoPainelEsquerdo={
           <div className={styles.infoConta}>
             <span className={styles.infoContaTitle}>
-              Olá, {definePrimeiroEUltimoNome(usuario.nome)}
+              Olá, {usuario.nome.split(" ")[0]}
             </span>
             <p id={styles["infoContaLabel"]}>Agência</p>
             <p id={styles["infoContaValue"]}>{usuario.conta.agencia}</p>
             <p id={styles["infoContaLabel"]}>Conta</p>
             <p id={styles["infoContaValue"]}>{usuario.conta.numero}</p>
             <p id={styles["infoContaLabel"]}>Saldo</p>
-            <p id={styles["infoContaValue"]}>R$ {usuario.conta.saldo}</p>
+            <p id={styles["infoContaValue"]}>R$ {usuario.conta.saldo.toFixed(2).toString().replace(".", ",")}</p>
             <p id={styles["infoContaLabel"]}>Crédito aprovado</p>
             <p id={styles["infoContaValue"]}>R$ 900,00</p>
           </div>
@@ -148,15 +185,15 @@ export function Transferencia() {
               tipo={"password"}
               placeholder={"Senha"}
               campoReferencia={"senha"}
-              tamanhoMax={4}
-              tamanhoMin={4}
+              tamanhoMax={6}
+              tamanhoMin={6}
               padrao={/^[0-9]*$/}
               obrigatorio={true}
               register={register}
               errors={errors}
             />
 
-            <Botao type="submit" nome={"Enviar"} />
+            <Botao tipo={"submit"} nome={"Enviar"} />
           </form>
         </div>
 

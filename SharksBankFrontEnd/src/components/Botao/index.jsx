@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import styles from "./index.module.css";
 
-export function Botao({ pagina, funcaoDoBotao, nome, desabilitado }) {
+export function Botao({ pagina, funcaoDoBotao, nome, desabilitado, tipo }) {
   const navigate = useNavigate();
 
   function handleOnClick() {
@@ -19,7 +19,7 @@ export function Botao({ pagina, funcaoDoBotao, nome, desabilitado }) {
 
   return (
     <div className={styles.botao}>
-      <button onClick={handleClick} disabled={desabilitado}>
+      <button onClick={handleClick} type = {tipo} disabled={desabilitado}>
         {nome}
       </button>
     </div>

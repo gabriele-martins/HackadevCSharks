@@ -21,6 +21,7 @@ import styles from "./style.module.css";
 export function Saldo() {
   const location = useLocation();
   const usuario = location.state.conteudo;
+  console.log(usuario);
   return (
     <>
       <Header
@@ -67,7 +68,7 @@ export function Saldo() {
               </div>
               <div className={styles.blocoConteudoLinhaItem}>Saldo:&nbsp;</div>
               <div className={styles.blocoConteudoLinhaValue}>
-                R$ {usuario.conta.saldo}
+                R$ {usuario.conta.saldo.toFixed(2).toString().replace(".", ",")}
               </div>
             </div>
             <div className={styles.blocoConteudoLinha}>
@@ -79,7 +80,12 @@ export function Saldo() {
               </div>
               <div className={styles.blocoConteudoLinhaValue}>
                 R${" "}
-                {usuario.conta.transacoes[usuario.conta.transacoes.length - 1]}
+                {usuario?.conta?.transacoes[
+                  usuario.conta.transacoes.length - 1
+                ]?.valor
+                  .toFixed(2)
+                  .toString()
+                  .replace(".", ",")}
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ export function Extrato() {
           </div>
         </div>
         <div className={styles.painelInferior}>
-          <TabelaTransacoes />
+          <TabelaTransacoes transacoes={usuario.conta.transacoes} />
         </div>
       </div>
       <Footer />

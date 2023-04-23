@@ -7,8 +7,8 @@ export function MenuTransacoes({ conteudo }) {
   return (
     <section className={styles.menu}>
       <nav className={styles.nav}>
-        <Link to="#">Sobre</Link>
-        <Link to="#">Ajuda</Link>
+        {/* <Link to="#">Sobre</Link> */}
+        {/* <Link to="#">Ajuda</Link> */}
         <Link to="/saldo" state={{ conteudo: conteudo }}>
           Saldo
         </Link>
