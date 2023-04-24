@@ -48,7 +48,7 @@ Esse projeto foi entregue no programa Sharp Coders da Ímã Tech, como um desafi
 ### Backend
 
 - C#
-- SQLite
+- MySQL
 
 # Autores
 
